@@ -5,8 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SousChapp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Sous-Chapp" Height="450" Width="800">
     <Grid>
-        
+        <Menu x:Name="mainMenu" HorizontalAlignment="Left" Height="354" VerticalAlignment="Top" Width="175" Margin="0,29,0,0">
+            <MenuItem x:Name="optIng" Header="Search by ingredients" Height="40" Width="165" BorderBrush="Black" MouseEnter="MenuMouseEnter" MouseLeave="MenuMouseLeave" Click="Option_Click"/>
+            <MenuItem x:Name="optCui" Header="Search by cuisine" Height="40" Width="165" Click="Option_Click" BorderBrush="Black" MouseEnter="MenuMouseEnter" MouseLeave="MenuMouseLeave"/>
+            <MenuItem x:Name="optDiff" Header="Search by difficulty" Height="40" Width="165" Click="Option_Click" BorderBrush="Black" MouseEnter="MenuMouseEnter" MouseLeave="MenuMouseLeave"/>
+            <MenuItem x:Name="optSplit" Header="Split" Height="40" Width="165" Click="Option_Click" BorderBrush="Black" MouseEnter="MenuMouseEnter" MouseLeave="MenuMouseLeave"/>
+            <MenuItem x:Name="optExit" Header="Exit" Height="40" Width="165" Click="Option_Click" BorderBrush="Black" MouseEnter="MenuMouseEnter" MouseLeave="MenuMouseLeave"/>
+
+        </Menu>
+        <TextBox x:Name="text1" HorizontalAlignment="Left" Height="23" Margin="405,192,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="187"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="29" Stroke="Black" VerticalAlignment="Top" Width="792"/>
+        <Button x:Name="showMenu" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top" Width="27" Click="ShowMenu_Click" RenderTransformOrigin="-0.342,-0.861" Height="29">
+            <Image Source="menu.png"/>
+        </Button>
     </Grid>
 </Window>

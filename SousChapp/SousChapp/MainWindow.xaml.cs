@@ -20,9 +20,62 @@ namespace SousChapp
     /// </summary>
     public partial class MainWindow : Window
     {
+        Boolean menuVisible = false;
         public MainWindow()
         {
             InitializeComponent();
+            mainMenu.Visibility = Visibility.Hidden;
         }
+
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            text1.Text = "Hello World";
+        }
+
+        private void Option1_Click(object sender, RoutedEventArgs e)
+        {
+            text1.Text = "Hello World";
+        }
+
+        private void Option2_Click(object sender, RoutedEventArgs e)
+        {
+            text1.Text = "Goodbye World";
+        }
+
+
+        private void MenuMouseEnter(object sender, MouseEventArgs e)
+        {
+            MenuItem item = (MenuItem)sender;
+            item.Foreground = Brushes.Red;
+        }
+
+        private void MenuMouseLeave(object sender, MouseEventArgs e)
+        {
+            MenuItem item = (MenuItem)sender;
+            item.Foreground = Brushes.Black;
+        }
+
+        private void ShowMenu_Click(object sender, RoutedEventArgs e)
+        {
+            Button me = (Button)sender;
+            if (!menuVisible)
+            {
+                mainMenu.Visibility = Visibility.Visible;
+                menuVisible = true;
+            }
+            else
+            {
+                mainMenu.Visibility = Visibility.Hidden;
+                menuVisible = false;
+            }
+        }
+
+        private void Option_Click(object sender, RoutedEventArgs e)
+        {
+            MenuItem choice = (MenuItem)sender;
+            text1.Text = choice.Header.ToString();
+        }
+
     }
 }
