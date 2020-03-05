@@ -7,18 +7,28 @@
         mc:Ignorable="d"
         Title="Sous-Chapp" Height="450" Width="800">
     <Grid>
+        <Image HorizontalAlignment="Left" Height="118" Margin="96,265,0,0" VerticalAlignment="Top" Width="120" Source="padthai.png"/>
+        <Image HorizontalAlignment="Left" Height="118" Margin="96,84,0,0" VerticalAlignment="Top" Width="120" Source="chocolatechipcookies.png"/>
         <Menu x:Name="mainMenu" HorizontalAlignment="Left" Height="354" VerticalAlignment="Top" Width="175" Margin="0,29,0,0">
-            <MenuItem x:Name="optIng" Header="Search by ingredients" Height="40" Width="165" BorderBrush="Black" MouseEnter="MenuMouseEnter" MouseLeave="MenuMouseLeave" Click="Option_Click"/>
-            <MenuItem x:Name="optCui" Header="Search by cuisine" Height="40" Width="165" Click="Option_Click" BorderBrush="Black" MouseEnter="MenuMouseEnter" MouseLeave="MenuMouseLeave"/>
-            <MenuItem x:Name="optDiff" Header="Search by difficulty" Height="40" Width="165" Click="Option_Click" BorderBrush="Black" MouseEnter="MenuMouseEnter" MouseLeave="MenuMouseLeave"/>
+            <MenuItem x:Name="optCui" Header="Search by Cuisine" Height="40" Width="165" Click="Option_Click" BorderBrush="Black" MouseEnter="MenuMouseEnter" MouseLeave="MenuMouseLeave"/>
+            <MenuItem x:Name="optDiff" Header="Search by Difficulty" Height="40" Width="165" Click="Option_Click" BorderBrush="Black" MouseEnter="MenuMouseEnter" MouseLeave="MenuMouseLeave"/>
             <MenuItem x:Name="optSplit" Header="Split" Height="40" Width="165" Click="Option_Click" BorderBrush="Black" MouseEnter="MenuMouseEnter" MouseLeave="MenuMouseLeave"/>
             <MenuItem x:Name="optExit" Header="Exit" Height="40" Width="165" Click="Option_Click" BorderBrush="Black" MouseEnter="MenuMouseEnter" MouseLeave="MenuMouseLeave"/>
 
         </Menu>
-        <TextBox x:Name="text1" HorizontalAlignment="Left" Height="23" Margin="405,192,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="187"/>
-        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="29" Stroke="Black" VerticalAlignment="Top" Width="792"/>
+        <Rectangle Fill="#FFA7A7B0" HorizontalAlignment="Left" Height="29" Stroke="Black" VerticalAlignment="Top" Width="792"/>
         <Button x:Name="showMenu" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top" Width="27" Click="ShowMenu_Click" RenderTransformOrigin="-0.342,-0.861" Height="29">
             <Image Source="menu.png"/>
         </Button>
+        <Label Content="Sous Chapp" HorizontalAlignment="Left" Margin="351,0,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Bodoni MT" FontSize="20" Height="40"/>
+        <TextBox HorizontalAlignment="Left" Height="118" Margin="216,84,0,0" TextWrapping="Wrap" Text="&#xA;Chocolate Chip Cookies" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged" FontSize="16" TextAlignment="Center"/>
+        <TextBox HorizontalAlignment="Left" Height="118" Margin="216,265,0,0" TextWrapping="Wrap" Text="&#xA;&#xA;Pad Thai" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged" FontSize="16" TextAlignment="Center"/>
+        <TextBox HorizontalAlignment="Left" Height="118" Margin="584,84,0,0" TextWrapping="Wrap" Text="&#xA;&#xA;French Omelet" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged" FontSize="16" TextAlignment="Center"/>
+        <TextBox HorizontalAlignment="Left" Height="118" Margin="584,265,0,0" TextWrapping="Wrap" Text="&#xA;&#xA;Aglio E Olio" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged" FontSize="16" TextAlignment="Center"/>
+        <Image HorizontalAlignment="Left" Height="118" Margin="464,84,0,0" VerticalAlignment="Top" Width="120" Source="frenchomelet.png"/>
+        <Image HorizontalAlignment="Left" Height="118" Margin="464,265,0,0" VerticalAlignment="Top" Width="120" Source="aglioeolio.png"/>
+        <ScrollBar HorizontalAlignment="Left" Margin="775,29,0,0" VerticalAlignment="Top" Height="390"/>
+        <TextBox x:Name="text1" HorizontalAlignment="Left" Height="19" Margin="617,6,0,0" TextWrapping="Wrap" Text="Text" VerticalAlignment="Top" Width="116"/>
+        <Button Content="Search" HorizontalAlignment="Left" Margin="738,5,0,0" VerticalAlignment="Top" Width="44"/>
     </Grid>
 </Window>

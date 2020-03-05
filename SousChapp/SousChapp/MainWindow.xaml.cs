@@ -77,5 +77,9 @@ namespace SousChapp
             text1.Text = choice.Header.ToString();
         }
 
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
