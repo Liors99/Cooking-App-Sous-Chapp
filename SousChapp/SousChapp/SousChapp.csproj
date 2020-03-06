@@ -99,7 +99,9 @@
     <None Include="Resources\menu.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="menu.png" />
+    <Resource Include="menu.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="aglioeolio.png">
