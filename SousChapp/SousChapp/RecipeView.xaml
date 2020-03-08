@@ -6,15 +6,17 @@
         xmlns:local="clr-namespace:SousChapp"
         mc:Ignorable="d"
         Title="Sous-Chapp" Height="450" Width="800">
-    <Grid>
-        <Rectangle Grid.Row="0" Grid.ColumnSpan="3" Fill="#FFA7A7B0" HorizontalAlignment="Left" Height="29" Stroke="Black" VerticalAlignment="Top" Width="792"/>
-        <Button x:Name="showMenu" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top" Width="27" Click="ShowMenu_Click" RenderTransformOrigin="-0.342,-0.861" Height="29">
-            <Image Source="menu.png"/>
-        </Button>
-        <Label Grid.Row="0" Grid.ColumnSpan="3" Name="headLabel" Content="Sous Chapp" HorizontalAlignment="Left" Margin="351,0,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Bodoni MT" FontSize="20" Height="40"/>
-        <ScrollBar Grid.Column="2" Grid.RowSpan="3" HorizontalAlignment="Right" Margin="0,29,0,0" VerticalAlignment="Top" Height="390"/>
-        <TextBox Grid.Row="0" Grid.ColumnSpan="3" x:Name="text1" HorizontalAlignment="Left" Height="19" Margin="617,6,0,0" TextWrapping="Wrap" Text="Text" VerticalAlignment="Top" Width="116"/>
-        <Button Grid.Row="0" Grid.ColumnSpan="3" Content="Search" HorizontalAlignment="Left" Margin="738,5,0,0" VerticalAlignment="Top" Width="44"/>
+    <Grid x:Name="mainGrid">
+        <Grid.Resources>
+            <Style x:Key="Blurred" TargetType="{x:Type Grid}">
+                <Setter Property="Effect">
+                    <Setter.Value>
+                        <BlurEffect Radius="5"/>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </Grid.Resources>
+
         <Grid.RowDefinitions>
             <RowDefinition Height= "40"/>
             <RowDefinition Height="1*"/>
@@ -27,13 +29,26 @@
             <ColumnDefinition Width="1*" />
             <ColumnDefinition Width="2*" />
         </Grid.ColumnDefinitions>
+        <Rectangle Grid.Row="0" Grid.ColumnSpan="3" Fill="#FFA7A7B0" HorizontalAlignment="Left" Height="29" Stroke="Black" VerticalAlignment="Top" Width="792"/>
+        <Button x:Name="showMenu" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top" Width="27" RenderTransformOrigin="-0.342,-0.861" Height="29">
+            <Image Source="menu.png"/>
+        </Button>
 
-        <TextBlock Grid.Column="0" Grid.Row="2" TextDecorations="{x:Null}"><Run Text="Tools" TextDecorations="Underline"/><LineBreak/><Run Text="Tool1"/><LineBreak/><Run Text="Tool2"/><LineBreak/><Run Text="Tool3"/><LineBreak/><Run Text="Tool4"/><LineBreak/><Run Text=""/><LineBreak/><Run/></TextBlock>
-        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Height="253" Width="198"><Run Text="Ingredients" TextDecorations="Underline"/><LineBreak/><Run Text="Ingredient1"/><LineBreak/><Run Text="Ingredient2"/><LineBreak/><Run Text="Ingredient3"/></TextBlock>
-        <TextBlock Grid.Column="2" HorizontalAlignment="Left" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Height="253" Width="379"><Run Text="Steps" TextDecorations="Underline"/><LineBreak/><Run Text="1. Do one thing"/><LineBreak/><Run Text="2. Do another thing"/><LineBreak/><Run Text="3. Do a third thing"/></TextBlock>
-        <Image HorizontalAlignment="Left" Height="100" Margin="98,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="100" Source="frenchomelet.png"/>
-        <TextBox Grid.ColumnSpan="2" Grid.Column="1" HorizontalAlignment="Left" Height="100" Margin="0,10,0,0" Grid.Row="1" TextWrapping="Wrap" Text="French Omelette &#xD;&#xA;&#xD;&#xA;Cooking time: 15 minutes&#xD;&#xA;1 serving&#xD;&#xA;&#xD;&#xA;Categories: Easy, breakfast, eggs, vegetarian" VerticalAlignment="Top" Width="502"/>
-        <Button Content="Start cooking!" Grid.Column="2" HorizontalAlignment="Left" Margin="132,38,0,0" Grid.Row="1" VerticalAlignment="Top" Width="124" Height="47"/>
+        <Label Grid.Row="0" Grid.ColumnSpan="3" Name="headLabel" Content="Sous Chapp" HorizontalAlignment="Left" Margin="351,0,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Bodoni MT" FontSize="20" Height="40"/>
+        <ScrollBar Grid.Column="2" Grid.RowSpan="3" HorizontalAlignment="Right" Margin="0,29,0,0" VerticalAlignment="Top" Height="390"/>
+        <TextBox Grid.Row="0" Grid.ColumnSpan="3" x:Name="text1" HorizontalAlignment="Left" Height="19" Margin="617,6,0,0" TextWrapping="Wrap" Text="Text" VerticalAlignment="Top" Width="116"/>
+        <Button Grid.Row="0" Grid.ColumnSpan="3" Content="Search" HorizontalAlignment="Left" Margin="738,5,0,0" VerticalAlignment="Top" Width="44"/>
+
+        <Grid x:Name="recipeGrid" HorizontalAlignment="Left" Height="390" Margin="0,29,0,0" VerticalAlignment="Top" Width="770" Grid.ColumnSpan="3" Grid.RowSpan="3">
+            <TextBlock x:Name="steps" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="253" Width="379" Margin="391,137,0,0"><Run Text="Steps" TextDecorations="Underline"/><LineBreak/><Run Text="1. Do one thing"/><LineBreak/><Run Text="2. Do another thing"/><LineBreak/><Run Text="3. Do a third thing"/></TextBlock>
+            <TextBlock x:Name="ingredients" HorizontalAlignment="Left"  TextWrapping="Wrap" VerticalAlignment="Top" Height="253" Width="198" Margin="193,137,0,0"><Run Text="Ingredients" TextDecorations="Underline"/><LineBreak/><Run Text="Ingredient1"/><LineBreak/><Run Text="Ingredient2"/><LineBreak/><Run Text="Ingredient3"/></TextBlock>
+            <TextBlock x:Name="tools" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="253" Width="198" Margin="0,137,0,0"><Run Text="Tools" TextDecorations="Underline"/><LineBreak/><Run Text="1"/><LineBreak/><Run Text="2"/><LineBreak/><Run Text="3"/><LineBreak/><Run Text="4"/></TextBlock>
+            <TextBox x:Name="recipeInfo" HorizontalAlignment="Left" Height="100" Margin="193,10,0,0" TextWrapping="Wrap" Text="French Omelette &#xA;&#xA;Cooking time: 15 minutes&#xA;1 serving&#xA;&#xA;Categories: Easy, breakfast, eggs, vegetarian" VerticalAlignment="Top" Width="502"/>
+            <Image x:Name="recipeImage" HorizontalAlignment="Left" Height="100" Margin="93,10,0,0" VerticalAlignment="Top" Width="100" Source="frenchomelet.png"/>
+            <Button x:Name="startButton" Content="Start cooking!" HorizontalAlignment="Left" Margin="504,34,0,0" VerticalAlignment="Top" Width="124" Height="46" Click="Button_Click"/>
+
+        </Grid>
+        <local:Stepper x:Name="step" Grid.ColumnSpan="3" HorizontalAlignment="Left" Height="328" Margin="98,34,0,0" Grid.RowSpan="3" VerticalAlignment="Top" Width="580" Visibility="Hidden"/>
 
     </Grid>
 </Window>

@@ -26,7 +26,7 @@
         <TextBox HorizontalAlignment="Left" Height="118" Margin="216,265,0,0" TextWrapping="Wrap" Text="&#xA;&#xA;Pad Thai" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged" FontSize="16" TextAlignment="Center"/>
         <TextBox HorizontalAlignment="Left" Height="118" Margin="584,84,0,0" TextWrapping="Wrap" Text="&#xA;&#xA;French Omelet" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged" FontSize="16" TextAlignment="Center"/>
         <TextBox HorizontalAlignment="Left" Height="118" Margin="584,265,0,0" TextWrapping="Wrap" Text="&#xA;&#xA;Aglio E Olio" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged" FontSize="16" TextAlignment="Center"/>
-        <Image HorizontalAlignment="Left" Height="118" Margin="464,84,0,0" VerticalAlignment="Top" Width="120" Source="frenchomelet.png"/>
+        <Image HorizontalAlignment="Left" Height="118" Margin="464,84,0,0" VerticalAlignment="Top" Width="120" Source="frenchomelet.png" MouseDown="Image_MouseDown"/>
         <Image HorizontalAlignment="Left" Height="118" Margin="464,265,0,0" VerticalAlignment="Top" Width="120" Source="aglioeolio.png"/>
         <ScrollBar HorizontalAlignment="Left" Margin="775,29,0,0" VerticalAlignment="Top" Height="390"/>
         <TextBox x:Name="text1" HorizontalAlignment="Left" Height="19" Margin="617,6,0,0" TextWrapping="Wrap" Text="Text" VerticalAlignment="Top" Width="116"/>

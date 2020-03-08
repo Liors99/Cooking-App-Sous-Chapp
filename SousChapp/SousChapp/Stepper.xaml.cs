@@ -18,9 +18,9 @@ namespace SousChapp
     /// <summary>
     /// Interaction logic for UserControl4.xaml
     /// </summary>
-    public partial class UserControl4 : UserControl
+    public partial class Stepper : UserControl
     {
-        public UserControl4()
+        public Stepper()
         {
             InitializeComponent();
         }

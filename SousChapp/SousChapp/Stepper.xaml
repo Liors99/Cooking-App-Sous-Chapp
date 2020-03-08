@@ -1,17 +1,17 @@
-﻿<UserControl x:Class="SousChapp.UserControl4"
+﻿<UserControl x:Class="SousChapp.Stepper"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:SousChapp"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="333.792" d:DesignWidth="589.602">
     <Grid>
-        <Grid HorizontalAlignment="Left" Height="271" VerticalAlignment="Top" Width="524" Margin="136,79,0,0" Background="White">
-            <Grid HorizontalAlignment="Left" Height="271" VerticalAlignment="Top" Width="524"/>
-            <Label Content="Coming up: the next step" HorizontalAlignment="Left" Height="45" Grid.Row="1" VerticalAlignment="Top" Width="524" Grid.ColumnSpan="2" BorderBrush="Black" BorderThickness="2"/>
-            <TextBlock HorizontalAlignment="Left" Height="226" TextWrapping="Wrap" VerticalAlignment="Top" Width="175"><Run Text="Tools and ingredients" TextDecorations="Underline"/><LineBreak/><Run Text="Tool1"/><LineBreak/><Run Text="Tool2"/><LineBreak/><Run Text="Tool3"/><LineBreak/><Run/><LineBreak/><Run/></TextBlock>
-            <TextBlock Grid.Column="1" HorizontalAlignment="Left" Height="226" TextWrapping="Wrap" VerticalAlignment="Top" Width="349"><Run Text="The current step" TextDecorations="Underline"/><LineBreak/><Run TextDecorations="Underline"/><LineBreak/><Run Text="Do the current step"/></TextBlock>
+        <Grid HorizontalAlignment="Left" Height="216" VerticalAlignment="Top" Width="428" Margin="53,47,0,0" Background="White">
+            <Label Content="Coming up: the next step" HorizontalAlignment="Left" Height="36" Grid.Row="1" VerticalAlignment="Top" Width="428" Grid.ColumnSpan="2" BorderBrush="Black" BorderThickness="2"/>
+            <TextBlock HorizontalAlignment="Left" Height="216" TextWrapping="Wrap" VerticalAlignment="Top" Width="143" Grid.RowSpan="2"><Run Text="The current step" TextDecorations="Underline"/><LineBreak/><Run TextDecorations="Underline"/><LineBreak/><Run Text="Do the current step"/></TextBlock>
+            <TextBlock HorizontalAlignment="Left" Height="216" TextWrapping="Wrap" VerticalAlignment="Top" Width="285" Grid.Column="1" Grid.RowSpan="2"><Run Text="The current step" TextDecorations="Underline"/><LineBreak/><Run TextDecorations="Underline"/><LineBreak/><Run Text="Do the current step"/></TextBlock>
+            <Border Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left"/>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*"/>
                 <ColumnDefinition Width="2*"/>
@@ -21,10 +21,10 @@
                 <RowDefinition Height="1*"/>
             </Grid.RowDefinitions>
         </Grid>
-        <Button Content="Minimize" HorizontalAlignment="Left" Height="32" Margin="678,30,0,0" VerticalAlignment="Top" Width="32"/>
-        <Button Content="Exit" HorizontalAlignment="Left" Height="32" Margin="715,30,0,0" VerticalAlignment="Top" Width="32"/>
-        <Button Content="Previous" HorizontalAlignment="Left" Margin="262,376,0,0" VerticalAlignment="Top" Width="64" Height="64"/>
-        <Button Content="Next" HorizontalAlignment="Left" Margin="458,376,0,0" VerticalAlignment="Top" Width="64" Height="64"/>
+        <Button Content="Minimize" HorizontalAlignment="Left" Height="16" Margin="521,47,0,0" VerticalAlignment="Top" Width="16"/>
+        <Button Content="Exit" HorizontalAlignment="Left" Height="16" Margin="559,47,0,0" VerticalAlignment="Top" Width="16"/>
+        <Button Content="Previous" HorizontalAlignment="Left" Margin="157,283,0,0" VerticalAlignment="Top" Width="34" Height="34"/>
+        <Button Content="Next" HorizontalAlignment="Left" Margin="306,283,0,0" VerticalAlignment="Top" Width="34" Height="34"/>
 
     </Grid>
 </UserControl>

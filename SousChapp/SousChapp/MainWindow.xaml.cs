@@ -81,5 +81,12 @@ namespace SousChapp
         {
 
         }
+
+        private void Image_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            RecipeView recipe = new RecipeView();
+            recipe.Show();
+            this.Close();
+        }
     }
 }
