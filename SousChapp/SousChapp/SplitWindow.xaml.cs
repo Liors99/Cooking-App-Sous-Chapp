@@ -17,11 +17,38 @@ namespace SousChapp
     /// <summary>
     /// Interaction logic for Window1.xaml
     /// </summary>
-    public partial class SplitWindow : Window
+    public partial class SplitWindow : Window 
     {
+        Boolean menuVisible = false;
         public SplitWindow()
         {
             InitializeComponent();
+        }
+
+        private void ShowMenu_Click(object sender, RoutedEventArgs e)
+        {
+            if (!menuVisible)
+            {
+                mainMenu.Visibility = Visibility.Visible;
+                menuVisible = true;
+            }
+            else
+            {
+                mainMenu.Visibility = Visibility.Hidden;
+                menuVisible = false;
+            }
+        }
+
+        private void MenuMouseEnter(object sender, MouseEventArgs e)
+        {
+            MenuItem item = (MenuItem)sender;
+            item.Foreground = Brushes.Red;
+        }
+
+        private void MenuMouseLeave(object sender, MouseEventArgs e)
+        {
+            MenuItem item = (MenuItem)sender;
+            item.Foreground = Brushes.Black;
         }
     }
 }

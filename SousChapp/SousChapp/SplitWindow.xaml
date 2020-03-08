@@ -14,10 +14,12 @@
         <Grid Grid.Column="0">
             <ScrollBar HorizontalAlignment="Right" VerticalAlignment="Stretch" Margin="0,29,0,0"/>
 
+            
+            
             <Rectangle Fill="#FFA7A7B0" HorizontalAlignment="Stretch" Height="29" Stroke="Black" VerticalAlignment="Top"/>
             <TextBox x:Name="searchBox1" HorizontalAlignment="Right" Height="19" Margin="0,5,60,0" TextWrapping="Wrap" Text="Text" VerticalAlignment="Top" Width="116"/>
             <Button Content="Search" HorizontalAlignment="Right" Margin="0,5,10,0" VerticalAlignment="Top" Width="44"/>
-            <Button x:Name="showMenu1" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top" Width="27" Height="29">
+            <Button x:Name="showMenu1" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top" Width="27" Height="29" Click="ShowMenu_Click">
                 <Image Source="menu.png"/>
             </Button>
             <Border HorizontalAlignment="Left" VerticalAlignment="Top" Margin="70,70,0,0">
@@ -38,6 +40,14 @@
 
                 </Grid>
             </Border>
+
+            <Menu x:Name="mainMenu" HorizontalAlignment="Left" Height="auto" VerticalAlignment="Top" Width="175" Margin="0,29,0,0" Visibility="Hidden">
+                <MenuItem x:Name="optIng" Header="Search by Ingredients" Height="40" Width="165" BorderBrush="Black" MouseEnter="MenuMouseEnter" MouseLeave="MenuMouseLeave"/>
+                <MenuItem x:Name="optCui" Header="Search by Cuisine" Height="40" Width="165" BorderBrush="Black" MouseEnter="MenuMouseEnter" MouseLeave="MenuMouseLeave"/>
+                <MenuItem x:Name="optDiff" Header="Search by Difficulty" Height="40" Width="165" BorderBrush="Black" MouseEnter="MenuMouseEnter" MouseLeave="MenuMouseLeave"/>
+                <MenuItem x:Name="optExit" Header="Exit Split Screen" Height="40" Width="165" BorderBrush="Black" MouseEnter="MenuMouseEnter" MouseLeave="MenuMouseLeave"/>
+
+            </Menu>
 
         </Grid>
         <Grid Grid.Column="1">

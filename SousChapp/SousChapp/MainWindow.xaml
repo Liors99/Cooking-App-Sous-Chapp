@@ -9,7 +9,7 @@
     <Grid>
         <Image HorizontalAlignment="Left" Height="118" Margin="96,265,0,0" VerticalAlignment="Top" Width="120" Source="padthai.png"/>
         <Image HorizontalAlignment="Left" Height="118" Margin="96,84,0,0" VerticalAlignment="Top" Width="120" Source="chocolatechipcookies.png"/>
-        <Menu x:Name="mainMenu" HorizontalAlignment="Left" Height="354" VerticalAlignment="Top" Width="175" Margin="0,29,0,0">
+        <Menu x:Name="mainMenu" HorizontalAlignment="Left" Height="auto" VerticalAlignment="Top" Width="175" Margin="0,29,0,0">
             <MenuItem x:Name="optIng" Header="Search by Ingredients" Height="40" Width="165" BorderBrush="Black" MouseEnter="MenuMouseEnter" MouseLeave="MenuMouseLeave" Click="Option_Click"/>
             <MenuItem x:Name="optCui" Header="Search by Cuisine" Height="40" Width="165" Click="Option_Click" BorderBrush="Black" MouseEnter="MenuMouseEnter" MouseLeave="MenuMouseLeave"/>
             <MenuItem x:Name="optDiff" Header="Search by Difficulty" Height="40" Width="165" Click="Option_Click" BorderBrush="Black" MouseEnter="MenuMouseEnter" MouseLeave="MenuMouseLeave"/>
