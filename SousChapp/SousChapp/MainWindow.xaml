@@ -13,7 +13,7 @@
             <MenuItem x:Name="optIng" Header="Search by Ingredients" Height="40" Width="165" BorderBrush="Black" MouseEnter="MenuMouseEnter" MouseLeave="MenuMouseLeave" Click="Option_Click"/>
             <MenuItem x:Name="optCui" Header="Search by Cuisine" Height="40" Width="165" Click="Option_Click" BorderBrush="Black" MouseEnter="MenuMouseEnter" MouseLeave="MenuMouseLeave"/>
             <MenuItem x:Name="optDiff" Header="Search by Difficulty" Height="40" Width="165" Click="Option_Click" BorderBrush="Black" MouseEnter="MenuMouseEnter" MouseLeave="MenuMouseLeave"/>
-            <MenuItem x:Name="optSplit" Header="Split" Height="40" Width="165" Click="Option_Click" BorderBrush="Black" MouseEnter="MenuMouseEnter" MouseLeave="MenuMouseLeave"/>
+            <MenuItem x:Name="optSplit" Header="Split" Height="40" Width="165" Click="Split_Screen" BorderBrush="Black" MouseEnter="MenuMouseEnter" MouseLeave="MenuMouseLeave"/>
             <MenuItem x:Name="optExit" Header="Exit" Height="40" Width="165" Click="Option_Click" BorderBrush="Black" MouseEnter="MenuMouseEnter" MouseLeave="MenuMouseLeave"/>
 
         </Menu>
@@ -24,7 +24,7 @@
         <Label Content="Sous Chapp" HorizontalAlignment="Left" Margin="351,0,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Bodoni MT" FontSize="20" Height="40"/>
         <TextBox HorizontalAlignment="Left" Height="118" Margin="216,84,0,0" TextWrapping="Wrap" Text="&#xA;Chocolate Chip Cookies" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged" FontSize="16" TextAlignment="Center"/>
         <TextBox HorizontalAlignment="Left" Height="118" Margin="216,265,0,0" TextWrapping="Wrap" Text="&#xA;&#xA;Pad Thai" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged" FontSize="16" TextAlignment="Center"/>
-        <TextBox HorizontalAlignment="Left" Height="118" Margin="584,84,0,0" TextWrapping="Wrap" Text="&#xA;&#xA;French Omelet" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged" FontSize="16" TextAlignment="Center"/>
+        <TextBox HorizontalAlignment="Left" Height="118" Margin="584,84,0,0" TextWrapping="Wrap" Text="&#xA;&#xA;French Omelette" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged" FontSize="16" TextAlignment="Center"/>
         <TextBox HorizontalAlignment="Left" Height="118" Margin="584,265,0,0" TextWrapping="Wrap" Text="&#xA;&#xA;Aglio E Olio" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged" FontSize="16" TextAlignment="Center"/>
         <Image HorizontalAlignment="Left" Height="118" Margin="464,84,0,0" VerticalAlignment="Top" Width="120" Source="frenchomelet.png" MouseDown="Image_MouseDown"/>
         <Image HorizontalAlignment="Left" Height="118" Margin="464,265,0,0" VerticalAlignment="Top" Width="120" Source="aglioeolio.png"/>

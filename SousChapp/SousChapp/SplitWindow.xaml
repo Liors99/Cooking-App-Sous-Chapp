@@ -23,7 +23,7 @@
             <Border HorizontalAlignment="Left" VerticalAlignment="Top" Margin="70,70,0,0">
                 <Grid>
                     <Image HorizontalAlignment="Left" Height="118" VerticalAlignment="Top" Width="120" Source="chocolatechipcookies.png"/>
-                    <TextBox HorizontalAlignment="Left" Height="118" Margin="120,0,0,0" TextWrapping="Wrap" Text="&#xA;Chocolate Chip Cookies" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged" FontSize="16" TextAlignment="Center"/>
+                    <TextBox HorizontalAlignment="Left" Height="118" Margin="120,0,0,0" TextWrapping="Wrap" Text="&#xA;Chocolate Chip Cookies" VerticalAlignment="Top" Width="120" FontSize="16" TextAlignment="Center"/>
 
                 </Grid>
             </Border>
@@ -34,7 +34,7 @@
                         <RowDefinition Height="75*"/>
                     </Grid.RowDefinitions>
                     <Image HorizontalAlignment="Left" Height="118" VerticalAlignment="Top" Width="120" Source="padthai.png" Grid.RowSpan="2"/>
-                    <TextBox HorizontalAlignment="Left" Height="118" Margin="120,0,0,0" TextWrapping="Wrap" Text="&#xA;&#xA;Pad Thai" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged" FontSize="16" TextAlignment="Center" Grid.RowSpan="2"/>
+                    <TextBox HorizontalAlignment="Left" Height="118" Margin="120,0,0,0" TextWrapping="Wrap" Text="&#xA;&#xA;Pad Thai" VerticalAlignment="Top" Width="120" FontSize="16" TextAlignment="Center" Grid.RowSpan="2"/>
 
                 </Grid>
             </Border>
@@ -51,14 +51,14 @@
             </Button>
             <Border HorizontalAlignment="Left" VerticalAlignment="Top" Margin="70,70,0,0">
                 <Grid>
-                    <TextBox HorizontalAlignment="Left" Height="118" TextWrapping="Wrap" Text="&#xA;&#xA;French Omelette" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged" FontSize="16" TextAlignment="Center" Margin="120,0,-120,0"/>
+                    <TextBox HorizontalAlignment="Left" Height="118" TextWrapping="Wrap" Text="&#xA;&#xA;French Omelette" VerticalAlignment="Top" Width="120" FontSize="16" TextAlignment="Center" Margin="120,0,-120,0"/>
                     <Image HorizontalAlignment="Left" Height="118" VerticalAlignment="Top" Width="120" Source="frenchomelet.png"/>
                 </Grid>
             </Border>
 
             <Border HorizontalAlignment="Left" VerticalAlignment="Top" Margin="70,235,0,0">
                 <Grid>
-                    <TextBox HorizontalAlignment="Left" Height="118" TextWrapping="Wrap" Text="&#xA;&#xA;Aglio E Olio" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged" FontSize="16" TextAlignment="Center" Margin="120,0,-120,0"/>
+                    <TextBox HorizontalAlignment="Left" Height="118" TextWrapping="Wrap" Text="&#xA;&#xA;Aglio E Olio" VerticalAlignment="Top" Width="120" FontSize="16" TextAlignment="Center" Margin="120,0,-120,0"/>
                     <Image HorizontalAlignment="Left" Height="118" VerticalAlignment="Top" Width="120" Source="aglioeolio.png"/>
                 </Grid>
             </Border>

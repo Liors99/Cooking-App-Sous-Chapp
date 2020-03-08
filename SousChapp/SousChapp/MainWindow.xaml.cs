@@ -77,6 +77,13 @@ namespace SousChapp
             text1.Text = choice.Header.ToString();
         }
 
+        private void Split_Screen(object sender, RoutedEventArgs e)
+        {
+            SplitWindow split = new SplitWindow();
+            split.Show();
+            this.Close();
+        }
+
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
 
