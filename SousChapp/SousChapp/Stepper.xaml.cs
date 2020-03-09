@@ -19,7 +19,9 @@ namespace SousChapp
     /// Interaction logic for UserControl4.xaml
     /// </summary>
     public partial class Stepper : UserControl
+
     {
+        public RecipeView rv;
         public Stepper()
         {
             InitializeComponent();
@@ -30,6 +32,13 @@ namespace SousChapp
             this.FinishButton.Visibility = Visibility.Visible;
             this.NextButton.Visibility = Visibility.Hidden;
             this.ComingUpLabel.Visibility = Visibility.Hidden;
+        }
+
+        private void MinimizeButton_Click(object sender, RoutedEventArgs e)
+        {
+            RecipePause rp = new RecipePause();
+            rv.Close();
+            rp.Show();
         }
     }
 }

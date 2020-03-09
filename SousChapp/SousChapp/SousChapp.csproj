@@ -74,6 +74,9 @@
     <Compile Include="SplitWindow.xaml.cs">
       <DependentUpon>SplitWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="RecipePause.xaml.cs">
+      <DependentUpon>RecipePause.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -107,6 +110,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="SplitWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RecipePause.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
