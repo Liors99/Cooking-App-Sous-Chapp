@@ -63,7 +63,7 @@
         <Button x:Name="OSKeyboard" HorizontalAlignment="Left" Height="19" Margin="584,6,0,0" VerticalAlignment="Top" Width="28" Visibility="Hidden">
             <Image Source="keyboard.png"/>
         </Button>
-        <Button x:Name="SearchSmall" HorizontalAlignment="Left" Height="23" Margin="758,2,0,0" VerticalAlignment="Top" Width="24" Click="SearchSmall_Click">
+        <Button x:Name="SearchSmall" HorizontalAlignment="Left" Height="23" Margin="758,2,0,0" VerticalAlignment="Top" Width="24" Click="SearchSmall_Click" Background="{x:Null}" BorderBrush="{x:Null}">
             <Image Source="search.png"/>
         </Button>
         <local:IngFilter x:Name="IngFilterPopup" HorizontalAlignment="Left" Height="475" Margin="0,-32,-21,-24" VerticalAlignment="Top" Width="813" Visibility="Hidden"/>

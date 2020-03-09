@@ -7,8 +7,6 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid Margin="70" Background="White">
-        <Rectangle Fill="#FFC4C4C7" HorizontalAlignment="Left" Height="35" Stroke="Black" VerticalAlignment="Top" Width="660"/>
-        <Label Content="&#x9;&#x9;                Search by Ingredients" HorizontalAlignment="Left" VerticalAlignment="Top" Width="660" Height="35" FontSize="20" FontFamily="Corbel" BorderBrush="Black" FontWeight="Bold"/>
         <Button Content="Submit" HorizontalAlignment="Left" Height="24" Margin="274,256,0,0" VerticalAlignment="Top" Width="116"/>
         <CheckBox Content="Beef" HorizontalAlignment="Left" Margin="100,90,0,0" VerticalAlignment="Top" FontSize="14"/>
         <CheckBox Content="Pork" HorizontalAlignment="Left" Margin="100,120,0,0" VerticalAlignment="Top" FontSize="14"/>
@@ -25,6 +23,23 @@
         <CheckBox Content="Root Vegetables" HorizontalAlignment="Left" Margin="471,150,0,0" VerticalAlignment="Top" FontSize="14" RenderTransformOrigin="-0.827,1.918"/>
         <CheckBox Content="Leafy Greens" HorizontalAlignment="Left" Margin="471,180,0,0" VerticalAlignment="Top" FontSize="14" RenderTransformOrigin="-0.827,1.918"/>
         <CheckBox Content="Squash" HorizontalAlignment="Left" Margin="471,210,0,0" VerticalAlignment="Top" FontSize="14" RenderTransformOrigin="-0.827,1.918"/>
+        <Rectangle HorizontalAlignment="Left" Height="660" Stroke="Black" VerticalAlignment="Top" Width="30" Margin="314,-315,0,-35" RenderTransformOrigin="0.5,0.5">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="#fd9f84" Offset="1"/>
+                    <GradientStop Color="#FFDC4040"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Label Content="&#x9;&#x9;                Search by Ingredients" HorizontalAlignment="Left" VerticalAlignment="Top" Width="660" Height="35" FontSize="20" FontFamily="Corbel" BorderBrush="Black" FontWeight="Bold" Margin="-10,0,0,0"/>
 
     </Grid>
 </UserControl>
