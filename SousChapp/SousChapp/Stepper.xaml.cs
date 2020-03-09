@@ -32,6 +32,8 @@ namespace SousChapp
             this.FinishButton.Visibility = Visibility.Visible;
             this.NextButton.Visibility = Visibility.Hidden;
             this.ComingUpLabel.Visibility = Visibility.Hidden;
+            this.StepTools.Text = "Tools and Ingredients";
+            this.StepDetail.Text = "\n\nServe immediately";
         }
 
         private void MinimizeButton_Click(object sender, RoutedEventArgs e)

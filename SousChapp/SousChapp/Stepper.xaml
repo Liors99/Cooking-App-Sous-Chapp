@@ -8,9 +8,9 @@
              d:DesignHeight="333.792" d:DesignWidth="589.602">
     <Grid>
         <Grid HorizontalAlignment="Left" Height="216" VerticalAlignment="Top" Width="428" Margin="53,47,0,0" Background="White">
-            <Label x:Name="ComingUpLabel" Content="Coming up: the next step" HorizontalAlignment="Left" Height="36" Grid.Row="1" VerticalAlignment="Top" Width="428" Grid.ColumnSpan="2" BorderBrush="Black" BorderThickness="2"/>
-            <TextBlock HorizontalAlignment="Left" Height="216" TextWrapping="Wrap" VerticalAlignment="Top" Width="143" Grid.RowSpan="2"><Run Text="The current step" TextDecorations="Underline"/><LineBreak/><Run TextDecorations="Underline"/><LineBreak/><Run Text="Do the current step"/></TextBlock>
-            <TextBlock HorizontalAlignment="Left" Height="216" TextWrapping="Wrap" VerticalAlignment="Top" Width="285" Grid.Column="1" Grid.RowSpan="2"><Run Text="The current step" TextDecorations="Underline"/><LineBreak/><Run TextDecorations="Underline"/><LineBreak/><Run Text="Do the current step"/></TextBlock>
+            <Label x:Name="ComingUpLabel" Content="Coming up: In a cup, beat 4 large eggs" HorizontalAlignment="Left" Height="36" Grid.Row="1" VerticalAlignment="Top" Width="428" Grid.ColumnSpan="2" BorderBrush="Black" BorderThickness="2"/>
+            <TextBlock x:Name="StepTools" HorizontalAlignment="Left" Height="216" TextWrapping="Wrap" VerticalAlignment="Top" Width="143" Grid.RowSpan="2"><Run Text="Tools and Ingredients" TextDecorations="Underline"/><LineBreak/><Run TextDecorations="Underline"/><LineBreak/><Run Text="- 1 tbsp olive oil"/><LineBreak/><Run Text="- 1 medium pan"/></TextBlock>
+            <TextBlock x:Name="StepDetail" HorizontalAlignment="Left" Height="216" TextWrapping="Wrap" VerticalAlignment="Top" Width="285" Grid.Column="1" Grid.RowSpan="2" FontSize="22"><Run Text="" TextDecorations="Underline"/><LineBreak/><Run Text="Step 1" TextDecorations="Underline"/><LineBreak/><Run Text="Heat 1 table spoon of olive oil in a pan over medium heat"/></TextBlock>
             <Border Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left"/>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*"/>
