@@ -16,18 +16,13 @@ using System.Windows.Shapes;
 namespace SousChapp
 {
     /// <summary>
-    /// Interaction logic for UserControl1.xaml
+    /// Interaction logic for UserControl3.xaml
     /// </summary>
-    public partial class UserControl1 : UserControl
+    public partial class DiffFilter : UserControl
     {
-        public UserControl1()
+        public DiffFilter()
         {
             InitializeComponent();
-        }
-
-        private void RadioButton_Checked(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

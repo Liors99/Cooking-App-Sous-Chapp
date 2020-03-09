@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace SousChapp
 {
     /// <summary>
-    /// Interaction logic for UserControl3.xaml
+    /// Interaction logic for UserControl2.xaml
     /// </summary>
-    public partial class UserControl3 : UserControl
+    public partial class CuiFilter : UserControl
     {
-        public UserControl3()
+        public CuiFilter()
         {
             InitializeComponent();
         }

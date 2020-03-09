@@ -115,5 +115,25 @@ namespace SousChapp
             this.OSKeyboard.Visibility = Visibility.Visible;
             this.SearchSmall.Visibility = Visibility.Hidden;
         }
+
+        private void OptIng_Click(object sender, RoutedEventArgs e)
+        {
+            this.IngFilterPopup.Visibility = Visibility.Visible;
+            this.mainMenu.Visibility = Visibility.Hidden;
+        }
+
+        private void OptCui_Click(object sender, RoutedEventArgs e)
+        {
+            this.CuiFilterPopup.Visibility = Visibility.Visible;
+            this.mainMenu.Visibility = Visibility.Hidden;
+
+        }
+
+        private void OptDiff_Click(object sender, RoutedEventArgs e)
+        {
+            this.DiffFilterPopup.Visibility = Visibility.Visible;
+            this.mainMenu.Visibility = Visibility.Hidden;
+
+        }
     }
 }

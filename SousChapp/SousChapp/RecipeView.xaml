@@ -36,7 +36,7 @@
 
         <Label Grid.Row="0" Grid.ColumnSpan="3" Name="headLabel" Content="Sous Chapp" HorizontalAlignment="Left" Margin="351,0,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Bodoni MT" FontSize="20" Height="40"/>
         <ScrollBar Grid.Column="2" Grid.RowSpan="3" HorizontalAlignment="Right" Margin="0,29,0,0" VerticalAlignment="Top" Height="390"/>
-        <Button x:Name="SearchSmall" HorizontalAlignment="Right" Height="23"  VerticalAlignment="Top" Width="24" Click="SearchSmall_Click" Grid.Column="2" Margin="0,5,5,0">
+        <Button x:Name="SearchSmall" HorizontalAlignment="Right" Height="23"  VerticalAlignment="Top" Width="24" Grid.Column="2" Margin="0,5,5,0">
             <Image Source="search.png"/>
         </Button>
         <Grid x:Name="recipeGrid" HorizontalAlignment="Left" Height="390" Margin="0,29,0,0" VerticalAlignment="Top" Width="770" Grid.ColumnSpan="3" Grid.RowSpan="3">

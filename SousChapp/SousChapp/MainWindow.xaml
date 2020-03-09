@@ -16,9 +16,9 @@
                     <GradientStop Color="#ff5b59" Offset="1"/>
                 </LinearGradientBrush>
             </Menu.Background>
-            <MenuItem x:Name="optIng" Header="Search by Ingredients" Height="40" Width="165" MouseEnter="MenuMouseEnter" MouseLeave="MenuMouseLeave" Foreground="White"/>
-            <MenuItem x:Name="optCui" Header="Search by Cuisine" Height="40" Width="165" MouseEnter="MenuMouseEnter" MouseLeave="MenuMouseLeave" Foreground="White"/>
-            <MenuItem x:Name="optDiff" Header="Search by Difficulty" Height="40" Width="165" MouseEnter="MenuMouseEnter" MouseLeave="MenuMouseLeave" Foreground="White"/>
+            <MenuItem x:Name="optIng" Header="Search by Ingredients" Height="40" Width="165" MouseEnter="MenuMouseEnter" MouseLeave="MenuMouseLeave" Foreground="White" Click="OptIng_Click"/>
+            <MenuItem x:Name="optCui" Header="Search by Cuisine" Height="40" Width="165" MouseEnter="MenuMouseEnter" MouseLeave="MenuMouseLeave" Foreground="White" Click="OptCui_Click"/>
+            <MenuItem x:Name="optDiff" Header="Search by Difficulty" Height="40" Width="165" MouseEnter="MenuMouseEnter" MouseLeave="MenuMouseLeave" Foreground="White" Click="OptDiff_Click"/>
             <MenuItem x:Name="optSplit" Header="Split" Height="40" Width="165" Click="Split_Screen"  MouseEnter="MenuMouseEnter" MouseLeave="MenuMouseLeave" Foreground="White" />
             <MenuItem x:Name="optExit" Header="Exit" Height="40" Width="165" MouseEnter="MenuMouseEnter" MouseLeave="MenuMouseLeave" Foreground="White" />
         </Menu>
@@ -66,5 +66,9 @@
         <Button x:Name="SearchSmall" HorizontalAlignment="Left" Height="23" Margin="758,2,0,0" VerticalAlignment="Top" Width="24" Click="SearchSmall_Click">
             <Image Source="search.png"/>
         </Button>
+        <local:IngFilter x:Name="IngFilterPopup" HorizontalAlignment="Left" Height="475" Margin="0,-32,-21,-24" VerticalAlignment="Top" Width="813" Visibility="Hidden"/>
+        <local:CuiFilter x:Name="CuiFilterPopup" HorizontalAlignment="Left" Height="475" Margin="0,-32,-21,-24" VerticalAlignment="Top" Width="813" Visibility="Hidden"/>
+        <local:DiffFilter x:Name="DiffFilterPopup" HorizontalAlignment="Left" Height="475" Margin="0,-32,-21,-24" VerticalAlignment="Top" Width="813" Visibility="Hidden"/>
+
     </Grid>
 </Window>
