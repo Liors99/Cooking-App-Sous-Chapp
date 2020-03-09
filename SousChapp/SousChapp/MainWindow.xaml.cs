@@ -119,6 +119,7 @@ namespace SousChapp
             myLinearGradientBrush.GradientStops.Add(
                 new GradientStop(newPink, 0.0));
 
+
             // Use the brush to paint the rectangle.
             r.Stroke = myLinearGradientBrush;
         }
