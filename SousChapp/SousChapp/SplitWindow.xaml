@@ -56,10 +56,16 @@
             </Border>
 
             <Menu x:Name="mainMenu" HorizontalAlignment="Left" Height="auto" VerticalAlignment="Top" Width="175" Margin="0,29,0,0" Visibility="Hidden">
-                <MenuItem x:Name="optIng" Header="Search by Ingredients" Height="40" Width="165" BorderBrush="Black" MouseEnter="MenuMouseEnter" MouseLeave="MenuMouseLeave"/>
-                <MenuItem x:Name="optCui" Header="Search by Cuisine" Height="40" Width="165" BorderBrush="Black" MouseEnter="MenuMouseEnter" MouseLeave="MenuMouseLeave"/>
-                <MenuItem x:Name="optDiff" Header="Search by Difficulty" Height="40" Width="165" BorderBrush="Black" MouseEnter="MenuMouseEnter" MouseLeave="MenuMouseLeave"/>
-                <MenuItem x:Name="optExit" Header="Exit Split Screen" Height="40" Width="165" BorderBrush="Black" MouseEnter="MenuMouseEnter" MouseLeave="MenuMouseLeave"/>
+                <Menu.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#fd9f84" Offset="0"/>
+                        <GradientStop Color="#ff5b59" Offset="1"/>
+                    </LinearGradientBrush>
+                </Menu.Background>
+                <MenuItem x:Name="optIng" Header="Search by Ingredients" Height="40" Width="165" MouseEnter="MenuMouseEnter" MouseLeave="MenuMouseLeave" Foreground="White"/>
+                <MenuItem x:Name="optCui" Header="Search by Cuisine" Height="40" Width="165" MouseEnter="MenuMouseEnter" MouseLeave="MenuMouseLeave" Foreground="White"/>
+                <MenuItem x:Name="optDiff" Header="Search by Difficulty" Height="40" Width="165" MouseEnter="MenuMouseEnter" MouseLeave="MenuMouseLeave" Foreground="White"/>
+                <MenuItem x:Name="optExit" Header="Exit" Height="40" Width="165" MouseEnter="MenuMouseEnter" MouseLeave="MenuMouseLeave" Foreground="White" />
 
             </Menu>
 

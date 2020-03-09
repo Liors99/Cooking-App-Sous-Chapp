@@ -42,13 +42,13 @@ namespace SousChapp
         private void MenuMouseEnter(object sender, MouseEventArgs e)
         {
             MenuItem item = (MenuItem)sender;
-            item.Foreground = Brushes.Red;
+            item.Foreground = Brushes.Black;
         }
 
         private void MenuMouseLeave(object sender, MouseEventArgs e)
         {
             MenuItem item = (MenuItem)sender;
-            item.Foreground = Brushes.Black;
+            item.Foreground = Brushes.White;
         }
     }
 }
