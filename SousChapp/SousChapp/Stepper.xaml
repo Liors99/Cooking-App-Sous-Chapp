@@ -30,7 +30,7 @@
         <Button HorizontalAlignment="Left" Margin="157,283,0,0" VerticalAlignment="Top" Width="34" Height="34">
             <Image Source="previous.png"/>
         </Button>
-        <Button x:Name="FinishButton" Content="Finish" HorizontalAlignment="Left" Margin="306,283,0,0" VerticalAlignment="Top" Width="64" Height="34" Visibility="Hidden" Background="Red"/>
+        <Button x:Name="FinishButton" Content="Finish" HorizontalAlignment="Left" Margin="306,283,0,0" VerticalAlignment="Top" Width="64" Height="34" Visibility="Hidden" Background="IndianRed"/>
         <Button x:Name="NextButton" HorizontalAlignment="Left" Margin="306,283,0,0" VerticalAlignment="Top" Width="34" Height="34" Click="Button_Click">
             <Image Source="next.png"/>
         </Button>

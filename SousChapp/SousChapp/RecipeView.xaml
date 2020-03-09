@@ -45,7 +45,7 @@
             <TextBlock x:Name="tools" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="253" Width="198" Margin="0,137,0,0"><Run Text="Tools" TextDecorations="Underline"/><LineBreak/><Run Text="1"/><LineBreak/><Run Text="2"/><LineBreak/><Run Text="3"/><LineBreak/><Run Text="4"/></TextBlock>
             <TextBox x:Name="recipeInfo" HorizontalAlignment="Left" Height="100" Margin="193,10,0,0" TextWrapping="Wrap" Text="French Omelette &#xA;&#xA;Cooking time: 15 minutes&#xA;1 serving&#xA;&#xA;Categories: Easy, breakfast, eggs, vegetarian" VerticalAlignment="Top" Width="502"/>
             <Image x:Name="recipeImage" HorizontalAlignment="Left" Height="100" Margin="93,10,0,0" VerticalAlignment="Top" Width="100" Source="frenchomelet.png"/>
-            <Button x:Name="startButton" Content="Start cooking!" HorizontalAlignment="Left" Margin="504,34,0,0" VerticalAlignment="Top" Width="124" Height="46" Click="Button_Click"/>
+            <Button x:Name="startButton" Content="Start cooking!" HorizontalAlignment="Left" Margin="504,34,0,0" VerticalAlignment="Top" Width="124" Height="46" Click="Button_Click" Background="Lime"/>
 
         </Grid>
         <local:Stepper x:Name="step" Grid.ColumnSpan="3" HorizontalAlignment="Left" Height="328" Margin="98,34,0,0" Grid.RowSpan="3" VerticalAlignment="Top" Width="580" Visibility="Hidden"/>
