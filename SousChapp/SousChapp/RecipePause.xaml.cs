@@ -17,19 +17,11 @@ namespace SousChapp
     /// <summary>
     /// Interaction logic for Window1.xaml
     /// </summary>
-    public partial class RecipeView : Window
+    public partial class RecipePause : Window
     {
-        public RecipeView()
+        public RecipePause()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-            this.recipeGrid.Style = this.mainGrid.Resources["Blurred"] as Style;
-            this.step.Visibility = Visibility.Visible;
-            this.step.rv = this;
         }
     }
 }
