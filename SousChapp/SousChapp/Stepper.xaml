@@ -21,11 +21,19 @@
                 <RowDefinition Height="1*"/>
             </Grid.RowDefinitions>
         </Grid>
-        <Button x:Name="MinimizeButton" Content="Minimize" HorizontalAlignment="Left" Height="16" Margin="521,47,0,0" VerticalAlignment="Top" Width="16" Click="MinimizeButton_Click"/>
-        <Button Content="Exit" HorizontalAlignment="Left" Height="16" Margin="559,47,0,0" VerticalAlignment="Top" Width="16"/>
-        <Button Content="Previous" HorizontalAlignment="Left" Margin="157,283,0,0" VerticalAlignment="Top" Width="34" Height="34"/>
+        <Button x:Name="MinimizeButton" HorizontalAlignment="Left" Height="16" Margin="521,47,0,0" VerticalAlignment="Top" Width="16" Click="MinimizeButton_Click">
+            <Image Source="minimize.png"/>
+        </Button>
+        <Button HorizontalAlignment="Left" Height="16" Margin="559,47,0,0" VerticalAlignment="Top" Width="16">
+            <Image Source="close.png"/>
+        </Button>
+        <Button HorizontalAlignment="Left" Margin="157,283,0,0" VerticalAlignment="Top" Width="34" Height="34">
+            <Image Source="previous.png"/>
+        </Button>
         <Button x:Name="FinishButton" Content="Finish" HorizontalAlignment="Left" Margin="306,283,0,0" VerticalAlignment="Top" Width="64" Height="34" Visibility="Hidden" Background="Red"/>
-        <Button x:Name="NextButton" Content="Next" HorizontalAlignment="Left" Margin="306,283,0,0" VerticalAlignment="Top" Width="34" Height="34" Click="Button_Click"/>
+        <Button x:Name="NextButton" HorizontalAlignment="Left" Margin="306,283,0,0" VerticalAlignment="Top" Width="34" Height="34" Click="Button_Click">
+            <Image Source="next.png"/>
+        </Button>
 
     </Grid>
 </UserControl>
