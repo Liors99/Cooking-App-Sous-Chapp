@@ -24,5 +24,12 @@ namespace SousChapp
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.FinishButton.Visibility = Visibility.Visible;
+            this.NextButton.Visibility = Visibility.Hidden;
+            this.ComingUpLabel.Visibility = Visibility.Hidden;
+        }
     }
 }

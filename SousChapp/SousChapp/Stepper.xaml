@@ -8,7 +8,7 @@
              d:DesignHeight="333.792" d:DesignWidth="589.602">
     <Grid>
         <Grid HorizontalAlignment="Left" Height="216" VerticalAlignment="Top" Width="428" Margin="53,47,0,0" Background="White">
-            <Label Content="Coming up: the next step" HorizontalAlignment="Left" Height="36" Grid.Row="1" VerticalAlignment="Top" Width="428" Grid.ColumnSpan="2" BorderBrush="Black" BorderThickness="2"/>
+            <Label x:Name="ComingUpLabel" Content="Coming up: the next step" HorizontalAlignment="Left" Height="36" Grid.Row="1" VerticalAlignment="Top" Width="428" Grid.ColumnSpan="2" BorderBrush="Black" BorderThickness="2"/>
             <TextBlock HorizontalAlignment="Left" Height="216" TextWrapping="Wrap" VerticalAlignment="Top" Width="143" Grid.RowSpan="2"><Run Text="The current step" TextDecorations="Underline"/><LineBreak/><Run TextDecorations="Underline"/><LineBreak/><Run Text="Do the current step"/></TextBlock>
             <TextBlock HorizontalAlignment="Left" Height="216" TextWrapping="Wrap" VerticalAlignment="Top" Width="285" Grid.Column="1" Grid.RowSpan="2"><Run Text="The current step" TextDecorations="Underline"/><LineBreak/><Run TextDecorations="Underline"/><LineBreak/><Run Text="Do the current step"/></TextBlock>
             <Border Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left"/>
@@ -24,7 +24,8 @@
         <Button Content="Minimize" HorizontalAlignment="Left" Height="16" Margin="521,47,0,0" VerticalAlignment="Top" Width="16"/>
         <Button Content="Exit" HorizontalAlignment="Left" Height="16" Margin="559,47,0,0" VerticalAlignment="Top" Width="16"/>
         <Button Content="Previous" HorizontalAlignment="Left" Margin="157,283,0,0" VerticalAlignment="Top" Width="34" Height="34"/>
-        <Button Content="Next" HorizontalAlignment="Left" Margin="306,283,0,0" VerticalAlignment="Top" Width="34" Height="34"/>
+        <Button x:Name="FinishButton" Content="Finish" HorizontalAlignment="Left" Margin="306,283,0,0" VerticalAlignment="Top" Width="64" Height="34" Visibility="Hidden"/>
+        <Button x:Name="NextButton" Content="Next" HorizontalAlignment="Left" Margin="306,283,0,0" VerticalAlignment="Top" Width="34" Height="34" Click="Button_Click"/>
 
     </Grid>
 </UserControl>
