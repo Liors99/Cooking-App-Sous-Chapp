@@ -191,5 +191,13 @@
     <Resource Include="next.png" />
     <Resource Include="previous.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="keyboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="search.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

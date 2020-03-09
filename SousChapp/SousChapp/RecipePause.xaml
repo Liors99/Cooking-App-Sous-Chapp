@@ -36,9 +36,9 @@
 
         <Label Grid.Row="0" Grid.ColumnSpan="3" Name="headLabel" Content="Sous Chapp" HorizontalAlignment="Left" Margin="351,0,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Bodoni MT" FontSize="20" Height="40"/>
         <ScrollBar Grid.Column="2" Grid.RowSpan="3" HorizontalAlignment="Right" Margin="0,29,0,0" VerticalAlignment="Top" Height="390"/>
-        <TextBox Grid.Row="0" Grid.ColumnSpan="3" x:Name="text1" HorizontalAlignment="Left" Height="19" Margin="617,6,0,0" TextWrapping="Wrap" Text="Text" VerticalAlignment="Top" Width="116"/>
-        <Button Grid.Row="0" Grid.ColumnSpan="3" Content="Search" HorizontalAlignment="Left" Margin="738,5,0,0" VerticalAlignment="Top" Width="44"/>
-
+        <Button x:Name="SearchSmall" HorizontalAlignment="Right" Height="23"  VerticalAlignment="Top" Width="24" Click="SearchSmall_Click" Grid.Column="2" Margin="0,5,5,0">
+            <Image Source="search.png"/>
+        </Button>
         <Grid x:Name="recipeGrid" HorizontalAlignment="Left" Height="390" Margin="0,29,0,0" VerticalAlignment="Top" Width="770" Grid.ColumnSpan="3" Grid.RowSpan="3">
             <TextBlock x:Name="steps" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="253" Width="379" Margin="391,137,0,0"><Run Text="Steps" TextDecorations="Underline"/><LineBreak/><Run Text="1. Do one thing"/><LineBreak/><Run Text="2. Do another thing"/><LineBreak/><Run Text="3. Do a third thing"/></TextBlock>
             <TextBlock x:Name="ingredients" HorizontalAlignment="Left"  TextWrapping="Wrap" VerticalAlignment="Top" Height="253" Width="193" Margin="193,137,0,0"><Run Text="Ingredients" TextDecorations="Underline"/><LineBreak/><Run Text="Ingredient1"/><LineBreak/><Run Text="Ingredient2"/><LineBreak/><Run Text="Ingredient3"/></TextBlock>

@@ -28,22 +28,6 @@ namespace SousChapp
         }
 
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            text1.Text = "Hello World";
-        }
-
-        private void Option1_Click(object sender, RoutedEventArgs e)
-        {
-            text1.Text = "Hello World";
-        }
-
-        private void Option2_Click(object sender, RoutedEventArgs e)
-        {
-            text1.Text = "Goodbye World";
-        }
-
-
         private void MenuMouseEnter(object sender, MouseEventArgs e)
         {
             MenuItem item = (MenuItem)sender;
@@ -71,12 +55,6 @@ namespace SousChapp
             }
         }
 
-        private void Option_Click(object sender, RoutedEventArgs e)
-        {
-            MenuItem choice = (MenuItem)sender;
-            text1.Text = choice.Header.ToString();
-        }
-
         private void Split_Screen(object sender, RoutedEventArgs e)
         {
             SplitWindow split = new SplitWindow();
@@ -87,13 +65,12 @@ namespace SousChapp
 
         private void Image_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            RecipeView recipe = new RecipeView();
-            recipe.Show();
-            this.Close();
+            this.ViewRecipeButton.Visibility = Visibility.Visible;
+            Border_highlight(this.ChosenRecipe);
         }
 
 
-        private void Border_highlight(object sender, MouseEventArgs e)
+        private void Border_highlight(object sender)
         {
             
             Rectangle r = (Rectangle)sender;
@@ -101,7 +78,7 @@ namespace SousChapp
             r.Stroke = Brushes.LimeGreen;
         }
 
-        private void Border_dehighlight(object sender, MouseEventArgs e)
+        private void Border_dehighlight(object sender)
         {
             Rectangle r = (Rectangle)sender;
             r.StrokeThickness = 3;
@@ -122,6 +99,21 @@ namespace SousChapp
 
             // Use the brush to paint the rectangle.
             r.Stroke = myLinearGradientBrush;
+        }
+
+        private void ViewRecipeButton_Click(object sender, RoutedEventArgs e)
+        {
+            RecipeView recipe = new RecipeView();
+            recipe.Show();
+            this.Close();
+        }
+
+        private void SearchSmall_Click(object sender, RoutedEventArgs e)
+        {
+            this.SearchBox.Visibility = Visibility.Visible;
+            this.SearchLarge.Visibility = Visibility.Visible;
+            this.OSKeyboard.Visibility = Visibility.Visible;
+            this.SearchSmall.Visibility = Visibility.Hidden;
         }
     }
 }

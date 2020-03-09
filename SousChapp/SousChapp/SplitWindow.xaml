@@ -17,8 +17,9 @@
             
             
             <Rectangle Fill="#FFA7A7B0" HorizontalAlignment="Stretch" Height="29" Stroke="Black" VerticalAlignment="Top"/>
-            <TextBox x:Name="searchBox1" HorizontalAlignment="Right" Height="19" Margin="0,5,60,0" TextWrapping="Wrap" Text="Text" VerticalAlignment="Top" Width="116"/>
-            <Button Content="Search" HorizontalAlignment="Right" Margin="0,5,10,0" VerticalAlignment="Top" Width="44"/>
+            <Button x:Name="SearchSmall1" HorizontalAlignment="Right" Height="23" Margin="0,5,5,0" VerticalAlignment="Top" Width="24">
+                <Image Source="search.png"/>
+            </Button>
             <Button x:Name="showMenu1" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top" Width="27" Height="29" Click="ShowMenu_Click">
                 <Image Source="menu.png"/>
             </Button>
@@ -54,8 +55,9 @@
             <ScrollBar HorizontalAlignment="Right" VerticalAlignment="Stretch" Margin="0,29,0,0"/>
 
             <Rectangle Fill="#FFA7A7B0" HorizontalAlignment="Stretch" Height="29" Stroke="Black" VerticalAlignment="Top"/>
-            <TextBox x:Name="searchBox2" HorizontalAlignment="Right" Height="19" Margin="0,5,60,0" TextWrapping="Wrap" Text="Text" VerticalAlignment="Top" Width="116"/>
-            <Button Content="Search" HorizontalAlignment="Right" Margin="0,5,10,0" VerticalAlignment="Top" Width="44"/>
+            <Button x:Name="SearchSmall2" HorizontalAlignment="Right" Height="23" Margin="0,5,5,0" VerticalAlignment="Top" Width="24">
+                <Image Source="search.png"/>
+            </Button>
             <Button x:Name="showMenu2" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top" Width="27" Height="29">
                 <Image Source="menu.png"/>
             </Button>
