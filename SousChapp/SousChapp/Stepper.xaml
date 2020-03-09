@@ -7,24 +7,18 @@
              mc:Ignorable="d" 
              d:DesignHeight="333.792" d:DesignWidth="589.602">
     <Grid>
-        <Grid HorizontalAlignment="Left" Height="216" VerticalAlignment="Top" Width="428" Margin="53,47,0,0" Background="White">
-            <Label x:Name="ComingUpLabel" Content="Coming up: In a cup, beat 4 large eggs" HorizontalAlignment="Left" Height="36" Grid.Row="1" VerticalAlignment="Top" Width="428" Grid.ColumnSpan="2" BorderBrush="Black" BorderThickness="2"/>
-            <TextBlock x:Name="StepTools" HorizontalAlignment="Left" Height="216" TextWrapping="Wrap" VerticalAlignment="Top" Width="143" Grid.RowSpan="2"><Run Text="Tools and Ingredients" TextDecorations="Underline"/><LineBreak/><Run TextDecorations="Underline"/><LineBreak/><Run Text="- 1 tbsp olive oil"/><LineBreak/><Run Text="- 1 medium pan"/></TextBlock>
-            <TextBlock x:Name="StepDetail" HorizontalAlignment="Left" Height="216" TextWrapping="Wrap" VerticalAlignment="Top" Width="285" Grid.Column="1" Grid.RowSpan="2" FontSize="22"><Run Text="" TextDecorations="Underline"/><LineBreak/><Run Text="Step 1" TextDecorations="Underline"/><LineBreak/><Run Text="Heat 1 table spoon of olive oil in a pan over medium heat"/></TextBlock>
-            <Border Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left"/>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="2*"/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="5*"/>
-                <RowDefinition Height="1*"/>
-            </Grid.RowDefinitions>
-        </Grid>
-        <Button x:Name="MinimizeButton" HorizontalAlignment="Left" Height="16" Margin="521,47,0,0" VerticalAlignment="Top" Width="16" Click="MinimizeButton_Click">
+        <Border Margin="53,47,109,71" BorderBrush="Black" BorderThickness="2">
+            <Grid Background="White">
+                <Label x:Name="ComingUpLabel" Content="Coming up: In a cup, beat 4 large eggs" HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" Width="428" BorderBrush="Black" BorderThickness="2" Margin="0,180,0,0"/>
+                <TextBlock x:Name="StepTools" HorizontalAlignment="Left" Height="216" TextWrapping="Wrap" VerticalAlignment="Top" Width="143"><Run Text="Tools and Ingredients" TextDecorations="Underline"/><LineBreak/><Run TextDecorations="Underline"/><LineBreak/><Run Text="- 1 tbsp olive oil"/><LineBreak/><Run Text="- 1 medium pan"/></TextBlock>
+                <TextBlock x:Name="StepDetail" HorizontalAlignment="Left" Height="216" TextWrapping="Wrap" VerticalAlignment="Top" Width="285" FontSize="22" Margin="143,0,0,0"><Run Text="" TextDecorations="Underline"/><LineBreak/><Run Text="Step 1" TextDecorations="Underline"/><LineBreak/><Run Text="Heat 1 table spoon of olive oil in a pan over medium heat"/></TextBlock>
+                <Border Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" Margin="0,0,0,36"/>
+            </Grid>
+        </Border>
+        <Button x:Name="MinimizeButton" HorizontalAlignment="Left" Height="20" Margin="521,47,0,0" VerticalAlignment="Top" Width="20" Click="MinimizeButton_Click">
             <Image Source="minimize.png"/>
         </Button>
-        <Button HorizontalAlignment="Left" Height="16" Margin="559,47,0,0" VerticalAlignment="Top" Width="16">
+        <Button HorizontalAlignment="Left" Height="20" Margin="559,47,0,0" VerticalAlignment="Top" Width="20">
             <Image Source="close.png"/>
         </Button>
         <Button HorizontalAlignment="Left" Margin="157,283,0,0" VerticalAlignment="Top" Width="34" Height="34">

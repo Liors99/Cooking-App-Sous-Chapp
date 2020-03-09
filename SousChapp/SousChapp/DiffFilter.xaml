@@ -6,55 +6,61 @@
              xmlns:local="clr-namespace:SousChapp"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid Margin="70" Background="White">
-        <Button Content="Submit" HorizontalAlignment="Left" Height="24" Margin="274,256,0,0" VerticalAlignment="Top" Width="116"/>
-        <CheckBox Content="Beginner" HorizontalAlignment="Left" Margin="140,90,0,0" VerticalAlignment="Top" FontSize="14"/>
-        <CheckBox Content="Easy" HorizontalAlignment="Left" Margin="140,140,0,0" VerticalAlignment="Top" FontSize="14" RenderTransformOrigin="-0.827,1.918"/>
-        <CheckBox Content="Hard" HorizontalAlignment="Left" Margin="360,90,0,0" VerticalAlignment="Top" FontSize="14" RenderTransformOrigin="-0.827,1.918"/>
-        <CheckBox Content="Medium" HorizontalAlignment="Left" Margin="140,190,0,0" VerticalAlignment="Top" FontSize="14" RenderTransformOrigin="-0.827,1.918"/>
-        <CheckBox Content="Challenging" HorizontalAlignment="Left" Margin="360,140,0,0" VerticalAlignment="Top" FontSize="14" RenderTransformOrigin="-0.827,1.918"/>
-        <Image HorizontalAlignment="Left" Height="20" Margin="220,90,0,0" VerticalAlignment="Top" Width="20" Source="star.png"/>
-        <Image HorizontalAlignment="Left" Height="20" Margin="220,140,0,0" VerticalAlignment="Top" Width="20" Source="star.png"/>
-        <Image HorizontalAlignment="Left" Height="20" Margin="240,140,0,0" VerticalAlignment="Top" Width="20" Source="star.png"/>
-        <Image HorizontalAlignment="Left" Height="20" Margin="220,190,0,0" VerticalAlignment="Top" Width="20" Source="star.png" RenderTransformOrigin="8.45,0.889"/>
-        <Image HorizontalAlignment="Left" Height="20" Margin="240,190,0,0" VerticalAlignment="Top" Width="20" Source="star.png" RenderTransformOrigin="14.477,0.602"/>
-        <Image HorizontalAlignment="Left" Height="20" Margin="260,190,0,0" VerticalAlignment="Top" Width="20" Source="star.png"/>
-        <Image HorizontalAlignment="Left" Height="20" Margin="460,90,0,0" VerticalAlignment="Top" Width="20" Source="star.png" RenderTransformOrigin="1.701,0.563"/>
-        <Image HorizontalAlignment="Left" Height="20" Margin="480,90,0,0" VerticalAlignment="Top" Width="20" Source="star.png" RenderTransformOrigin="1.356,0.448"/>
-        <Image HorizontalAlignment="Left" Height="20" Margin="500,90,0,0" VerticalAlignment="Top" Width="20" Source="star.png" RenderTransformOrigin="1.356,0.448"/>
-        <Image HorizontalAlignment="Left" Height="20" Margin="520,90,0,0" VerticalAlignment="Top" Width="20" Source="star.png" RenderTransformOrigin="1.356,0.448"/>
-        <Image HorizontalAlignment="Left" Height="20" Margin="460,140,0,0" VerticalAlignment="Top" Width="20" Source="star.png" RenderTransformOrigin="1.356,0.448"/>
-        <Image HorizontalAlignment="Left" Height="20" Margin="480,140,0,0" VerticalAlignment="Top" Width="20" Source="star.png" RenderTransformOrigin="1.356,0.448"/>
-        <Image HorizontalAlignment="Left" Height="20" Margin="500,140,0,0" VerticalAlignment="Top" Width="20" Source="star.png" RenderTransformOrigin="1.356,0.448"/>
-        <Image HorizontalAlignment="Left" Height="20" Margin="520,140,0,0" VerticalAlignment="Top" Width="20" Source="star.png" RenderTransformOrigin="1.356,0.448"/>
-        <Image HorizontalAlignment="Left" Height="20" Margin="540,140,0,0" VerticalAlignment="Top" Width="20" Source="star.png" RenderTransformOrigin="1.356,0.448"/>
-        <Image HorizontalAlignment="Left" Height="20" Margin="240,90,0,0" VerticalAlignment="Top" Width="20" Source="star2.png"/>
-        <Image HorizontalAlignment="Left" Height="20" Margin="260,90,0,0" VerticalAlignment="Top" Width="20" Source="star2.png"/>
-        <Image HorizontalAlignment="Left" Height="20" Margin="280,90,0,0" VerticalAlignment="Top" Width="20" Source="star2.png"/>
-        <Image HorizontalAlignment="Left" Height="20" Margin="300,90,0,0" VerticalAlignment="Top" Width="20" Source="star2.png" RenderTransformOrigin="1.499,0.495"/>
-        <Image HorizontalAlignment="Left" Height="20" Margin="260,140,0,0" VerticalAlignment="Top" Width="20" Source="star2.png" RenderTransformOrigin="0.432,3.193"/>
-        <Image HorizontalAlignment="Left" Height="20" Margin="280,140,0,0" VerticalAlignment="Top" Width="20" Source="star2.png" RenderTransformOrigin="0.432,3.193"/>
-        <Image HorizontalAlignment="Left" Height="20" Margin="300,140,0,0" VerticalAlignment="Top" Width="20" Source="star2.png" RenderTransformOrigin="0.432,3.193"/>
-        <Image HorizontalAlignment="Left" Height="20" Margin="280,190,0,0" VerticalAlignment="Top" Width="20" Source="star2.png" RenderTransformOrigin="0.432,3.193"/>
-        <Image HorizontalAlignment="Left" Height="20" Margin="300,190,0,0" VerticalAlignment="Top" Width="20" Source="star2.png" RenderTransformOrigin="0.432,3.193"/>
-        <Image HorizontalAlignment="Left" Height="20" Margin="540,90,0,0" VerticalAlignment="Top" Width="20" Source="star2.png" RenderTransformOrigin="0.432,3.193"/>
-        <Rectangle HorizontalAlignment="Left" Height="660" Stroke="Black" VerticalAlignment="Top" Width="30" Margin="314,-315,0,-35" RenderTransformOrigin="0.5,0.5">
-            <Rectangle.Fill>
-                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                    <GradientStop Color="#fd9f84" Offset="1"/>
-                    <GradientStop Color="#FFDC4040"/>
-                </LinearGradientBrush>
-            </Rectangle.Fill>
-            <Rectangle.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="90"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Rectangle.RenderTransform>
-        </Rectangle>
-        <Label Content="&#x9;&#x9;                Search by Difficulty" HorizontalAlignment="Left" VerticalAlignment="Top" Width="660" Height="35" FontSize="20" FontFamily="Corbel" BorderBrush="Black" FontWeight="Bold"/>
+    <Border Margin="70" BorderThickness="2" Background="Black" >
+        <Grid Background="White">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="357*"/>
+                <ColumnDefinition Width="299*"/>
+            </Grid.ColumnDefinitions>
+            <Button Content="Submit" HorizontalAlignment="Left" Height="24" Margin="274,256,0,0" VerticalAlignment="Top" Width="116" Grid.ColumnSpan="2"/>
+            <CheckBox Content="Beginner" HorizontalAlignment="Left" Margin="140,90,0,0" VerticalAlignment="Top" FontSize="14"/>
+            <CheckBox Content="Easy" HorizontalAlignment="Left" Margin="140,140,0,0" VerticalAlignment="Top" FontSize="14" RenderTransformOrigin="-0.827,1.918"/>
+            <CheckBox Content="Hard" HorizontalAlignment="Left" Margin="3.077,90,0,0" VerticalAlignment="Top" FontSize="14" RenderTransformOrigin="-0.827,1.918" Grid.Column="1"/>
+            <CheckBox Content="Medium" HorizontalAlignment="Left" Margin="140,190,0,0" VerticalAlignment="Top" FontSize="14" RenderTransformOrigin="-0.827,1.918"/>
+            <CheckBox Content="Challenging" HorizontalAlignment="Left" Margin="3.077,140,0,0" VerticalAlignment="Top" FontSize="14" RenderTransformOrigin="-0.827,1.918" Grid.Column="1"/>
+            <Image HorizontalAlignment="Left" Height="20" Margin="220,90,0,0" VerticalAlignment="Top" Width="20" Source="star.png"/>
+            <Image HorizontalAlignment="Left" Height="20" Margin="220,140,0,0" VerticalAlignment="Top" Width="20" Source="star.png"/>
+            <Image HorizontalAlignment="Left" Height="20" Margin="240,140,0,0" VerticalAlignment="Top" Width="20" Source="star.png"/>
+            <Image HorizontalAlignment="Left" Height="20" Margin="220,190,0,0" VerticalAlignment="Top" Width="20" Source="star.png" RenderTransformOrigin="8.45,0.889"/>
+            <Image HorizontalAlignment="Left" Height="20" Margin="240,190,0,0" VerticalAlignment="Top" Width="20" Source="star.png" RenderTransformOrigin="14.477,0.602"/>
+            <Image HorizontalAlignment="Left" Height="20" Margin="260,190,0,0" VerticalAlignment="Top" Width="20" Source="star.png"/>
+            <Image HorizontalAlignment="Left" Height="20" Margin="103.077,90,0,0" VerticalAlignment="Top" Width="20" Source="star.png" RenderTransformOrigin="1.701,0.563" Grid.Column="1"/>
+            <Image HorizontalAlignment="Left" Height="20" Margin="123.077,90,0,0" VerticalAlignment="Top" Width="20" Source="star.png" RenderTransformOrigin="1.356,0.448" Grid.Column="1"/>
+            <Image HorizontalAlignment="Left" Height="20" Margin="143.077,90,0,0" VerticalAlignment="Top" Width="20" Source="star.png" RenderTransformOrigin="1.356,0.448" Grid.Column="1"/>
+            <Image HorizontalAlignment="Left" Height="20" Margin="163.077,90,0,0" VerticalAlignment="Top" Width="20" Source="star.png" RenderTransformOrigin="1.356,0.448" Grid.Column="1"/>
+            <Image HorizontalAlignment="Left" Height="20" Margin="103.077,140,0,0" VerticalAlignment="Top" Width="20" Source="star.png" RenderTransformOrigin="1.356,0.448" Grid.Column="1"/>
+            <Image HorizontalAlignment="Left" Height="20" Margin="123.077,140,0,0" VerticalAlignment="Top" Width="20" Source="star.png" RenderTransformOrigin="1.356,0.448" Grid.Column="1"/>
+            <Image HorizontalAlignment="Left" Height="20" Margin="143.077,140,0,0" VerticalAlignment="Top" Width="20" Source="star.png" RenderTransformOrigin="1.356,0.448" Grid.Column="1"/>
+            <Image HorizontalAlignment="Left" Height="20" Margin="163.077,140,0,0" VerticalAlignment="Top" Width="20" Source="star.png" RenderTransformOrigin="1.356,0.448" Grid.Column="1"/>
+            <Image HorizontalAlignment="Left" Height="20" Margin="183.077,140,0,0" VerticalAlignment="Top" Width="20" Source="star.png" RenderTransformOrigin="1.356,0.448" Grid.Column="1"/>
+            <Image HorizontalAlignment="Left" Height="20" Margin="240,90,0,0" VerticalAlignment="Top" Width="20" Source="star2.png"/>
+            <Image HorizontalAlignment="Left" Height="20" Margin="260,90,0,0" VerticalAlignment="Top" Width="20" Source="star2.png"/>
+            <Image HorizontalAlignment="Left" Height="20" Margin="280,90,0,0" VerticalAlignment="Top" Width="20" Source="star2.png"/>
+            <Image HorizontalAlignment="Left" Height="20" Margin="300,90,0,0" VerticalAlignment="Top" Width="20" Source="star2.png" RenderTransformOrigin="1.499,0.495"/>
+            <Image HorizontalAlignment="Left" Height="20" Margin="260,140,0,0" VerticalAlignment="Top" Width="20" Source="star2.png" RenderTransformOrigin="0.432,3.193"/>
+            <Image HorizontalAlignment="Left" Height="20" Margin="280,140,0,0" VerticalAlignment="Top" Width="20" Source="star2.png" RenderTransformOrigin="0.432,3.193"/>
+            <Image HorizontalAlignment="Left" Height="20" Margin="300,140,0,0" VerticalAlignment="Top" Width="20" Source="star2.png" RenderTransformOrigin="0.432,3.193"/>
+            <Image HorizontalAlignment="Left" Height="20" Margin="280,190,0,0" VerticalAlignment="Top" Width="20" Source="star2.png" RenderTransformOrigin="0.432,3.193"/>
+            <Image HorizontalAlignment="Left" Height="20" Margin="300,190,0,0" VerticalAlignment="Top" Width="20" Source="star2.png" RenderTransformOrigin="0.432,3.193"/>
+            <Image HorizontalAlignment="Left" Height="20" Margin="183.077,90,0,0" VerticalAlignment="Top" Width="20" Source="star2.png" RenderTransformOrigin="0.432,3.193" Grid.Column="1"/>
+            <Rectangle HorizontalAlignment="Left" Height="660" Stroke="Black" VerticalAlignment="Top" Width="30" Margin="314,-315,0,-39" RenderTransformOrigin="0.5,0.5">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                        <GradientStop Color="#fd9f84" Offset="1"/>
+                        <GradientStop Color="#FFDC4040"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="90"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+            <Label Content="&#x9;&#x9;                Search by Difficulty" HorizontalAlignment="Left" VerticalAlignment="Top" Width="660" Height="35" FontSize="20" FontFamily="Corbel" BorderBrush="Black" FontWeight="Bold" Grid.ColumnSpan="2" Margin="0,0,-4,0"/>
 
-    </Grid>
+        </Grid>
+    </Border>
 </UserControl>
