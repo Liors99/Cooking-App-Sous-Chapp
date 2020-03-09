@@ -47,13 +47,13 @@ namespace SousChapp
         private void MenuMouseEnter(object sender, MouseEventArgs e)
         {
             MenuItem item = (MenuItem)sender;
-            item.Foreground = Brushes.Red;
+            item.Foreground = Brushes.Black;
         }
 
         private void MenuMouseLeave(object sender, MouseEventArgs e)
         {
             MenuItem item = (MenuItem)sender;
-            item.Foreground = Brushes.Black;
+            item.Foreground = Brushes.White;
         }
 
         private void ShowMenu_Click(object sender, RoutedEventArgs e)
@@ -84,16 +84,43 @@ namespace SousChapp
             this.Close();
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
 
         private void Image_MouseDown(object sender, MouseButtonEventArgs e)
         {
             RecipeView recipe = new RecipeView();
             recipe.Show();
             this.Close();
+        }
+
+
+        private void Border_highlight(object sender, MouseEventArgs e)
+        {
+            
+            Rectangle r = (Rectangle)sender;
+            r.StrokeThickness = 6;
+            r.Stroke = Brushes.LimeGreen;
+        }
+
+        private void Border_dehighlight(object sender, MouseEventArgs e)
+        {
+            Rectangle r = (Rectangle)sender;
+            r.StrokeThickness = 3;
+
+            Color newRed = Color.FromRgb(255, 91, 89);
+            Color newPink = Color.FromRgb(253, 159, 132);
+
+            // Create a diagonal linear gradient with four stops.   
+            LinearGradientBrush myLinearGradientBrush =
+                new LinearGradientBrush();
+            myLinearGradientBrush.StartPoint = new Point(0, 0);
+            myLinearGradientBrush.EndPoint = new Point(1, 1);
+            myLinearGradientBrush.GradientStops.Add(
+                new GradientStop(newRed, 1.0));
+            myLinearGradientBrush.GradientStops.Add(
+                new GradientStop(newPink, 0.0));
+
+            // Use the brush to paint the rectangle.
+            r.Stroke = myLinearGradientBrush;
         }
     }
 }
