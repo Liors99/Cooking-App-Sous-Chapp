@@ -50,5 +50,10 @@ namespace SousChapp
             MenuItem item = (MenuItem)sender;
             item.Foreground = Brushes.White;
         }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

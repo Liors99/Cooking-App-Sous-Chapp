@@ -25,6 +25,29 @@ namespace SousChapp
         {
             InitializeComponent();
             mainMenu.Visibility = Visibility.Hidden;
+
+            //Testing code
+            RecipeDetails rd = new RecipeDetails();
+
+            rd.setImage("star.png");
+            rd.setRecipeName("BEST RECIPE NAME EVER");
+            rd.setServing(1);
+            rd.setCookingTime(20);
+            rd.addCategory("Easy");
+
+            rd.addIngridient("Pasta");
+            rd.addIngridient("Water");
+            rd.addStep("Some step number #1");
+            rd.addStep("Some step number #2");
+
+            rd.addTool("some tool #1");
+            rd.addTool("some tool #2");
+
+            DynamicRecipeView drv = new DynamicRecipeView(rd);
+
+
+            drv.Show();
+            this.Close();
         }
 
 

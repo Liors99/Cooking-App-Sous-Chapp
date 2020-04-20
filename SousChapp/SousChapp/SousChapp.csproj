@@ -56,6 +56,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="RecipeDetails.cs" />
     <Compile Include="Stepper.xaml.cs">
       <DependentUpon>Stepper.xaml</DependentUpon>
     </Compile>
@@ -76,6 +77,9 @@
     </Compile>
     <Compile Include="RecipePause.xaml.cs">
       <DependentUpon>RecipePause.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicRecipeView.xaml.cs">
+      <DependentUpon>DynamicRecipeView.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -117,6 +121,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="DynamicRecipeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -145,57 +153,57 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="menu.png">
+    <Resource Include="Resources\menu.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="aglioeolio.png">
+    <Resource Include="Resources\aglioeolio.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="chocolatechipcookies.png">
+    <Resource Include="Resources\chocolatechipcookies.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="frenchomelet.png">
+    <Resource Include="Resources\frenchomelet.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="padthai.png">
+    <Resource Include="Resources\padthai.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="star.png">
+    <Resource Include="Resources\star.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="star2.png">
+    <Resource Include="Resources\star2.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="minimize.png">
+    <Resource Include="Resources\minimize.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="close.png" />
+    <Resource Include="Resources\close.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="next.png" />
-    <Resource Include="previous.png" />
+    <Resource Include="Resources\next.png" />
+    <Resource Include="Resources\previous.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="keyboard.png" />
+    <Resource Include="Resources\keyboard.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="search.png">
+    <Resource Include="Resources\search.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
