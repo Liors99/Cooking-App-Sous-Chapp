@@ -17,12 +17,9 @@
                 <Border Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" Margin="0,0,0,36"/>
             </Grid>
         </Border>
-        <Button x:Name="MinimizeButton" HorizontalAlignment="Left" Height="20" Margin="521,47,0,0" VerticalAlignment="Top" Width="20" Click="MinimizeButton_Click">
-            <Image Source="Resources/minimize.png"/>
-        </Button>
-        <Button HorizontalAlignment="Left" Height="20" Margin="559,47,0,0" VerticalAlignment="Top" Width="20">
-            <Image Source="Resources/close.png"/>
-        </Button>
+            <Button x:Name="MinimizeButton" HorizontalAlignment="Left" Height="20" Margin="559,47,0,0" VerticalAlignment="Top" Width="20" Click="MinimizeButton_Click">
+                <Image Source="Resources/minimize.png"/>
+            </Button>
             <Button x:Name="prevButton" HorizontalAlignment="Left" Margin="157,283,0,0" VerticalAlignment="Top" Width="34" Height="34" Click="prevButton_Click">
             <Image Source="Resources/previous.png"/>
         </Button>

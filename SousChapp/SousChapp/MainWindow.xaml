@@ -5,70 +5,74 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SousChapp"
         mc:Ignorable="d"
-        Title="Sous-Chapp" Height="450" Width="800">
-    <Grid>
-        <Image HorizontalAlignment="Left" Height="118" Margin="96,265,0,0" VerticalAlignment="Top" Width="120" Source="Resources/padthai.png"/>
-        <Image HorizontalAlignment="Left" Height="118" Margin="96,84,0,0" VerticalAlignment="Top" Width="120" Source="Resources/chocolatechipcookies.png"/>
-        <Menu x:Name="mainMenu" HorizontalAlignment="Left" Height="auto" VerticalAlignment="Top" Width="165" Margin="0,29,0,0">
-            <Menu.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#fd9f84" Offset="0"/>
-                    <GradientStop Color="#ff5b59" Offset="1"/>
-                </LinearGradientBrush>
-            </Menu.Background>
-            <MenuItem x:Name="optIng" Header="Search by Ingredients" Height="40" Width="165" MouseEnter="MenuMouseEnter" MouseLeave="MenuMouseLeave" Foreground="White" Click="OptIng_Click"/>
-            <MenuItem x:Name="optCui" Header="Search by Cuisine" Height="40" Width="165" MouseEnter="MenuMouseEnter" MouseLeave="MenuMouseLeave" Foreground="White" Click="OptCui_Click"/>
-            <MenuItem x:Name="optDiff" Header="Search by Difficulty" Height="40" Width="165" MouseEnter="MenuMouseEnter" MouseLeave="MenuMouseLeave" Foreground="White" Click="OptDiff_Click"/>
-            <MenuItem x:Name="optSplit" Header="Split" Height="40" Width="165" Click="Split_Screen"  MouseEnter="MenuMouseEnter" MouseLeave="MenuMouseLeave" Foreground="White" />
-            <MenuItem x:Name="optExit" Header="Exit" Height="40" Width="165" MouseEnter="MenuMouseEnter" MouseLeave="MenuMouseLeave" Foreground="White" />
-        </Menu>
-        <Rectangle HorizontalAlignment="Left" Height="798" Stroke="Black" VerticalAlignment="Top" Width="30" Margin="382,-385,0,0" RenderTransformOrigin="0.5,0.5">
-            <Rectangle.Fill>
-                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                    <GradientStop Color="#fd9f84" Offset="1"/>
-                    <GradientStop Color="#FFDC4040"/>
-                </LinearGradientBrush>
-            </Rectangle.Fill>
-            <Rectangle.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="90"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Rectangle.RenderTransform>
-        </Rectangle>
-        <Button x:Name="showMenu" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top" Width="27" Click="ShowMenu_Click" RenderTransformOrigin="-0.342,-0.861" Height="29" BorderBrush="{x:Null}" Background="#fd9f84" Foreground="{x:Null}">
-            <Image Source="Resources/menu.png"/>
-        </Button>
-        <Label Content="Sous Chapp" HorizontalAlignment="Left" Margin="351,0,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Bodoni MT" FontSize="20" Height="40"/>
-        <Image HorizontalAlignment="Left" Height="118" Margin="464,84,0,0" VerticalAlignment="Top" Width="120" Source="Resources/frenchomelet.png" MouseDown="Image_MouseDown"/>
-        <Image HorizontalAlignment="Left" Height="118" Margin="464,265,0,0" VerticalAlignment="Top" Width="120" Source="Resources/aglioeolio.png"/>
-        <ScrollBar HorizontalAlignment="Left" Margin="775,29,0,0" VerticalAlignment="Top" Height="390"/>
-        <TextBox x:Name="SearchBox" HorizontalAlignment="Left" Height="19" Margin="617,6,0,0" TextWrapping="Wrap" Text="Enter keyword" VerticalAlignment="Top" Width="116" Visibility="Hidden"/>
-        <Button x:Name="SearchLarge" Content="Search" HorizontalAlignment="Left" Margin="738,5,0,0" VerticalAlignment="Top" Width="44" Visibility="Hidden"/>
-        <Rectangle x:Name="ChosenRecipe" HorizontalAlignment="Left" Height="118" Margin="464,84,0,0" VerticalAlignment="Top" Width="240" StrokeThickness="3">
-            <!--<Rectangle.Stroke>
+        Title="Sous-Chapp" Height="450" Width="800"
+        WindowState="Maximized"
+        WindowStyle="None">
+    <Viewbox StretchDirection="Both" Stretch="Uniform">
+        <Grid>
+            <Image HorizontalAlignment="Left" Height="118" Margin="96,265,0,0" VerticalAlignment="Top" Width="120" Source="Resources/padthai.png"/>
+            <Image HorizontalAlignment="Left" Height="118" Margin="96,84,0,0" VerticalAlignment="Top" Width="120" Source="Resources/chocolatechipcookies.png"/>
+            <Menu x:Name="mainMenu" HorizontalAlignment="Left" Height="auto" VerticalAlignment="Top" Width="165" Margin="0,29,0,0">
+                <Menu.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#fd9f84" Offset="0"/>
+                        <GradientStop Color="#ff5b59" Offset="1"/>
+                    </LinearGradientBrush>
+                </Menu.Background>
+                <MenuItem x:Name="optIng" Header="Search by Ingredients" Height="40" Width="165" MouseEnter="MenuMouseEnter" MouseLeave="MenuMouseLeave" Foreground="White" Click="OptIng_Click"/>
+                <MenuItem x:Name="optCui" Header="Search by Cuisine" Height="40" Width="165" MouseEnter="MenuMouseEnter" MouseLeave="MenuMouseLeave" Foreground="White" Click="OptCui_Click"/>
+                <MenuItem x:Name="optDiff" Header="Search by Difficulty" Height="40" Width="165" MouseEnter="MenuMouseEnter" MouseLeave="MenuMouseLeave" Foreground="White" Click="OptDiff_Click"/>
+                <MenuItem x:Name="optSplit" Header="Split" Height="40" Width="165" Click="Split_Screen"  MouseEnter="MenuMouseEnter" MouseLeave="MenuMouseLeave" Foreground="White" />
+                <MenuItem x:Name="optExit" Header="Exit" Height="40" Width="165" MouseEnter="MenuMouseEnter" MouseLeave="MenuMouseLeave" Foreground="White" />
+            </Menu>
+            <Rectangle HorizontalAlignment="Left" Height="798" Stroke="Black" VerticalAlignment="Top" Width="30" Margin="382,-385,0,0" RenderTransformOrigin="0.5,0.5">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                        <GradientStop Color="#fd9f84" Offset="1"/>
+                        <GradientStop Color="#FFDC4040"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="90"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+            <Button x:Name="showMenu" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top" Width="27" Click="ShowMenu_Click" RenderTransformOrigin="-0.342,-0.861" Height="29" BorderBrush="{x:Null}" Background="#fd9f84" Foreground="{x:Null}">
+                <Image Source="Resources/menu.png"/>
+            </Button>
+            <Label Content="Sous Chapp" HorizontalAlignment="Left" Margin="351,0,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Bodoni MT" FontSize="20" Height="40"/>
+            <Image HorizontalAlignment="Left" Height="118" Margin="464,84,0,0" VerticalAlignment="Top" Width="120" Source="Resources/frenchomelet.png" MouseDown="Image_MouseDown"/>
+            <Image HorizontalAlignment="Left" Height="118" Margin="464,265,0,0" VerticalAlignment="Top" Width="120" Source="Resources/aglioeolio.png"/>
+            <ScrollBar HorizontalAlignment="Left" Margin="775,29,0,0" VerticalAlignment="Top" Height="390"/>
+            <TextBox x:Name="SearchBox" HorizontalAlignment="Left" Height="19" Margin="617,6,0,0" TextWrapping="Wrap" Text="Enter keyword" VerticalAlignment="Top" Width="116" Visibility="Hidden"/>
+            <Button x:Name="SearchLarge" Content="Search" HorizontalAlignment="Left" Margin="738,5,0,0" VerticalAlignment="Top" Width="44" Visibility="Hidden"/>
+            <Rectangle x:Name="ChosenRecipe" HorizontalAlignment="Left" Height="118" Margin="464,84,0,0" VerticalAlignment="Top" Width="240" StrokeThickness="3">
+                <!--<Rectangle.Stroke>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#fd9f84" Offset="0"/>
                     <GradientStop Color="#ff5b59" Offset="1"/>
                 </LinearGradientBrush>
             </Rectangle.Stroke>-->
-        </Rectangle>
-        <TextBlock HorizontalAlignment="Left" Margin="221,292,0,0" TextWrapping="Wrap" Text="Pad Thai" VerticalAlignment="Top" Height="28" Width="91" TextAlignment="Center" FontSize="16"/>
-        <TextBlock HorizontalAlignment="Left" Margin="216,97,0,0" TextWrapping="Wrap" Text="Chocolate Chip Cookie" VerticalAlignment="Top" Height="57" Width="120" TextAlignment="Center" FontSize="16"/>
-        <TextBlock HorizontalAlignment="Left" Margin="589,97,0,0" TextWrapping="Wrap" Text="French Omelette" VerticalAlignment="Top" Height="57" Width="107" TextAlignment="Center" FontSize="16"/>
-        <TextBlock HorizontalAlignment="Left" Margin="589,292,0,0" TextWrapping="Wrap" Text="Aglio E Olio" VerticalAlignment="Top" Height="57" Width="107" TextAlignment="Center" FontSize="16"/>
-        <Button x:Name="ViewRecipeButton" Content="View Recipe" HorizontalAlignment="Left" Height="34" Margin="598,154,0,0" VerticalAlignment="Top" Width="88" Background="LimeGreen" Click="ViewRecipeButton_Click" Visibility="Hidden"/>
-        <Button x:Name="OSKeyboard" HorizontalAlignment="Left" Height="19" Margin="584,6,0,0" VerticalAlignment="Top" Width="28" Visibility="Hidden">
-            <Image Source="Resources/keyboard.png"/>
-        </Button>
-        <Button x:Name="SearchSmall" HorizontalAlignment="Left" Height="23" Margin="758,2,0,0" VerticalAlignment="Top" Width="24" Click="SearchSmall_Click" Background="{x:Null}" BorderBrush="{x:Null}">
-            <Image Source="Resources/search.png"/>
-        </Button>
-        <local:IngFilter x:Name="IngFilterPopup" HorizontalAlignment="Left" Height="475" Margin="0,-32,-21,-24" VerticalAlignment="Top" Width="813" Visibility="Hidden"/>
-        <local:CuiFilter x:Name="CuiFilterPopup" HorizontalAlignment="Left" Height="475" Margin="0,-32,-21,-24" VerticalAlignment="Top" Width="813" Visibility="Hidden"/>
-        <local:DiffFilter x:Name="DiffFilterPopup" HorizontalAlignment="Left" Height="475" Margin="0,-32,-21,-24" VerticalAlignment="Top" Width="813" Visibility="Hidden"/>
+            </Rectangle>
+            <TextBlock HorizontalAlignment="Left" Margin="221,292,0,0" TextWrapping="Wrap" Text="Pad Thai" VerticalAlignment="Top" Height="28" Width="91" TextAlignment="Center" FontSize="16"/>
+            <TextBlock HorizontalAlignment="Left" Margin="216,97,0,0" TextWrapping="Wrap" Text="Chocolate Chip Cookie" VerticalAlignment="Top" Height="57" Width="120" TextAlignment="Center" FontSize="16"/>
+            <TextBlock HorizontalAlignment="Left" Margin="589,97,0,0" TextWrapping="Wrap" Text="French Omelette" VerticalAlignment="Top" Height="57" Width="107" TextAlignment="Center" FontSize="16"/>
+            <TextBlock HorizontalAlignment="Left" Margin="589,292,0,0" TextWrapping="Wrap" Text="Aglio E Olio" VerticalAlignment="Top" Height="57" Width="107" TextAlignment="Center" FontSize="16"/>
+            <Button x:Name="ViewRecipeButton" Content="View Recipe" HorizontalAlignment="Left" Height="34" Margin="598,154,0,0" VerticalAlignment="Top" Width="88" Background="LimeGreen" Click="ViewRecipeButton_Click" Visibility="Hidden"/>
+            <Button x:Name="OSKeyboard" HorizontalAlignment="Left" Height="19" Margin="584,6,0,0" VerticalAlignment="Top" Width="28" Visibility="Hidden">
+                <Image Source="Resources/keyboard.png"/>
+            </Button>
+            <Button x:Name="SearchSmall" HorizontalAlignment="Left" Height="23" Margin="758,2,0,0" VerticalAlignment="Top" Width="24" Click="SearchSmall_Click" Background="{x:Null}" BorderBrush="{x:Null}">
+                <Image Source="Resources/search.png"/>
+            </Button>
+            <local:IngFilter x:Name="IngFilterPopup" HorizontalAlignment="Left" Height="475" Margin="0,-32,-21,-24" VerticalAlignment="Top" Width="813" Visibility="Hidden"/>
+            <local:CuiFilter x:Name="CuiFilterPopup" HorizontalAlignment="Left" Height="475" Margin="0,-32,-21,-24" VerticalAlignment="Top" Width="813" Visibility="Hidden"/>
+            <local:DiffFilter x:Name="DiffFilterPopup" HorizontalAlignment="Left" Height="475" Margin="0,-32,-21,-24" VerticalAlignment="Top" Width="813" Visibility="Hidden"/>
 
-    </Grid>
+        </Grid>
+    </Viewbox>
 </Window>

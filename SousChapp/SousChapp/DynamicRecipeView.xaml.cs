@@ -103,6 +103,7 @@ namespace SousChapp
             foreach (String step in steps_array){
                 this.steps.Inlines.Add(i+ ") "+step);
                 this.steps.Inlines.Add("\n");
+                i++;
             }
         }
 

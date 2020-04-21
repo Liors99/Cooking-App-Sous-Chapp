@@ -26,6 +26,7 @@ namespace SousChapp
             InitializeComponent();
             mainMenu.Visibility = Visibility.Hidden;
 
+            /*
             //Testing code
             RecipeDetails rd = new RecipeDetails();
 
@@ -48,6 +49,7 @@ namespace SousChapp
 
             drv.Show();
             this.Close();
+            */
         }
 
 
@@ -126,8 +128,46 @@ namespace SousChapp
 
         private void ViewRecipeButton_Click(object sender, RoutedEventArgs e)
         {
-            RecipeView recipe = new RecipeView();
-            recipe.Show();
+            
+            RecipeDetails rd = new RecipeDetails();
+
+            rd.setImage("frenchomelet.png");
+            rd.setRecipeName("French Omelette ");
+            rd.setCookingTime(15);
+            rd.setServing(1);
+
+            rd.addCategory("Easy");
+            rd.addCategory("Breakfast");
+            rd.addCategory("Eggs");
+            rd.addCategory("Vegeterian");
+            
+            //Steps
+            rd.addIngridient("4 large eggs");
+            rd.addIngridient("1 tbsp olive oil");
+            rd.addIngridient("100 grams cheddar cheese");
+            rd.addIngridient("pinch salt");
+            rd.addIngridient("pinch pepper");
+
+            //Tools
+            rd.addTool("1 cup");
+            rd.addTool("1 fork");
+            rd.addTool("1 medium pan");
+            rd.addTool("1 spatula");
+
+            //Steps
+            rd.addStep("Heat 1 table spoon of olive oil in a pan over medium heat");
+            rd.addStep("In a cup, beat 4 large eggs");
+            rd.addStep("Add salt and pepper to taste");
+            rd.addStep("Pour eggs into pan");
+            rd.addStep("Cook until eggs set");
+            rd.addStep("Using the spatula, flip the omelette");
+            rd.addStep("Spread cheese over the omelette");
+            rd.addStep("Cook for 3 minutes and fold");
+            rd.addStep("Serve immediately");
+
+            DynamicRecipeView drv = new DynamicRecipeView(rd);
+
+            drv.Show();
             this.Close();
         }
 
