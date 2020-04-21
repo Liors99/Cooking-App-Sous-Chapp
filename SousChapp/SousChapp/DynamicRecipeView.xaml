@@ -18,6 +18,13 @@
                         </Setter.Value>
                     </Setter>
                 </Style>
+                <Style x:Key="Default" TargetType="{x:Type Grid}">
+                    <Setter Property="Effect">
+                        <Setter.Value>
+                            <BlurEffect Radius="0"/>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
             </Grid.Resources>
 
             <Grid.RowDefinitions>
@@ -61,17 +68,19 @@
                 <TextBlock x:Name="ingredients" HorizontalAlignment="Left"  TextWrapping="Wrap" VerticalAlignment="Top" Height="253" Width="198" Margin="193,137,0,0"><Run Text="Ingredients" TextDecorations="Underline"/><LineBreak/></TextBlock>
                 <TextBlock x:Name="tools" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="253" Width="198" Margin="0,137,0,0"><Run Text="Tools" TextDecorations="Underline"/><LineBreak/></TextBlock>
                 <Image x:Name="recipeImage" HorizontalAlignment="Left" Height="100" Margin="93,10,0,0" VerticalAlignment="Top" Width="100"/>
-                <Button x:Name="startButton" Content="Start cooking!" HorizontalAlignment="Left" Margin="504,34,0,0" VerticalAlignment="Top" Width="124" Height="46" Background="LimeGreen"/>
+                <Button x:Name="startButton" Content="Start cooking!" HorizontalAlignment="Left" Margin="504,34,0,0" VerticalAlignment="Top" Width="124" Height="46" Background="LimeGreen" Click="startButton_Click"/>
                 <TextBlock x:Name="recipeName" HorizontalAlignment="Left" Margin="279,21,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="21" Width="186"/>
                 <TextBlock x:Name="recipeCookingTime" HorizontalAlignment="Left" Margin="279,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="21" Width="186"/>
                 <TextBlock x:Name="recipeServing" HorizontalAlignment="Left" Margin="279,73,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="21" Width="186"/>
                 <TextBlock x:Name="recipeCatgories" HorizontalAlignment="Left" Margin="279,99,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="21" Width="186"/>
+                <Button x:Name="contButton" Content="Continue Recipe" HorizontalAlignment="Left" Margin="504,34,0,0" VerticalAlignment="Top" Width="124" Height="46" Background="LimeGreen" Click="contButton_Click" Visibility="Hidden"/>
+                <Button x:Name="cancelButton" Content="Cancel Recipe" HorizontalAlignment="Left" Margin="504,86,0,0" VerticalAlignment="Top" Width="124" Height="46" Background="IndianRed" Click="cancelButton_Click" Visibility="Hidden"/>
 
             </Grid>
             <local:Stepper x:Name="step" Grid.ColumnSpan="3" HorizontalAlignment="Left" Height="328" Margin="98,34,0,0" Grid.RowSpan="3" VerticalAlignment="Top" Width="580" Visibility="Hidden"/>
             <Image Grid.Column="1" HorizontalAlignment="Left" Height="39" VerticalAlignment="Top" Width="200" Grid.ColumnSpan="2" Margin="110,-5,0,0" Source="Resources/Logo.png"/>
 
-
+            
 
         </Grid>
     </Viewbox>

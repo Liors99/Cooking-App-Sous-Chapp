@@ -20,9 +20,15 @@ namespace SousChapp
     /// </summary>
     public partial class DynamicRecipeView : Window
     {
+
+        private ArrayList steps_arraylist;
+        
         public DynamicRecipeView(RecipeDetails rd)
         {
             InitializeComponent();
+
+            this.steps_arraylist = rd.getSteps();
+            this.step.initializeStepper(this.steps_arraylist);
 
             setImage(rd.getImage());
             setName(rd.getRecipeName());
@@ -33,6 +39,7 @@ namespace SousChapp
             setTools(rd.getTools());
             setIngridients(rd.getIngridients());
             setSteps(rd.getSteps());
+
             
 
 
@@ -100,5 +107,46 @@ namespace SousChapp
         }
 
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+            this.recipeGrid.Style = this.mainGrid.Resources["Blurred"] as Style;
+            
+            this.step.Visibility = Visibility.Visible;
+            this.step.rv = this;
+        }
+
+  
+
+        private void startButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.step.reset();
+            this.startButton.IsEnabled = false;
+            this.recipeGrid.Style = this.mainGrid.Resources["Blurred"] as Style;
+            this.step.Visibility = Visibility.Visible;
+            this.step.rv = this;
+            
+        }
+
+        private void contButton_Click(object sender, RoutedEventArgs e) {
+            this.startButton.IsEnabled = false;
+            this.step.Visibility = Visibility.Visible;
+            this.recipeGrid.Style = this.mainGrid.Resources["Blurred"] as Style;
+        }
+
+        private void cancelButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.startButton.IsEnabled = true;
+            this.step.Visibility = Visibility.Hidden;
+
+            this.startButton.Visibility = Visibility.Visible;
+            this.startButton.IsEnabled = true;
+
+
+            this.contButton.Visibility = Visibility.Hidden;
+            this.cancelButton.Visibility = Visibility.Hidden;
+
+            this.step.reset();
+        }
     }
 }

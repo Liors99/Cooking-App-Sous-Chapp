@@ -56,6 +56,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ArrayList.cs" />
     <Compile Include="RecipeDetails.cs" />
     <Compile Include="Stepper.xaml.cs">
       <DependentUpon>Stepper.xaml</DependentUpon>

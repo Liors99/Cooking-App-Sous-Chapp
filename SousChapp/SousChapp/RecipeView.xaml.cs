@@ -29,7 +29,7 @@ namespace SousChapp
 
             this.recipeGrid.Style = this.mainGrid.Resources["Blurred"] as Style;
             this.step.Visibility = Visibility.Visible;
-            this.step.rv = this;
+            //this.step.rv = this;
         }
     }
 }

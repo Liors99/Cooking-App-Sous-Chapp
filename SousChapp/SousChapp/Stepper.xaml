@@ -6,7 +6,9 @@
              xmlns:local="clr-namespace:SousChapp"
              mc:Ignorable="d" 
              d:DesignHeight="333.792" d:DesignWidth="589.602">
-    <Grid>
+
+    <Viewbox StretchDirection="Both" Stretch="Uniform">
+        <Grid>
         <Border Margin="53,47,109,71" BorderBrush="Black" BorderThickness="2">
             <Grid Background="White">
                 <Label x:Name="ComingUpLabel" Content="Coming up: In a cup, beat 4 large eggs" HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" Width="428" BorderBrush="Black" BorderThickness="2" Margin="0,180,0,0"/>
@@ -16,18 +18,19 @@
             </Grid>
         </Border>
         <Button x:Name="MinimizeButton" HorizontalAlignment="Left" Height="20" Margin="521,47,0,0" VerticalAlignment="Top" Width="20" Click="MinimizeButton_Click">
-            <Image Source="minimize.png"/>
+            <Image Source="Resources/minimize.png"/>
         </Button>
         <Button HorizontalAlignment="Left" Height="20" Margin="559,47,0,0" VerticalAlignment="Top" Width="20">
-            <Image Source="close.png"/>
+            <Image Source="Resources/close.png"/>
         </Button>
-        <Button HorizontalAlignment="Left" Margin="157,283,0,0" VerticalAlignment="Top" Width="34" Height="34">
-            <Image Source="previous.png"/>
+            <Button x:Name="prevButton" HorizontalAlignment="Left" Margin="157,283,0,0" VerticalAlignment="Top" Width="34" Height="34" Click="prevButton_Click">
+            <Image Source="Resources/previous.png"/>
         </Button>
-        <Button x:Name="FinishButton" Content="Finish" HorizontalAlignment="Left" Margin="306,283,0,0" VerticalAlignment="Top" Width="64" Height="34" Visibility="Hidden" Background="IndianRed"/>
-        <Button x:Name="NextButton" HorizontalAlignment="Left" Margin="306,283,0,0" VerticalAlignment="Top" Width="34" Height="34" Click="Button_Click">
-            <Image Source="next.png"/>
+            <Button x:Name="FinishButton" Content="Finish" HorizontalAlignment="Left" Margin="306,283,0,0" VerticalAlignment="Top" Width="64" Height="34" Visibility="Hidden" Background="IndianRed" Click="finishButton_Click"/>
+        <Button x:Name="NextButton" HorizontalAlignment="Left" Margin="306,283,0,0" VerticalAlignment="Top" Width="34" Height="34" Click="nextButton_Click">
+            <Image Source="Resources/next.png"/>
         </Button>
 
     </Grid>
+    </Viewbox>
 </UserControl>
