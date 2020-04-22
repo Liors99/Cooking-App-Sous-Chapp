@@ -168,10 +168,10 @@ namespace SousChapp
 
             DynamicRecipeView drv = new DynamicRecipeView(rd, this);
 
-            drv.Visibility = Visibility.Visible;
-            this.Visibility = Visibility.Hidden;
-            //drv.Show();
-            //this.Close();
+            //drv.Visibility = Visibility.Visible;
+            //this.Visibility = Visibility.Hidden;
+            drv.Show();
+            this.Close();
         }
 
         private void SearchSmall_Click(object sender, RoutedEventArgs e)

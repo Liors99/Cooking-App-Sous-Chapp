@@ -164,9 +164,10 @@ namespace SousChapp
         }
 
         private void backBtn_Click(object sender, RoutedEventArgs e) {
-            
+
             //this.Close();
-            this.mw.Visibility = Visibility.Visible;
+            MainWindow mw = new MainWindow();
+            mw.Show();
             this.Close();
             //mw.Show();
 

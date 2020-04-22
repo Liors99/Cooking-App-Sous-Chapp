@@ -58,8 +58,6 @@
                 </Rectangle.RenderTransform>
             </Rectangle>
 
-            <Image HorizontalAlignment="Left" Height="28" Margin="125.333,0,0,0" VerticalAlignment="Top" Width="134" Grid.Column="1" Source="Resources/Logo.png"/>
-
             <Button x:Name="showMenu" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top" Width="27" RenderTransformOrigin="-0.342,-0.861" Height="29" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}">
                 <Image Source="Resources/menu.png"/>
             </Button>
@@ -67,8 +65,8 @@
                 <Image Source="Resources/search.png"/>
             </Button>
 
-            <Grid x:Name="recipeGrid" HorizontalAlignment="Left" Height="390" Margin="-1,29,0,0" VerticalAlignment="Top" Width="770" Grid.ColumnSpan="3" Grid.RowSpan="3">
-                <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <Grid x:Name="recipeGrid" HorizontalAlignment="Left" Height="385" Margin="-1,34,0,0" VerticalAlignment="Top" Width="770" Grid.ColumnSpan="3" Grid.RowSpan="3">
+                <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="0,3,0,0">
                     <Canvas x:Name ="recipeCanvas" Height="390"  Width="770">
 
                         <Rectangle HorizontalAlignment="Left" Height="124" Margin="81,8,0,0" Stroke="Black" VerticalAlignment="Top" Width="591"/>
@@ -107,8 +105,8 @@
 
 
                         <TextBlock x:Name="steps" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="174" Width="352" FontSize="14" FontFamily="Arial" TextAlignment="Left" Canvas.Left="401" Canvas.Top="206"><Run Text="" TextDecorations="Underline"/><LineBreak/></TextBlock>
-                        <TextBlock x:Name="ingredients" HorizontalAlignment="Left"  TextWrapping="Wrap" VerticalAlignment="Top" Height="184" Width="188" Margin="198,206,0,0" FontSize="14" FontFamily="Arial" TextAlignment="Center"><Run Text="" TextDecorations="Underline" /><LineBreak/></TextBlock>
-                        <TextBlock x:Name="tools" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="184" Width="190" Margin="0,206,0,0" FontSize="14" FontFamily="Arial" TextAlignment="Center"><LineBreak/></TextBlock>
+                        <TextBlock x:Name="ingredients" HorizontalAlignment="Left"  TextWrapping="Wrap" VerticalAlignment="Top" Height="174" Width="188" FontSize="14" FontFamily="Arial" TextAlignment="Center" Canvas.Left="198" Canvas.Top="206"><Run Text="" TextDecorations="Underline" /><LineBreak/></TextBlock>
+                        <TextBlock x:Name="tools" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="174" Width="190" FontSize="14" FontFamily="Arial" TextAlignment="Center" Canvas.Top="206"><LineBreak/></TextBlock>
                         <Image x:Name="recipeImage" HorizontalAlignment="Left" Height="100" Margin="90,21,0,0" VerticalAlignment="Top" Width="100"/>
                         <Button x:Name="startButton" Content="Start cooking!" HorizontalAlignment="Left" Margin="504,47,0,0" VerticalAlignment="Top" Width="124" Height="46" Background="LimeGreen" Click="startButton_Click" Visibility="Visible"/>
                         <TextBlock x:Name="recipeName" HorizontalAlignment="Left" Margin="220,21,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="21" Width="279" FontWeight="Bold" FontFamily="Arial" FontSize="14"/>
@@ -135,6 +133,7 @@
             </Grid>
 
             <local:Stepper x:Name="step" Grid.ColumnSpan="3" HorizontalAlignment="Left" Height="328" Margin="98,34,0,0" Grid.RowSpan="3" VerticalAlignment="Top" Width="580" Visibility="Hidden"/>
+            <Image HorizontalAlignment="Left" Height="28" Margin="125.333,0,0,0" VerticalAlignment="Top" Width="134" Grid.Column="1" Source="Resources/Logo.png"/>
 
 
 
