@@ -120,6 +120,8 @@ namespace SousChapp
             rv.cancelButton.Visibility = Visibility.Visible;
             rv.startButton.Visibility = Visibility.Hidden;
             rv.startButton.IsEnabled = true;
+            this.rv.contButton.IsEnabled = true;
+            this.rv.cancelButton.IsEnabled = true;
 
         }
     }

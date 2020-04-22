@@ -56,7 +56,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="ArrayList.cs" />
     <Compile Include="RecipeDetails.cs" />
     <Compile Include="Stepper.xaml.cs">
       <DependentUpon>Stepper.xaml</DependentUpon>
@@ -210,6 +209,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Back_btn.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -163,12 +163,15 @@ namespace SousChapp
             rd.addStep("Using the spatula, flip the omelette");
             rd.addStep("Spread cheese over the omelette");
             rd.addStep("Cook for 3 minutes and fold");
-            rd.addStep("Serve immediately");
+            rd.addStep("Serve immediately1");
+            rd.addStep("Serve immediately2");
 
-            DynamicRecipeView drv = new DynamicRecipeView(rd);
+            DynamicRecipeView drv = new DynamicRecipeView(rd, this);
 
-            drv.Show();
-            this.Close();
+            drv.Visibility = Visibility.Visible;
+            this.Visibility = Visibility.Hidden;
+            //drv.Show();
+            //this.Close();
         }
 
         private void SearchSmall_Click(object sender, RoutedEventArgs e)

@@ -22,10 +22,13 @@ namespace SousChapp
     {
 
         private ArrayList steps_arraylist;
+        private MainWindow mw;
         
-        public DynamicRecipeView(RecipeDetails rd)
+        public DynamicRecipeView(RecipeDetails rd, MainWindow mw)
         {
             InitializeComponent();
+
+            this.mw = mw;
 
             this.steps_arraylist = rd.getSteps();
             this.step.initializeStepper(this.steps_arraylist);
@@ -101,9 +104,17 @@ namespace SousChapp
         {
             int i = 1;
             foreach (String step in steps_array){
+                if (i >= 9)
+                {
+                    this.steps.Height += 20;
+                    this.recipeCanvas.Height += 20;
+                }
+
                 this.steps.Inlines.Add(i+ ") "+step);
                 this.steps.Inlines.Add("\n");
                 i++;
+                
+                
             }
         }
 
@@ -131,6 +142,8 @@ namespace SousChapp
 
         private void contButton_Click(object sender, RoutedEventArgs e) {
             this.startButton.IsEnabled = false;
+            this.contButton.IsEnabled = false;
+            this.cancelButton.IsEnabled = false;
             this.step.Visibility = Visibility.Visible;
             this.recipeGrid.Style = this.mainGrid.Resources["Blurred"] as Style;
         }
@@ -148,6 +161,16 @@ namespace SousChapp
             this.cancelButton.Visibility = Visibility.Hidden;
 
             this.step.reset();
+        }
+
+        private void backBtn_Click(object sender, RoutedEventArgs e) {
+            
+            //this.Close();
+            this.mw.Visibility = Visibility.Visible;
+            this.Close();
+            //mw.Show();
+
+
         }
     }
 }
