@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,35 +22,17 @@ namespace SousChapp
     public partial class MainWindow : Window
     {
         Boolean menuVisible = false;
+
+        //Filter options
+        private HashSet<String> cui_opt;
         public MainWindow()
         {
             InitializeComponent();
             mainMenu.Visibility = Visibility.Hidden;
 
-            /*
-            //Testing code
-            RecipeDetails rd = new RecipeDetails();
+            cui_opt = new HashSet<string>();
 
-            rd.setImage("star.png");
-            rd.setRecipeName("BEST RECIPE NAME EVER");
-            rd.setServing(1);
-            rd.setCookingTime(20);
-            rd.addCategory("Easy");
-
-            rd.addIngridient("Pasta");
-            rd.addIngridient("Water");
-            rd.addStep("Some step number #1");
-            rd.addStep("Some step number #2");
-
-            rd.addTool("some tool #1");
-            rd.addTool("some tool #2");
-
-            DynamicRecipeView drv = new DynamicRecipeView(rd);
-
-
-            drv.Show();
-            this.Close();
-            */
+            this.CuiFilterPopup.setMainWindow(this);
         }
 
 
@@ -168,10 +151,11 @@ namespace SousChapp
 
             DynamicRecipeView drv = new DynamicRecipeView(rd, this);
 
-            //drv.Visibility = Visibility.Visible;
-            //this.Visibility = Visibility.Hidden;
-            drv.Show();
-            this.Close();
+            drv.Visibility = Visibility.Visible;
+            this.Visibility = Visibility.Hidden;
+            //drv.Show();
+            //this.Close();
+           
         }
 
         private void SearchSmall_Click(object sender, RoutedEventArgs e)
@@ -199,6 +183,36 @@ namespace SousChapp
         {
             this.DiffFilterPopup.Visibility = Visibility.Visible;
             this.mainMenu.Visibility = Visibility.Hidden;
+
+        }
+
+        public HashSet<String> getCuiFilter() {
+            return this.cui_opt;
+        }
+
+        public void setCuiFilter(HashSet<String> cui_opt) {
+
+            this.cui_opt = cui_opt;
+
+            if (cui_opt.Count > 0){
+                filter_cui.Text = "(Cuisine) ";
+                for (int i = 0; i < cui_opt.Count; i++)
+                {
+                    if (i != cui_opt.Count - 1)
+                    {
+                       filter_cui.Inlines.Add(cui_opt.ElementAt(i) + ", ");
+                    }
+                    else
+                    {
+                        filter_cui.Inlines.Add(cui_opt.ElementAt(i));
+                    }
+
+
+                }
+            }
+            else{
+                filter_cui.Text = "";
+            }
 
         }
     }

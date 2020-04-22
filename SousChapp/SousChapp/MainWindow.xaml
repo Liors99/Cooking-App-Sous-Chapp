@@ -43,6 +43,10 @@
             <Grid Height="392" VerticalAlignment="Bottom" Margin="0,0,0,-10">
                 <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="0,-6,0,-21" >
                     <Canvas Height="615">
+                        <!-- Filter information -->
+                        <TextBlock x:Name ="filter_cui" Height="23" Canvas.Left="10" TextWrapping="Wrap" Text="" Canvas.Top="5" Width="755"/>
+
+
                         <!-- Inner grid for recipes comment -->
 
                         <Image HorizontalAlignment="Left" Height="118" Margin="96,265,0,0" VerticalAlignment="Top" Width="120" Source="Resources/padthai.png"/>
@@ -66,13 +70,14 @@
                         <TextBlock HorizontalAlignment="Left" Margin="589,292,0,0" TextWrapping="Wrap" Text="Aglio E Olio" VerticalAlignment="Top" Height="57" Width="107" TextAlignment="Center" FontSize="16"/>
                         <Button x:Name="ViewRecipeButton" Content="View Recipe" HorizontalAlignment="Left" Height="34" Margin="598,154,0,0" VerticalAlignment="Top" Width="88" Background="LimeGreen" Click="ViewRecipeButton_Click" Visibility="Hidden"/>
 
+
                     </Canvas>
                 </ScrollViewer>
             </Grid>
 
 
 
-            <Menu x:Name="mainMenu" HorizontalAlignment="Left" Height="403" VerticalAlignment="Top" Width="165" Margin="0,29,0,-13">
+            <Menu x:Name="mainMenu" HorizontalAlignment="Left" Height="403" VerticalAlignment="Top" Width="165" Margin="0,29,0,-13" Visibility="Hidden">
                 <Menu.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="#fd9f84" Offset="0"/>
@@ -90,6 +95,7 @@
             <local:IngFilter x:Name="IngFilterPopup" HorizontalAlignment="Left" Height="475" Margin="0,-32,-21,-24" VerticalAlignment="Top" Width="813" Visibility="Hidden"/>
             <local:CuiFilter x:Name="CuiFilterPopup" HorizontalAlignment="Left" Height="475" Margin="0,-32,-21,-24" VerticalAlignment="Top" Width="813" Visibility="Hidden"/>
             <local:DiffFilter x:Name="DiffFilterPopup" HorizontalAlignment="Left" Height="475" Margin="0,-32,-21,-24" VerticalAlignment="Top" Width="813" Visibility="Hidden"/>
+
         </Grid>
     </Viewbox>
 

@@ -165,10 +165,12 @@ namespace SousChapp
 
         private void backBtn_Click(object sender, RoutedEventArgs e) {
 
-            //this.Close();
-            MainWindow mw = new MainWindow();
-            mw.Show();
             this.Close();
+            mw.Visibility = Visibility.Visible;
+            //MainWindow mw = new MainWindow();
+            //mw.setCuiFilter(this.mw.getCuiFilter());
+            //mw.Show();
+            //this.Close();
             //mw.Show();
 
 
