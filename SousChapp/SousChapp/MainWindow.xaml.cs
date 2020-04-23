@@ -27,14 +27,21 @@ namespace SousChapp
         object highlighted;
         //Filter options
         private HashSet<String> cui_opt;
+        private HashSet<String> dif_opt;
+        private HashSet<String> ing_opt;
+
         public MainWindow()
         {
             InitializeComponent();
             mainMenu.Visibility = Visibility.Hidden;
 
             cui_opt = new HashSet<string>();
+            dif_opt = new HashSet<string>();
+            ing_opt = new HashSet<string>();
 
             this.CuiFilterPopup.setMainWindow(this);
+            this.DiffFilterPopup.setMainWindow(this);
+            this.IngFilterPopup.setMainWindow(this);
         }
 
 
@@ -177,9 +184,7 @@ namespace SousChapp
 
         }
 
-        public HashSet<String> getCuiFilter() {
-            return this.cui_opt;
-        }
+        
 
         public void setCuiFilter(HashSet<String> cui_opt) {
 
@@ -205,6 +210,69 @@ namespace SousChapp
                 filter_cui.Text = "";
             }
 
+        }
+
+        public void setDifFilter(HashSet<String> dif_opt)
+        {
+
+            this.dif_opt = dif_opt;
+
+            if (dif_opt.Count > 0)
+            {
+                filter_dif.Text = "(Diificulty) ";
+                for (int i = 0; i < dif_opt.Count; i++)
+                {
+                    if (i != dif_opt.Count - 1)
+                    {
+                        filter_dif.Inlines.Add(dif_opt.ElementAt(i) + ", ");
+                    }
+                    else
+                    {
+                        filter_dif.Inlines.Add(dif_opt.ElementAt(i));
+                    }
+
+
+                }
+            }
+            else
+            {
+                filter_dif.Text = "";
+            }
+
+        }
+
+        public void setIngFilter(HashSet<String> ing_opt)
+        {
+
+            this.ing_opt = ing_opt;
+
+            if (ing_opt.Count > 0)
+            {
+                filter_ing.Text = "(Ingridients) ";
+                for (int i = 0; i < ing_opt.Count; i++)
+                {
+                    if (i != ing_opt.Count - 1)
+                    {
+                        filter_ing.Inlines.Add(ing_opt.ElementAt(i) + ", ");
+                    }
+                    else
+                    {
+                        filter_ing.Inlines.Add(ing_opt.ElementAt(i));
+                    }
+
+
+                }
+            }
+            else
+            {
+                filter_ing.Text = "";
+            }
+
+        }
+
+        private void Canvas_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            this.mainMenu.Visibility = Visibility.Hidden;
         }
     }
 }

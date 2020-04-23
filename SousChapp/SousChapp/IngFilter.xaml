@@ -7,24 +7,23 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Border Margin="70" BorderThickness="2"  BorderBrush="Black">
-        <Grid Background="White">
-            <Button Content="Submit" HorizontalAlignment="Left" Height="24" Margin="274,256,0,0" VerticalAlignment="Top" Width="116"/>
-            <CheckBox Content="Beef" HorizontalAlignment="Left" Margin="100,90,0,0" VerticalAlignment="Top" FontSize="14"/>
-            <CheckBox Content="Pork" HorizontalAlignment="Left" Margin="100,120,0,0" VerticalAlignment="Top" FontSize="14"/>
-            <CheckBox Content="Chicken" HorizontalAlignment="Left" Margin="100,150,0,0" VerticalAlignment="Top" FontSize="14" RenderTransformOrigin="-0.827,1.918"/>
-            <CheckBox Content="Seafood" HorizontalAlignment="Left" Margin="100,180,0,0" VerticalAlignment="Top" FontSize="14" RenderTransformOrigin="-0.827,1.918"/>
-            <CheckBox Content="Tofu" HorizontalAlignment="Left" Margin="100,210,0,0" VerticalAlignment="Top" FontSize="14" RenderTransformOrigin="-0.827,1.918"/>
-            <CheckBox Content="Pasta" HorizontalAlignment="Left" Margin="297,90,0,0" VerticalAlignment="Top" FontSize="14" RenderTransformOrigin="-0.827,1.918"/>
-            <CheckBox Content="Rice" HorizontalAlignment="Left" Margin="297,120,0,0" VerticalAlignment="Top" FontSize="14" RenderTransformOrigin="-0.827,1.918"/>
-            <CheckBox Content="Noodles" HorizontalAlignment="Left" Margin="297,150,0,0" VerticalAlignment="Top" FontSize="14" RenderTransformOrigin="-0.827,1.918"/>
-            <CheckBox Content="Quinoa" HorizontalAlignment="Left" Margin="297,180,0,0" VerticalAlignment="Top" FontSize="14" RenderTransformOrigin="-0.827,1.918"/>
-            <CheckBox Content="Lentils" HorizontalAlignment="Left" Margin="297,210,0,0" VerticalAlignment="Top" FontSize="14" RenderTransformOrigin="-0.827,1.918"/>
-            <CheckBox Content="Berries" HorizontalAlignment="Left" Margin="471,90,0,0" VerticalAlignment="Top" FontSize="14" RenderTransformOrigin="-0.827,1.918"/>
-            <CheckBox Content="Fruit" HorizontalAlignment="Left" Margin="471,120,0,0" VerticalAlignment="Top" FontSize="14" RenderTransformOrigin="-0.827,1.918"/>
-            <CheckBox Content="Root Vegetables" HorizontalAlignment="Left" Margin="471,150,0,0" VerticalAlignment="Top" FontSize="14" RenderTransformOrigin="-0.827,1.918"/>
-            <CheckBox Content="Leafy Greens" HorizontalAlignment="Left" Margin="471,180,0,0" VerticalAlignment="Top" FontSize="14" RenderTransformOrigin="-0.827,1.918"/>
-            <CheckBox Content="Squash" HorizontalAlignment="Left" Margin="471,210,0,0" VerticalAlignment="Top" FontSize="14" RenderTransformOrigin="-0.827,1.918"/>
-            <Rectangle HorizontalAlignment="Left" Height="659" Stroke="Black" VerticalAlignment="Top" Width="33" Margin="313,-313,0,-40" RenderTransformOrigin="0.5,0.5">
+        <Grid Background="White" Name="Checkbox_grid">
+            <CheckBox x:Name="Beef" Content="Beef" HorizontalAlignment="Left" Margin="100,90,0,0" VerticalAlignment="Top" FontSize="14"/>
+            <CheckBox x:Name="Pork" Content="Pork" HorizontalAlignment="Left" Margin="100,120,0,0" VerticalAlignment="Top" FontSize="14"/>
+            <CheckBox x:Name="Chicken" Content="Chicken" HorizontalAlignment="Left" Margin="100,150,0,0" VerticalAlignment="Top" FontSize="14" RenderTransformOrigin="-0.827,1.918"/>
+            <CheckBox x:Name="Seafood" Content="Seafood" HorizontalAlignment="Left" Margin="100,180,0,0" VerticalAlignment="Top" FontSize="14" RenderTransformOrigin="-0.827,1.918"/>
+            <CheckBox x:Name="Tofu" Content="Tofu" HorizontalAlignment="Left" Margin="100,210,0,0" VerticalAlignment="Top" FontSize="14" RenderTransformOrigin="-0.827,1.918"/>
+            <CheckBox x:Name="Pasta" Content="Pasta" HorizontalAlignment="Left" Margin="297,90,0,0" VerticalAlignment="Top" FontSize="14" RenderTransformOrigin="-0.827,1.918"/>
+            <CheckBox x:Name="Rice" Content="Rice" HorizontalAlignment="Left" Margin="297,120,0,0" VerticalAlignment="Top" FontSize="14" RenderTransformOrigin="-0.827,1.918"/>
+            <CheckBox x:Name="Noodles" Content="Noodles" HorizontalAlignment="Left" Margin="297,150,0,0" VerticalAlignment="Top" FontSize="14" RenderTransformOrigin="-0.827,1.918"/>
+            <CheckBox x:Name="Quinoa" Content="Quinoa" HorizontalAlignment="Left" Margin="297,180,0,0" VerticalAlignment="Top" FontSize="14" RenderTransformOrigin="-0.827,1.918"/>
+            <CheckBox x:Name="Lentils" Content="Lentils" HorizontalAlignment="Left" Margin="297,210,0,0" VerticalAlignment="Top" FontSize="14" RenderTransformOrigin="-0.827,1.918"/>
+            <CheckBox x:Name="Berries" Content="Berries" HorizontalAlignment="Left" Margin="471,90,0,0" VerticalAlignment="Top" FontSize="14" RenderTransformOrigin="-0.827,1.918"/>
+            <CheckBox x:Name="Fruit" Content="Fruit" HorizontalAlignment="Left" Margin="471,120,0,0" VerticalAlignment="Top" FontSize="14" RenderTransformOrigin="-0.827,1.918"/>
+            <CheckBox x:Name="Root_Vegetables" Content="Root Vegetables" HorizontalAlignment="Left" Margin="471,150,0,0" VerticalAlignment="Top" FontSize="14" RenderTransformOrigin="-0.827,1.918"/>
+            <CheckBox x:Name="Leafy_Greens" Content="Leafy Greens" HorizontalAlignment="Left" Margin="471,180,0,0" VerticalAlignment="Top" FontSize="14" RenderTransformOrigin="-0.827,1.918"/>
+            <CheckBox x:Name="Squash" Content="Squash" HorizontalAlignment="Left" Margin="471,210,0,0" VerticalAlignment="Top" FontSize="14" RenderTransformOrigin="-0.827,1.918"/>
+            <Rectangle HorizontalAlignment="Left" Height="672" Stroke="Black" VerticalAlignment="Top" Width="32" Margin="320,-320,0,-46" RenderTransformOrigin="0.5,0.5">
                 <Rectangle.Fill>
                     <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                         <GradientStop Color="#fd9f84" Offset="1"/>
@@ -40,7 +39,10 @@
                     </TransformGroup>
                 </Rectangle.RenderTransform>
             </Rectangle>
-            <Label Content="&#x9;&#x9;                Search by Ingredients" HorizontalAlignment="Right" VerticalAlignment="Top" Width="656" Height="34" FontSize="20" FontFamily="Corbel" BorderBrush="Black" FontWeight="Bold"/>
+            <Label Content="Search by Ingredients" HorizontalAlignment="Center" VerticalAlignment="Top" Width="197" Height="34" FontSize="20" FontFamily="Corbel" BorderBrush="Black" FontWeight="Bold" Margin="225,0,234,0"/>
+            <Button x:Name="CancelBtn"  Content="Cancel" HorizontalAlignment="Left" Height="24" Margin="153,256,0,0" VerticalAlignment="Top" Width="116" Background="IndianRed" Click="CancelBtn_Click"/>
+            <Button x:Name="submitBtn" Content="Submit" HorizontalAlignment="Left" Height="24" Margin="376,256,0,0" VerticalAlignment="Top" Width="116" Click="submitBtn_Click"/>
+            <Button x:Name="resetBtn" Content="Reset" HorizontalAlignment="Left" Height="24" Margin="530,44,0,0" VerticalAlignment="Top" Width="116" Background="LightBlue" Click="resetBtn_Click"/>
 
         </Grid>
     </Border>

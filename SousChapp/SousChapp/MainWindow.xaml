@@ -41,11 +41,12 @@
             <Label Content="Sous Chapp" HorizontalAlignment="Left" Margin="350,-3,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Bodoni MT" FontSize="20" Height="40"/>
 
             <Grid Height="392" VerticalAlignment="Bottom" Margin="0,0,0,-10">
-                <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="0,-6,0,-21" >
-                    <Canvas Height="615">
+                <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="0,-6,0,-21">
+                    <Canvas Height="615" MouseDown="Canvas_MouseDown">
                         <!-- Filter information -->
-                        <TextBlock x:Name ="filter_cui" Height="23" Canvas.Left="10" TextWrapping="Wrap" Text="" Canvas.Top="5" Width="755"/>
-
+                        <TextBlock x:Name ="filter_ing" Height="23" Canvas.Left="10" TextWrapping="Wrap" Text="" Canvas.Top="2" Width="755"/>
+                        <TextBlock x:Name ="filter_cui" Height="23" Canvas.Left="10" TextWrapping="Wrap" Text="" Canvas.Top="25" Width="755"/>
+                        <TextBlock x:Name ="filter_dif" Height="23" Canvas.Left="10" TextWrapping="Wrap" Text="" Canvas.Top="48" Width="755"/>
 
                         <!-- Inner grid for recipes comment -->
 
