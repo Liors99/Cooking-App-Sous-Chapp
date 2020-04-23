@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Diagnostics;
 
 namespace SousChapp
 {
@@ -30,6 +32,7 @@ namespace SousChapp
         private HashSet<String> dif_opt;
         private HashSet<String> ing_opt;
 
+        private String search_word;
         public MainWindow()
         {
             InitializeComponent();
@@ -42,6 +45,8 @@ namespace SousChapp
             this.CuiFilterPopup.setMainWindow(this);
             this.DiffFilterPopup.setMainWindow(this);
             this.IngFilterPopup.setMainWindow(this);
+
+            this.search_word = "";
         }
 
 
@@ -156,13 +161,7 @@ namespace SousChapp
 
         }
 
-        private void SearchSmall_Click(object sender, RoutedEventArgs e)
-        {
-            this.SearchBox.Visibility = Visibility.Visible;
-            this.SearchLarge.Visibility = Visibility.Visible;
-            this.OSKeyboard.Visibility = Visibility.Visible;
-            this.SearchSmall.Visibility = Visibility.Hidden;
-        }
+        
 
         private void OptIng_Click(object sender, RoutedEventArgs e)
         {
@@ -273,6 +272,42 @@ namespace SousChapp
         private void Canvas_MouseDown(object sender, MouseButtonEventArgs e)
         {
             this.mainMenu.Visibility = Visibility.Hidden;
+        }
+
+        private void SearchBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            this.SearchBox.Text = "";
+        }
+
+        private void SearchSmall_Click(object sender, RoutedEventArgs e)
+        {
+            this.viewSearch.Visibility = Visibility.Hidden;
+            this.SearchBox.Visibility = Visibility.Visible;
+            this.SearchLarge.Visibility = Visibility.Visible;
+            this.OSKeyboard.Visibility = Visibility.Visible;
+            this.SearchSmall.Visibility = Visibility.Hidden;
+        }
+
+        private void SearchLarge_Click(object sender, RoutedEventArgs e)
+        {
+            
+            this.search_word = this.SearchBox.Text;
+            if (this.search_word.Length > 0) {
+                this.viewSearch.Text = "Viewing results for: " + this.SearchBox.Text;
+                this.viewSearch.Visibility = Visibility.Visible;
+            }
+            
+            this.SearchBox.Visibility = Visibility.Hidden;
+            this.SearchLarge.Visibility = Visibility.Hidden;
+            this.OSKeyboard.Visibility = Visibility.Hidden;
+            this.SearchSmall.Visibility = Visibility.Visible;
+        }
+
+        private void SearchBox_LostFocus(object sender, RoutedEventArgs e)
+        {
+           //this.SearchBox.Text = "";
+            
+            
         }
     }
 }

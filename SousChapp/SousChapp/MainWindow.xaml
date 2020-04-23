@@ -13,10 +13,9 @@
     <Viewbox StretchDirection="Both" Stretch="Uniform">
 
         <Grid>
-            <Button x:Name="OSKeyboard" HorizontalAlignment="Left" Height="19" Margin="584,6,0,0" VerticalAlignment="Top" Width="28" Visibility="Hidden">
-                <Image Source="Resources/keyboard.png"/>
-            </Button>
-            <Rectangle HorizontalAlignment="Left" Height="798" Stroke="Black" VerticalAlignment="Top" Width="42" Margin="376,-390,0,0" RenderTransformOrigin="0.5,0.5">
+            
+            
+            <Rectangle HorizontalAlignment="Left" Height="794" Stroke="Black" VerticalAlignment="Top" Width="42" Margin="374,-391,0,0" RenderTransformOrigin="0.5,0.5">
                 <Rectangle.Fill>
                     <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                         <GradientStop Color="#fd9f84" Offset="1"/>
@@ -32,16 +31,24 @@
                     </TransformGroup>
                 </Rectangle.RenderTransform>
             </Rectangle>
-            <Button x:Name="SearchSmall" HorizontalAlignment="Left" Height="23" Margin="758,2,0,0" VerticalAlignment="Top" Width="24" Click="SearchSmall_Click" Background="{x:Null}" BorderBrush="{x:Null}">
+            <Button x:Name="SearchSmall" HorizontalAlignment="Right" Height="23"  VerticalAlignment="Top" Width="24" Margin="10,-2" Background="{x:Null}" BorderBrush="{x:Null}" Click="SearchSmall_Click">
                 <Image Source="Resources/search.png"/>
             </Button>
-            <Button x:Name="showMenu" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top" Width="27" Click="ShowMenu_Click" RenderTransformOrigin="-0.342,-0.861" Height="29" BorderBrush="{x:Null}" Background="#fd9f84" Foreground="{x:Null}">
+            <TextBox x:Name="SearchBox" HorizontalAlignment="Right" Height="19" Margin="58,-2" TextWrapping="Wrap" Text="Enter keyword" VerticalAlignment="Top" Width="116" Visibility="Hidden" GotFocus="SearchBox_GotFocus" LostFocus="SearchBox_LostFocus"/>
+            <Button x:Name="SearchLarge" Content="Search" HorizontalAlignment="Right" Margin="10,-2" VerticalAlignment="Top" Width="44" Visibility="Hidden" Click="SearchLarge_Click"/>
+            <Button x:Name="OSKeyboard" HorizontalAlignment="Right" Height="19" Margin="178,-2" VerticalAlignment="Top" Width="28" Visibility="Hidden">
+                <Image Source="Resources/keyboard.png"/>
+            </Button>
+            <Button x:Name="showMenu" HorizontalAlignment="Left" Margin="5,-5" VerticalAlignment="Top" Width="27" Click="ShowMenu_Click" RenderTransformOrigin="0,0" Height="29" BorderBrush="{x:Null}" Background="#fd9f84" Foreground="{x:Null}">
                 <Image Source="Resources/menu.png"/>
             </Button>
-            <Label Content="Sous Chapp" HorizontalAlignment="Left" Margin="350,-3,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Bodoni MT" FontSize="20" Height="40"/>
+            
+            <Image HorizontalAlignment="Left" Height="28" Margin="333,-5,0,0" VerticalAlignment="Top" Width="134" Source="Resources/Logo.png"/>
+            <TextBlock x:Name="viewSearch" HorizontalAlignment="Left" Margin="490,0,0,0" TextWrapping="Wrap" Text="Viewing results for: " VerticalAlignment="Top" FontFamily="Arial" FontSize="16" Visibility="Hidden" Width="263"/>
 
-            <Grid Height="392" VerticalAlignment="Bottom" Margin="0,0,0,-10">
-                <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="0,-6,0,-21">
+
+            <Grid Height="392" VerticalAlignment="Bottom" Margin="0,0,0,-10" Grid.ColumnSpan="2">
+                <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="0,-6,0,0">
                     <Canvas Height="615" MouseDown="Canvas_MouseDown">
                         <!-- Filter information -->
                         <TextBlock x:Name ="filter_ing" Height="23" Canvas.Left="10" TextWrapping="Wrap" Text="" Canvas.Top="2" Width="755"/>
@@ -55,8 +62,7 @@
 
                         <Image HorizontalAlignment="Left" Height="118" Margin="464,84,0,0" VerticalAlignment="Top" Width="120" Source="Resources/frenchomelet.png" MouseDown="Image_MouseDown"/>
                         <Image HorizontalAlignment="Left" Height="118" Margin="464,265,0,0" VerticalAlignment="Top" Width="120" Source="Resources/aglioeolio.png"/>
-                        <TextBox x:Name="SearchBox" HorizontalAlignment="Left" Height="19" Margin="617,6,0,0" TextWrapping="Wrap" Text="Enter keyword" VerticalAlignment="Top" Width="116" Visibility="Hidden"/>
-                        <Button x:Name="SearchLarge" Content="Search" HorizontalAlignment="Left" Margin="738,5,0,0" VerticalAlignment="Top" Width="44" Visibility="Hidden"/>
+                       
                         <Rectangle x:Name="ChosenRecipe" HorizontalAlignment="Left" Height="118" Margin="464,84,0,0" VerticalAlignment="Top" Width="240" StrokeThickness="3" >
                             <!--<Rectangle.Stroke>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -78,7 +84,7 @@
 
 
 
-            <Menu x:Name="mainMenu" HorizontalAlignment="Left" Height="403" VerticalAlignment="Top" Width="165" Margin="0,29,0,-13" Visibility="Hidden">
+            <Menu x:Name="mainMenu" HorizontalAlignment="Left" Height="403" VerticalAlignment="Top" Width="165" Margin="0,29,0,-13" Visibility="Hidden" Grid.ColumnSpan="2">
                 <Menu.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="#fd9f84" Offset="0"/>
@@ -93,9 +99,10 @@
                 <MenuItem x:Name="optExit" Margin="0,200,0,0" Header="Exit" Height="40" Width="165" MouseEnter="MenuMouseEnter" MouseLeave="MenuMouseLeave" Foreground="White" VerticalAlignment="Bottom"/>
             </Menu>
 
-            <local:IngFilter x:Name="IngFilterPopup" HorizontalAlignment="Left" Height="475" Margin="0,-32,-21,-24" VerticalAlignment="Top" Width="813" Visibility="Hidden"/>
-            <local:CuiFilter x:Name="CuiFilterPopup" HorizontalAlignment="Left" Height="475" Margin="0,-32,-21,-24" VerticalAlignment="Top" Width="813" Visibility="Hidden"/>
-            <local:DiffFilter x:Name="DiffFilterPopup" HorizontalAlignment="Left" Height="475" Margin="0,-32,-21,-24" VerticalAlignment="Top" Width="813" Visibility="Hidden"/>
+            <local:IngFilter x:Name="IngFilterPopup" HorizontalAlignment="Left" Height="475" Margin="0,-32,-21,-24" VerticalAlignment="Top" Width="813" Visibility="Hidden" Grid.ColumnSpan="2"/>
+            <local:CuiFilter x:Name="CuiFilterPopup" HorizontalAlignment="Left" Height="475" Margin="0,-32,-21,-24" VerticalAlignment="Top" Width="813" Visibility="Hidden" Grid.ColumnSpan="2"/>
+            <local:DiffFilter x:Name="DiffFilterPopup" HorizontalAlignment="Left" Height="475" Margin="0,-32,-21,-24" VerticalAlignment="Top" Width="813" Visibility="Hidden" Grid.ColumnSpan="2"/>
+            
 
         </Grid>
     </Viewbox>
