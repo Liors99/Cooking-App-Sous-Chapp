@@ -23,6 +23,8 @@ namespace SousChapp
     {
         Boolean menuVisible = false;
 
+        //Currently highlighted object
+        object highlighted;
         //Filter options
         private HashSet<String> cui_opt;
         public MainWindow()
@@ -73,6 +75,9 @@ namespace SousChapp
 
         private void Image_MouseDown(object sender, MouseButtonEventArgs e)
         {
+            Image current = (Image)sender;
+            this.ChosenRecipe.Margin = current.Margin;
+            this.ViewRecipeButton.Margin = new Thickness(current.Margin.Left+130, current.Margin.Top+70,0,0);
             this.ViewRecipeButton.Visibility = Visibility.Visible;
             Border_highlight(this.ChosenRecipe);
         }
@@ -80,7 +85,7 @@ namespace SousChapp
 
         private void Border_highlight(object sender)
         {
-            
+            highlighted = sender;
             Rectangle r = (Rectangle)sender;
             r.StrokeThickness = 6;
             r.Stroke = Brushes.LimeGreen;
@@ -89,24 +94,8 @@ namespace SousChapp
         private void Border_dehighlight(object sender)
         {
             Rectangle r = (Rectangle)sender;
-            r.StrokeThickness = 3;
-
-            Color newRed = Color.FromRgb(255, 91, 89);
-            Color newPink = Color.FromRgb(253, 159, 132);
-
-            // Create a diagonal linear gradient with four stops.   
-            LinearGradientBrush myLinearGradientBrush =
-                new LinearGradientBrush();
-            myLinearGradientBrush.StartPoint = new Point(0, 0);
-            myLinearGradientBrush.EndPoint = new Point(1, 1);
-            myLinearGradientBrush.GradientStops.Add(
-                new GradientStop(newRed, 1.0));
-            myLinearGradientBrush.GradientStops.Add(
-                new GradientStop(newPink, 0.0));
-
-
-            // Use the brush to paint the rectangle.
-            r.Stroke = myLinearGradientBrush;
+            r.StrokeThickness = 0;
+            this.ViewRecipeButton.Visibility = Visibility.Hidden;
         }
 
         private void ViewRecipeButton_Click(object sender, RoutedEventArgs e)
@@ -155,7 +144,9 @@ namespace SousChapp
             this.Visibility = Visibility.Hidden;
             //drv.Show();
             //this.Close();
-           
+            Border_dehighlight(highlighted);
+
+
         }
 
         private void SearchSmall_Click(object sender, RoutedEventArgs e)

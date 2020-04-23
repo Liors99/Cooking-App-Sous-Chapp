@@ -50,13 +50,13 @@
                         <!-- Inner grid for recipes comment -->
 
                         <Image HorizontalAlignment="Left" Height="118" Margin="96,265,0,0" VerticalAlignment="Top" Width="120" Source="Resources/padthai.png"/>
-                        <Image HorizontalAlignment="Left" Height="118" Margin="96,84,0,0" VerticalAlignment="Top" Width="120" Source="Resources/chocolatechipcookies.png"/>
+                        <Image HorizontalAlignment="Left" Height="118" Margin="96,84,0,0" VerticalAlignment="Top" Width="120" Source="Resources/chocolatechipcookies.png" MouseDown="Image_MouseDown"/>
 
                         <Image HorizontalAlignment="Left" Height="118" Margin="464,84,0,0" VerticalAlignment="Top" Width="120" Source="Resources/frenchomelet.png" MouseDown="Image_MouseDown"/>
                         <Image HorizontalAlignment="Left" Height="118" Margin="464,265,0,0" VerticalAlignment="Top" Width="120" Source="Resources/aglioeolio.png"/>
                         <TextBox x:Name="SearchBox" HorizontalAlignment="Left" Height="19" Margin="617,6,0,0" TextWrapping="Wrap" Text="Enter keyword" VerticalAlignment="Top" Width="116" Visibility="Hidden"/>
                         <Button x:Name="SearchLarge" Content="Search" HorizontalAlignment="Left" Margin="738,5,0,0" VerticalAlignment="Top" Width="44" Visibility="Hidden"/>
-                        <Rectangle x:Name="ChosenRecipe" HorizontalAlignment="Left" Height="118" Margin="464,84,0,0" VerticalAlignment="Top" Width="240" StrokeThickness="3">
+                        <Rectangle x:Name="ChosenRecipe" HorizontalAlignment="Left" Height="118" Margin="464,84,0,0" VerticalAlignment="Top" Width="240" StrokeThickness="3" >
                             <!--<Rectangle.Stroke>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#fd9f84" Offset="0"/>
