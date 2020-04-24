@@ -31,7 +31,7 @@ namespace SousChapp
             this.mw = mw;
 
             this.steps_arraylist = rd.getSteps();
-            this.step.initializeStepper(this.steps_arraylist);
+            this.step.initializeStepper(this.steps_arraylist, rd.getToolsToStep());
 
             setImage(rd.getImage());
             setName(rd.getRecipeName());
@@ -53,7 +53,7 @@ namespace SousChapp
         }
 
         private void setCookingTime(int time) {
-            this.recipeCookingTime.Text = "Cooking time: "+time.ToString();
+            this.recipeCookingTime.Text = "Cooking time: "+time.ToString() +" minutes";
         }
 
         private void setServing(int serv)
@@ -106,8 +106,8 @@ namespace SousChapp
             foreach (String step in steps_array){
                 if (i >= 9)
                 {
-                    this.steps.Height += 20;
-                    this.recipeCanvas.Height += 20;
+                    this.steps.Height += 25;
+                    this.recipeCanvas.Height += 25;
                 }
 
                 this.steps.Inlines.Add(i+ ") "+step);

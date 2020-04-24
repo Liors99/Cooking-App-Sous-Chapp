@@ -33,6 +33,10 @@ namespace SousChapp
         private HashSet<String> ing_opt;
 
         private String search_word;
+
+        private List<Grid> all_recipes;
+
+        private RecipeDetails current_recipe;
         public MainWindow()
         {
             InitializeComponent();
@@ -42,13 +46,147 @@ namespace SousChapp
             dif_opt = new HashSet<string>();
             ing_opt = new HashSet<string>();
 
+            this.all_recipes = new List<Grid>();
+
             this.CuiFilterPopup.setMainWindow(this);
             this.DiffFilterPopup.setMainWindow(this);
             this.IngFilterPopup.setMainWindow(this);
 
             this.search_word = "";
+
+            initializeRecipes(); //Set the all recipes arraylist
+            drawRecipes();
+
         }
 
+        //Add all the recipes to the array list
+        private void initializeRecipes() {
+            this.all_recipes.Add(this.chocolatechipcookies);
+            this.all_recipes.Add(this.frenchomelet);
+            this.all_recipes.Add(this.padthai);
+            this.all_recipes.Add(this.aglioeolio);
+            this.all_recipes.Add(this.beansalad);
+            this.all_recipes.Add(this.overnightoats);
+            this.all_recipes.Add(this.honeysalmon);
+            this.all_recipes.Add(this.porkchops);
+            this.all_recipes.Add(this.lambburger);
+            this.all_recipes.Add(this.quesadilla);
+        }
+
+        //Draws the recipes on the screen
+        private void drawRecipes() {
+
+            if (highlighted != null) {
+                Border_dehighlight(highlighted);
+            }
+
+            this.recipeCanvas.Height = 392;
+
+            //Reset the recipes prior to displaying them
+            for (int i = 0; i < this.all_recipes.Count; i++) {
+                this.all_recipes[i].Visibility = Visibility.Hidden;
+            }
+
+            //Check if we have't selected any options
+            if (this.cui_opt.Count == 0 && this.dif_opt.Count == 0 && this.ing_opt.Count == 0 && this.search_word == "")
+            {
+                drawAll();
+            }
+            else {
+                drawFiltered();
+            }
+        }
+
+        private void drawAll() {
+            Thickness current_margin = new Thickness(96, 84, 0, 0);
+            for (int i = 0; i < this.all_recipes.Count; i++) {
+
+                this.all_recipes[i].Margin = current_margin;
+                this.all_recipes[i].Visibility = Visibility.Visible;
+
+                if (current_margin.Left == 96)
+                {
+                    current_margin = new Thickness(464, current_margin.Top, 0, 0);
+                }
+                else if (current_margin.Left == 464)
+                {
+                    current_margin = new Thickness(96, current_margin.Top + 181, 0, 0);
+                }
+
+                if (this.recipeCanvas.Height - current_margin.Top <= 0)
+                {
+                    this.recipeCanvas.Height += 100;
+                }
+            }
+        }
+
+        private void drawFiltered() {
+            Thickness current_margin = new Thickness(96, 84, 0, 0);
+            if (this.search_word.ToLower() == "bean salad" && this.cui_opt.Count == 0 && this.dif_opt.Count == 0 && this.ing_opt.Count == 0)
+            {
+                for (int i = 0; i < this.all_recipes.Count; i++)
+                {
+                    if (this.all_recipes[i].Name == "beansalad")
+                    {
+                        this.all_recipes[i].Margin = current_margin;
+                        this.all_recipes[i].Visibility = Visibility.Visible;
+                    }
+                }
+            }
+            else if(this.search_word==""){
+                for (int i = 0; i < this.all_recipes.Count; i++)
+                {
+
+                    //Check for Mexican
+                    if (this.cui_opt.Contains("French") && (this.all_recipes[i].Name == "frenchomelet"))
+                    {
+                        this.all_recipes[i].Margin = current_margin;
+                        this.all_recipes[i].Visibility = Visibility.Visible;
+                        current_margin = drawNext(current_margin);
+                        continue;
+                    }
+
+                    //Check for easy
+                    if (this.dif_opt.Contains("Beginner") && (this.all_recipes[i].Name == "frenchomelet" || this.all_recipes[i].Name == "overnightoats" || this.all_recipes[i].Name == "quesadilla")) {
+                        this.all_recipes[i].Margin = current_margin;
+                        this.all_recipes[i].Visibility = Visibility.Visible;
+                        current_margin = drawNext(current_margin);
+                        continue;
+                    }
+
+                    //Check for 
+                    if (this.ing_opt.Contains("Leafy Greens") && (this.all_recipes[i].Name == "beansalad")){
+                        this.all_recipes[i].Margin = current_margin;
+                        this.all_recipes[i].Visibility = Visibility.Visible;
+                        current_margin = drawNext(current_margin);
+                        continue;
+                    }
+
+
+
+                }
+            }
+
+            
+        }
+
+        private Thickness drawNext(Thickness current_margin) {
+            if (current_margin.Left == 96)
+            {
+                current_margin = new Thickness(464, current_margin.Top, 0, 0);
+            }
+            else if (current_margin.Left == 464)
+            {
+                current_margin = new Thickness(96, current_margin.Top + 181, 0, 0);
+            }
+
+            if (this.recipeCanvas.Height - current_margin.Top <= 0)
+            {
+                this.recipeCanvas.Height += 100;
+            }
+
+            return current_margin;
+        }
 
         private void MenuMouseEnter(object sender, MouseEventArgs e)
         {
@@ -87,32 +225,25 @@ namespace SousChapp
 
         private void Image_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            Image current = (Image)sender;
+            Grid current = (Grid)sender;
             this.ChosenRecipe.Margin = current.Margin;
             this.ViewRecipeButton.Margin = new Thickness(current.Margin.Left+130, current.Margin.Top+70,0,0);
             this.ViewRecipeButton.Visibility = Visibility.Visible;
             Border_highlight(this.ChosenRecipe);
+
+            //Do the preps depending on which one we chose
+            if (current.Name == "frenchomelet") {
+                this.current_recipe = prepOmelet();
+            }
+            else if (current.Name == "beansalad") {
+                this.current_recipe = prepBeanSalad();
+            }
+            else if (current.Name == "quesadilla") {
+                this.current_recipe = prepQuesadilla();
+            }
         }
 
-
-        private void Border_highlight(object sender)
-        {
-            highlighted = sender;
-            Rectangle r = (Rectangle)sender;
-            r.StrokeThickness = 6;
-            r.Stroke = Brushes.LimeGreen;
-        }
-
-        private void Border_dehighlight(object sender)
-        {
-            Rectangle r = (Rectangle)sender;
-            r.StrokeThickness = 0;
-            this.ViewRecipeButton.Visibility = Visibility.Hidden;
-        }
-
-        private void ViewRecipeButton_Click(object sender, RoutedEventArgs e)
-        {
-            
+        private RecipeDetails prepOmelet() {
             RecipeDetails rd = new RecipeDetails();
 
             rd.setImage("frenchomelet.png");
@@ -120,11 +251,11 @@ namespace SousChapp
             rd.setCookingTime(15);
             rd.setServing(1);
 
-            rd.addCategory("Easy");
-            rd.addCategory("Breakfast");
+            rd.addCategory("Beginner");
             rd.addCategory("Eggs");
             rd.addCategory("Vegeterian");
-            
+            rd.addCategory("French");
+
             //Steps
             rd.addIngridient("4 large eggs");
             rd.addIngridient("1 tbsp olive oil");
@@ -147,8 +278,19 @@ namespace SousChapp
             rd.addStep("Using the spatula, flip the omelette");
             rd.addStep("Spread cheese over the omelette");
             rd.addStep("Cook for 3 minutes and fold");
-            rd.addStep("Serve immediately1");
-            rd.addStep("Serve immediately2");
+            rd.addStep("Serve immediately");
+
+            //Tools to step
+            rd.addToolsToStep(0, new List<string> {"TEST" });
+
+            
+            
+
+            return rd;
+        }
+
+        private RecipeDetails prepBeanSalad() {
+            RecipeDetails rd = new RecipeDetails();
 
             rd.setImage("beansalad.png");
             rd.setRecipeName("Broccoli Rabe and White Bean Salad");
@@ -158,7 +300,8 @@ namespace SousChapp
             rd.addCategory("Easy");
             rd.addCategory("Side");
             rd.addCategory("Vegeterian");
-            
+            rd.addCategory("Leafy Greens");
+
             //Steps
             rd.addIngridient("30 oz  of canned white kidney beans");
             rd.addIngridient("3 tbsp olive oil");
@@ -183,15 +326,22 @@ namespace SousChapp
             rd.addStep("Salt and pepper to taste");
             rd.addStep("Serve immediately");
 
+            return rd;
+        }
+
+
+        private RecipeDetails prepQuesadilla() {
+            RecipeDetails rd = new RecipeDetails();
+
             rd.setImage("quesadilla.png");
             rd.setRecipeName("Quick Cheesy Quesadillas");
             rd.setCookingTime(25);
             rd.setServing(6);
 
-            rd.addCategory("Easy");
+            rd.addCategory("Beginner");
             rd.addCategory("Lunch");
             rd.addCategory("Vegeterian");
-            
+
             //Steps
             rd.addIngridient("6 flour torillas");
             rd.addIngridient("1 1/2 cups shredded cheddar cheese");
@@ -211,7 +361,30 @@ namespace SousChapp
             rd.addStep("Cut into triangles");
             rd.addStep("Serve immediately with salsa");
 
-            DynamicRecipeView drv = new DynamicRecipeView(rd, this);
+            return rd;
+
+        }
+
+        private void Border_highlight(object sender)
+        {
+            highlighted = sender;
+            Rectangle r = (Rectangle)sender;
+            r.StrokeThickness = 6;
+            r.Stroke = Brushes.LimeGreen;
+        }
+
+        private void Border_dehighlight(object sender)
+        {
+            Rectangle r = (Rectangle)sender;
+            r.StrokeThickness = 0;
+            this.ViewRecipeButton.Visibility = Visibility.Hidden;
+        }
+
+        private void ViewRecipeButton_Click(object sender, RoutedEventArgs e){
+            
+            
+
+            DynamicRecipeView drv = new DynamicRecipeView(current_recipe, this);
 
             drv.Visibility = Visibility.Visible;
             this.Visibility = Visibility.Hidden;
@@ -269,7 +442,7 @@ namespace SousChapp
             else{
                 filter_cui.Text = "";
             }
-
+            drawRecipes();
         }
 
         public void setDifFilter(HashSet<String> dif_opt)
@@ -299,6 +472,8 @@ namespace SousChapp
                 filter_dif.Text = "";
             }
 
+            drawRecipes();
+
         }
 
         public void setIngFilter(HashSet<String> ing_opt)
@@ -327,7 +502,7 @@ namespace SousChapp
             {
                 filter_ing.Text = "";
             }
-
+            drawRecipes();
         }
 
         private void Canvas_MouseDown(object sender, MouseButtonEventArgs e)
@@ -362,6 +537,7 @@ namespace SousChapp
             this.SearchLarge.Visibility = Visibility.Hidden;
             this.OSKeyboard.Visibility = Visibility.Hidden;
             this.SearchSmall.Visibility = Visibility.Visible;
+            drawRecipes();
         }
 
         private void SearchBox_LostFocus(object sender, RoutedEventArgs e)

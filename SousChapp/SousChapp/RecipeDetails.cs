@@ -13,6 +13,7 @@ namespace SousChapp
         private ArrayList _ingridients;
         private ArrayList _tools;
         private ArrayList _categories;
+        private Dictionary<int, List<String>> _tools_to_step;
 
         private String image;
         private String recipe_name;
@@ -25,6 +26,7 @@ namespace SousChapp
             _ingridients = new ArrayList();
             _tools = new ArrayList();
             _categories = new ArrayList();
+            _tools_to_step = new Dictionary<int, List<string>>();
         }
 
 
@@ -94,6 +96,13 @@ namespace SousChapp
             return _tools;
         }
 
+        public void addToolsToStep(int step, List<String> tools) {
+            _tools_to_step.Add(step, tools);
+        }
+
+        public Dictionary<int, List<String>> getToolsToStep() {
+            return _tools_to_step;
+        }
 
 
 

@@ -25,6 +25,7 @@ namespace SousChapp
         public DynamicRecipeView rv;
 
         private ArrayList steps;
+        private Dictionary<int, List<String>> tools_to_step;
         private int current;
 
         public Stepper()
@@ -32,8 +33,9 @@ namespace SousChapp
             InitializeComponent();
         }
 
-        public void initializeStepper(ArrayList steps) {
+        public void initializeStepper(ArrayList steps, Dictionary<int, List<String>> tools_to_step) {
             this.steps = steps;
+            this.tools_to_step = tools_to_step;
             reset();
 
             
@@ -47,13 +49,20 @@ namespace SousChapp
         }
 
         private void changeText() {
+            this.StepDetail.Text = "";
+            Run title_steps = new Run();
+            title_steps.Text = "Step #" + (current+1).ToString() + "\n";
+            title_steps.TextDecorations = TextDecorations.Underline;
+            this.StepDetail.Inlines.Add(title_steps);
+
             if (current == this.steps.Count-1)
             {
                 this.FinishButton.Visibility = Visibility.Visible;
                 this.NextButton.Visibility = Visibility.Hidden;
                 this.ComingUpLabel.Visibility = Visibility.Hidden;
 
-                this.StepDetail.Text = (String)this.steps[current];
+                this.StepDetail.Inlines.Add ((String)this.steps[current]);
+
                 if (current != 0) {
                     this.prevButton.Visibility = Visibility.Visible;
                 }
@@ -67,11 +76,11 @@ namespace SousChapp
                 this.prevButton.Visibility = Visibility.Hidden;
                 this.NextButton.Visibility = Visibility.Visible;
 
-                this.StepDetail.Text = (String)this.steps[current];
-                
-                
+                this.StepDetail.Inlines.Add((String)this.steps[current]);
+
+
                 this.ComingUpLabel.Visibility = Visibility.Visible;
-                this.ComingUpLabel.Content = (String)this.steps[current+1];
+                this.ComingUpLabel.Content = "Coming up: " + (String)this.steps[current+1];
             }
             else
             {
@@ -80,11 +89,26 @@ namespace SousChapp
                 this.NextButton.Visibility = Visibility.Visible;
                 this.prevButton.Visibility = Visibility.Visible;
 
-                this.StepDetail.Text = (String)this.steps[current];
+                this.StepDetail.Inlines.Add((String)this.steps[current]);
 
                 this.ComingUpLabel.Visibility = Visibility.Visible;
-                this.ComingUpLabel.Content = (String)this.steps[current+1];
+                this.ComingUpLabel.Content = "Coming up: " + (String)this.steps[current+1];
             }
+
+            //Add the tools for this step
+            this.StepTools.Text = "";
+            Run title_ts = new Run();
+            title_ts.Text = "Tools and Ingridients \n";
+            title_ts.TextDecorations = TextDecorations.Underline;
+            this.StepTools.Inlines.Add(title_ts);
+            if (tools_to_step.ContainsKey(current)) {
+                List<String> tools = this.tools_to_step[current];
+                foreach (String tool in tools)
+                {
+                    this.StepTools.Inlines.Add(tool + "\n");
+                }
+            }
+            
         }
 
         private void nextButton_Click(object sender, RoutedEventArgs e) {

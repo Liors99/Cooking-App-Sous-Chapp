@@ -99,7 +99,7 @@
                         <TextBlock x:Name="recipeName" HorizontalAlignment="Left" Margin="220,21,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="21" Width="279" FontWeight="Bold" FontFamily="Arial" FontSize="14"/>
                         <TextBlock x:Name="recipeCookingTime" HorizontalAlignment="Left" Margin="220,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="21" Width="279" FontFamily="Arial"/>
                         <TextBlock x:Name="recipeServing" HorizontalAlignment="Left" Margin="220,73,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="21" Width="279" FontFamily="Arial"/>
-                        <TextBlock x:Name="recipeCatgories" HorizontalAlignment="Left" Margin="220,100,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="21" Width="279" FontFamily="Arial"/>
+                        <TextBlock x:Name="recipeCatgories" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="32" Width="443" FontFamily="Arial" Canvas.Left="220" Canvas.Top="100"/>
                         <Button x:Name="contButton" Content="Continue Recipe" HorizontalAlignment="Left" Margin="504,19,0,0" VerticalAlignment="Top" Width="124" Height="46" Background="SteelBlue" Click="contButton_Click" Visibility="Hidden"/>
                         <Button x:Name="cancelButton" Content="Cancel Recipe" HorizontalAlignment="Left" Margin="504,75,0,0" VerticalAlignment="Top" Width="124" Height="46" Background="IndianRed" Click="cancelButton_Click" Visibility="hidden"/>
 
