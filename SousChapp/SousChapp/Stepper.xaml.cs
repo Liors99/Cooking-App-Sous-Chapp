@@ -98,7 +98,7 @@ namespace SousChapp
             //Add the tools for this step
             this.StepTools.Text = "";
             Run title_ts = new Run();
-            title_ts.Text = "Tools and Ingridients \n";
+            title_ts.Text = "Tools and Ingredients \n";
             title_ts.TextDecorations = TextDecorations.Underline;
             this.StepTools.Inlines.Add(title_ts);
             if (tools_to_step.ContainsKey(current)) {

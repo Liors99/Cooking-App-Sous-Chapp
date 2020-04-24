@@ -281,9 +281,15 @@ namespace SousChapp
             rd.addStep("Serve immediately");
 
             //Tools to step
-            rd.addToolsToStep(0, new List<string> {"TEST" });
-
-            
+            rd.addToolsToStep(0, new List<string> {"1 medium pan", "1 tbsp olive oil"});
+            rd.addToolsToStep(1, new List<string> {"1 cup", "4 large eggs"});
+            rd.addToolsToStep(2, new List<string> {"pinch salt", "pinch pepper"});
+            rd.addToolsToStep(3, new List<string> {""});
+            rd.addToolsToStep(4, new List<string> {""});
+            rd.addToolsToStep(5, new List<string> {"1 spatula"});
+            rd.addToolsToStep(6, new List<string> {"100 grams cheddar cheese"});
+            rd.addToolsToStep(7, new List<string> {""});
+            rd.addToolsToStep(8, new List<string> {""});
             
 
             return rd;
