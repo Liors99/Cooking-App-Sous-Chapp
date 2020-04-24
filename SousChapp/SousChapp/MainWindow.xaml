@@ -44,16 +44,16 @@
             </Button>
             
             <Image HorizontalAlignment="Left" Height="28" Margin="333,-5,0,0" VerticalAlignment="Top" Width="134" Source="Resources/Logo.png"/>
-            <TextBlock x:Name="viewSearch" HorizontalAlignment="Left" Margin="490,0,0,0" TextWrapping="Wrap" Text="Viewing results for: " VerticalAlignment="Top" FontFamily="Arial" FontSize="16" Visibility="Hidden" Width="263"/>
+            <TextBlock x:Name="viewSearch" HorizontalAlignment="Right" Margin="460,0,0,0" TextWrapping="Wrap" Text="matching results for: " VerticalAlignment="Top" FontFamily="Arial" FontSize="10" Visibility="Hidden" Width="263" FontStyle="Italic"/>
 
 
             <Grid Height="392" VerticalAlignment="Bottom" Margin="0,0,0,-10" Grid.ColumnSpan="2">
                 <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="0,-6,0,0">
                     <Canvas Height="615" MouseDown="Canvas_MouseDown">
                         <!-- Filter information -->
-                        <TextBlock x:Name ="filter_ing" Height="23" Canvas.Left="10" TextWrapping="Wrap" Text="" Canvas.Top="2" Width="755"/>
-                        <TextBlock x:Name ="filter_cui" Height="23" Canvas.Left="10" TextWrapping="Wrap" Text="" Canvas.Top="25" Width="755"/>
-                        <TextBlock x:Name ="filter_dif" Height="23" Canvas.Left="10" TextWrapping="Wrap" Text="" Canvas.Top="48" Width="755"/>
+                        <TextBlock x:Name ="filter_ing" Height="23" Canvas.Left="10" TextWrapping="Wrap" Text="" Canvas.Top="2" Width="755" FontSize="10" FontStyle="Italic"/>
+                        <TextBlock x:Name ="filter_cui" Height="23" Canvas.Left="10" TextWrapping="Wrap" Text="" Canvas.Top="25" Width="755" FontSize="10" FontStyle="Italic"/>
+                        <TextBlock x:Name ="filter_dif" Height="23" Canvas.Left="10" TextWrapping="Wrap" Text="" Canvas.Top="48" Width="755" FontSize="10" FontStyle="Italic"/>
 
                         <!-- Inner grid for recipes comment -->
 

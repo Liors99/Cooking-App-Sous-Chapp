@@ -190,16 +190,16 @@ namespace SousChapp
             this.cui_opt = cui_opt;
 
             if (cui_opt.Count > 0){
-                filter_cui.Text = "(Cuisine) ";
+                filter_cui.Text = "Matching results for cusine(s): ";
                 for (int i = 0; i < cui_opt.Count; i++)
                 {
                     if (i != cui_opt.Count - 1)
                     {
-                       filter_cui.Inlines.Add(cui_opt.ElementAt(i) + ", ");
+                       filter_cui.Inlines.Add("\"" + cui_opt.ElementAt(i) + "\", ");
                     }
                     else
                     {
-                        filter_cui.Inlines.Add(cui_opt.ElementAt(i));
+                        filter_cui.Inlines.Add("\"" + cui_opt.ElementAt(i) + "\"");
                     }
 
 
@@ -218,16 +218,16 @@ namespace SousChapp
 
             if (dif_opt.Count > 0)
             {
-                filter_dif.Text = "(Diificulty) ";
+                filter_dif.Text = "Matching results for difficulty: ";
                 for (int i = 0; i < dif_opt.Count; i++)
                 {
                     if (i != dif_opt.Count - 1)
                     {
-                        filter_dif.Inlines.Add(dif_opt.ElementAt(i) + ", ");
+                        filter_dif.Inlines.Add("\"" + dif_opt.ElementAt(i) + "\", ");
                     }
                     else
                     {
-                        filter_dif.Inlines.Add(dif_opt.ElementAt(i));
+                        filter_dif.Inlines.Add("\"" + dif_opt.ElementAt(i) + "\"");
                     }
 
 
@@ -247,16 +247,16 @@ namespace SousChapp
 
             if (ing_opt.Count > 0)
             {
-                filter_ing.Text = "(Ingridients) ";
+                filter_ing.Text = "Matching results for ingredient(s): ";
                 for (int i = 0; i < ing_opt.Count; i++)
                 {
                     if (i != ing_opt.Count - 1)
                     {
-                        filter_ing.Inlines.Add(ing_opt.ElementAt(i) + ", ");
+                        filter_ing.Inlines.Add("\"" + ing_opt.ElementAt(i) + "\", ");
                     }
                     else
                     {
-                        filter_ing.Inlines.Add(ing_opt.ElementAt(i));
+                        filter_ing.Inlines.Add("\"" + ing_opt.ElementAt(i) + "\"");
                     }
 
 
@@ -293,7 +293,7 @@ namespace SousChapp
             
             this.search_word = this.SearchBox.Text;
             if (this.search_word.Length > 0) {
-                this.viewSearch.Text = "Viewing results for: " + this.SearchBox.Text;
+                this.viewSearch.Text = "Matching results for: \"" + this.SearchBox.Text + "\"";
                 this.viewSearch.Visibility = Visibility.Visible;
             }
             
