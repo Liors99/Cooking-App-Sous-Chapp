@@ -213,5 +213,13 @@
   <ItemGroup>
     <Resource Include="Resources\Back_btn.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\beansalad.png" />
+    <Resource Include="Resources\honeysalmon.png" />
+    <Resource Include="Resources\lambburger.png" />
+    <Resource Include="Resources\overnightoats.png" />
+    <Resource Include="Resources\porkchops.png" />
+    <Resource Include="Resources\quesadilla.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

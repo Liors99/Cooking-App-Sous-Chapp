@@ -49,7 +49,7 @@
 
             <Grid Height="392" VerticalAlignment="Bottom" Margin="0,0,0,-10" Grid.ColumnSpan="2">
                 <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="0,-6,0,0">
-                    <Canvas Height="615" MouseDown="Canvas_MouseDown">
+                    <Canvas Height="900" MouseDown="Canvas_MouseDown">
                         <!-- Filter information -->
                         <TextBlock x:Name ="filter_ing" Height="23" Canvas.Left="10" TextWrapping="Wrap" Text="" Canvas.Top="2" Width="755" FontSize="10" FontStyle="Italic"/>
                         <TextBlock x:Name ="filter_cui" Height="23" Canvas.Left="10" TextWrapping="Wrap" Text="" Canvas.Top="25" Width="755" FontSize="10" FontStyle="Italic"/>
@@ -59,9 +59,15 @@
 
                         <Image HorizontalAlignment="Left" Height="118" Margin="96,265,0,0" VerticalAlignment="Top" Width="120" Source="Resources/padthai.png"/>
                         <Image HorizontalAlignment="Left" Height="118" Margin="96,84,0,0" VerticalAlignment="Top" Width="120" Source="Resources/chocolatechipcookies.png" MouseDown="Image_MouseDown"/>
+                        <Image HorizontalAlignment="Left" Height="118" Margin="96,446,0,0" VerticalAlignment="Top" Width="120" Source="Resources/beansalad.png" MouseDown="Image_MouseDown"/>
+                        <Image HorizontalAlignment="Left" Height="118" Margin="96,627,0,0" VerticalAlignment="Top" Width="120" Source="Resources/honeysalmon.png" MouseDown="Image_MouseDown"/>
+                        <Image HorizontalAlignment="Left" Height="118" Margin="96,808,0,0" VerticalAlignment="Top" Width="120" Source="Resources/lambburger.png" MouseDown="Image_MouseDown"/>
 
                         <Image HorizontalAlignment="Left" Height="118" Margin="464,84,0,0" VerticalAlignment="Top" Width="120" Source="Resources/frenchomelet.png" MouseDown="Image_MouseDown"/>
                         <Image HorizontalAlignment="Left" Height="118" Margin="464,265,0,0" VerticalAlignment="Top" Width="120" Source="Resources/aglioeolio.png"/>
+                        <Image HorizontalAlignment="Left" Height="118" Margin="464,446,0,0" VerticalAlignment="Top" Width="120" Source="Resources/overnightoats.png" MouseDown="Image_MouseDown"/>
+                        <Image HorizontalAlignment="Left" Height="118" Margin="464,627,0,0" VerticalAlignment="Top" Width="120" Source="Resources/porkchops.png" MouseDown="Image_MouseDown"/>
+                        <Image HorizontalAlignment="Left" Height="118" Margin="464,808,0,0" VerticalAlignment="Top" Width="120" Source="Resources/quesadilla.png" MouseDown="Image_MouseDown"/>
                        
                         <Rectangle x:Name="ChosenRecipe" HorizontalAlignment="Left" Height="118" Margin="464,84,0,0" VerticalAlignment="Top" Width="240" StrokeThickness="3" >
                             <!--<Rectangle.Stroke>
@@ -73,8 +79,14 @@
                         </Rectangle>
                         <TextBlock HorizontalAlignment="Left" Margin="221,292,0,0" TextWrapping="Wrap" Text="Pad Thai" VerticalAlignment="Top" Height="28" Width="91" TextAlignment="Center" FontSize="16"/>
                         <TextBlock HorizontalAlignment="Left" Margin="216,97,0,0" TextWrapping="Wrap" Text="Chocolate Chip Cookie" VerticalAlignment="Top" Height="57" Width="120" TextAlignment="Center" FontSize="16"/>
+                        <TextBlock HorizontalAlignment="Left" Margin="216,475,0,0" TextWrapping="Wrap" Text="Broccoli Rabe and White Bean Salad" VerticalAlignment="Top" Height="60" Width="120" TextAlignment="Center" FontSize="16"/>
+                        <TextBlock HorizontalAlignment="Left" Margin="216,650,0,0" TextWrapping="Wrap" Text="Honey Salmon" VerticalAlignment="Top" Height="57" Width="120" TextAlignment="Center" FontSize="16"/>
+                        <TextBlock HorizontalAlignment="Left" Margin="216,820,0,0" TextWrapping="Wrap" Text="Lamb Burger" VerticalAlignment="Top" Height="57" Width="120" TextAlignment="Center" FontSize="16"/>
                         <TextBlock HorizontalAlignment="Left" Margin="589,97,0,0" TextWrapping="Wrap" Text="French Omelette" VerticalAlignment="Top" Height="57" Width="107" TextAlignment="Center" FontSize="16"/>
                         <TextBlock HorizontalAlignment="Left" Margin="589,292,0,0" TextWrapping="Wrap" Text="Aglio E Olio" VerticalAlignment="Top" Height="57" Width="107" TextAlignment="Center" FontSize="16"/>
+                        <TextBlock HorizontalAlignment="Left" Margin="589,475,0,0" TextWrapping="Wrap" Text="Overnight Oats" VerticalAlignment="Top" Height="57" Width="107" TextAlignment="Center" FontSize="16"/>
+                        <TextBlock HorizontalAlignment="Left" Margin="589,650,0,0" TextWrapping="Wrap" Text="Pork Chops" VerticalAlignment="Top" Height="57" Width="107" TextAlignment="Center" FontSize="16"/>
+                        <TextBlock HorizontalAlignment="Left" Margin="589,820,0,0" TextWrapping="Wrap" Text="Quick Cheesy Quesadillas" VerticalAlignment="Top" Height="57" Width="107" TextAlignment="Center" FontSize="16"/>
                         <Button x:Name="ViewRecipeButton" Content="View Recipe" HorizontalAlignment="Left" Height="34" Margin="598,154,0,0" VerticalAlignment="Top" Width="88" Background="LimeGreen" Click="ViewRecipeButton_Click" Visibility="Hidden"/>
 
 

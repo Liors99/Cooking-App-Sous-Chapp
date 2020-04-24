@@ -150,6 +150,67 @@ namespace SousChapp
             rd.addStep("Serve immediately1");
             rd.addStep("Serve immediately2");
 
+            rd.setImage("beansalad.png");
+            rd.setRecipeName("Broccoli Rabe and White Bean Salad");
+            rd.setCookingTime(25);
+            rd.setServing(4);
+
+            rd.addCategory("Easy");
+            rd.addCategory("Side");
+            rd.addCategory("Vegeterian");
+            
+            //Steps
+            rd.addIngridient("30 oz  of canned white kidney beans");
+            rd.addIngridient("3 tbsp olive oil");
+            rd.addIngridient("half bunch broccoli rabe");
+            rd.addIngridient("4 garlic cloves");
+            rd.addIngridient("1 small lemon");
+            rd.addIngridient("pinch salt");
+            rd.addIngridient("pinch pepper");
+
+            //Tools
+            rd.addTool("1 knife");
+            rd.addTool("1 pot");
+            rd.addTool("1 medium pan");
+
+            //Steps
+            rd.addStep("Slice garlic cloves and lemon thinly");
+            rd.addStep("Chop broccoli rabe into large chunks");
+            rd.addStep("Heat oil in a pan and add garlic and lemons, cook until golden brown");
+            rd.addStep("Add broccoli into the pan and cook until wilted");
+            rd.addStep("Drain beans and boil in pot with 1/2 cup water for 3 mins");
+            rd.addStep("Drain beans and add to pan");
+            rd.addStep("Salt and pepper to taste");
+            rd.addStep("Serve immediately");
+
+            rd.setImage("quesadilla.png");
+            rd.setRecipeName("Quick Cheesy Quesadillas");
+            rd.setCookingTime(25);
+            rd.setServing(6);
+
+            rd.addCategory("Easy");
+            rd.addCategory("Lunch");
+            rd.addCategory("Vegeterian");
+            
+            //Steps
+            rd.addIngridient("6 flour torillas");
+            rd.addIngridient("1 1/2 cups shredded cheddar cheese");
+            rd.addIngridient("2 green onions");
+            rd.addIngridient("jar of salsa");
+            rd.addIngridient("canola oil");
+
+            //Tools
+            rd.addTool("1 knife");
+            rd.addTool("1 large pan");
+
+            //Steps
+            rd.addStep("Slice green onions thinly");
+            rd.addStep("Lay out tortilla and add 1/4 cheese, 1 tbsp salsa, and a sprinkle of green onions to half of the tortilla");
+            rd.addStep("Brush edge of tortilla with water and fold it over, press to seal");
+            rd.addStep("Heat oil in pan over medium heat, add in quesadilla and cook until golden on both sides");
+            rd.addStep("Cut into triangles");
+            rd.addStep("Serve immediately with salsa");
+
             DynamicRecipeView drv = new DynamicRecipeView(rd, this);
 
             drv.Visibility = Visibility.Visible;
