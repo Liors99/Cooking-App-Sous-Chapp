@@ -131,6 +131,7 @@ namespace SousChapp
         }
 
         private void drawFiltered() {
+            this.btnReset.Visibility = Visibility.Visible;
             Thickness current_margin = new Thickness(96, 84, 0, 0);
             if (this.search_word.ToLower() == "bean salad" && this.cui_opt.Count == 0 && this.dif_opt.Count == 0 && this.ing_opt.Count == 0)
             {
@@ -649,6 +650,7 @@ namespace SousChapp
             }
         }
 
+
         private void OSKeyboard_Click(object sender, RoutedEventArgs e)
         {
             Console.WriteLine(Environment.GetFolderPath(Environment.SpecialFolder.System) + System.IO.Path.DirectorySeparatorChar + "osk.exe");
@@ -662,5 +664,28 @@ namespace SousChapp
             proc.Start();
 
         }
+
+        private void btnReset_Click(object sender, RoutedEventArgs e)
+        {
+            this.cui_opt.Clear();
+            this.ing_opt.Clear();
+            this.dif_opt.Clear();
+            this.search_word = "";
+
+            this.setCuiFilter(this.cui_opt);
+            this.setDifFilter(this.dif_opt);
+            this.setIngFilter(this.ing_opt);
+
+            this.viewSearch.Visibility = Visibility.Hidden;
+            this.SearchBox.Visibility = Visibility.Hidden;
+            this.SearchLarge.Visibility = Visibility.Hidden;
+            this.OSKeyboard.Visibility = Visibility.Hidden;
+            this.SearchSmall.Visibility = Visibility.Visible;
+
+            drawRecipes();
+            this.btnReset.Visibility = Visibility.Hidden;
+        }
+
+        
     }
 }
