@@ -32,6 +32,7 @@ namespace SousChapp
         private HashSet<String> dif_opt;
         private HashSet<String> ing_opt;
         private Boolean splitMode = false;
+        private MainWindow otherWindow;
 
         private String search_word;
 
@@ -234,15 +235,16 @@ namespace SousChapp
             this.Top = workArea.Top;
             this.WindowState = WindowState.Normal;
             this.recipeGrid.Height = this.Height;
-            this.recipeGrid.Width = this.Width;
-            setSplit(true);
+           // this.recipeGrid.Width = this.Width;
+            
             MainWindow window2 = new MainWindow();
             window2.Width = SystemParameters.PrimaryScreenWidth / 2;
             window2.Height = SystemParameters.PrimaryScreenHeight;
             window2.WindowState = WindowState.Normal;
             window2.recipeGrid.Height = window2.Height;
-            window2.recipeGrid.Width = window2.Width;
-            window2.setSplit(true);
+            //window2.recipeGrid.Width = window2.Width;
+            setSplit(true, window2);
+            window2.setSplit(true, this);
 
             window2.Top = this.Top;
             window2.Left = this.Left + this.Width-10;
@@ -608,7 +610,16 @@ namespace SousChapp
 
         private void OptExit_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            if (splitMode)
+            {
+                setSplit(false, otherWindow);
+
+            }
+            else
+            {
+                this.Close();
+            }
+            
         }
 
         public Boolean isSplit()
@@ -616,9 +627,26 @@ namespace SousChapp
             return splitMode;
         }
 
-        public void setSplit(Boolean val)
+        public void setSplit(Boolean val, MainWindow other)
         {
             splitMode = val;
+            if (val)
+            {
+                this.optExit.Header = "Exit split screen";
+                this.optSplit.Visibility = Visibility.Hidden;
+                otherWindow = other;
+            }
+            if (!val)
+            {
+                otherWindow.optExit.Header = "Exit";
+                otherWindow.optSplit.Visibility = Visibility.Visible;
+                otherWindow.WindowState = WindowState.Maximized;
+                otherWindow.recipeGrid.Height = 392;
+                otherWindow.splitMode = false;
+                otherWindow.Hide();
+                otherWindow.Show();
+                this.Close();
+            }
         }
     }
 }
