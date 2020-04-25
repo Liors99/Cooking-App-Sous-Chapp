@@ -221,5 +221,11 @@
     <Resource Include="Resources\porkchops.png" />
     <Resource Include="Resources\quesadilla.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Back Arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Forward Arrow.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
