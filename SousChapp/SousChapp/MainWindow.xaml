@@ -15,7 +15,7 @@
              Height="{Binding ActualHeight, 
               RelativeSource ={RelativeSource AncestorType = {x:Type Window}}}">
 
-        <Grid>
+        <Grid x:Name="mainGrid">
             
             
             

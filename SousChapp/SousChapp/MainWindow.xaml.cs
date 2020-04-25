@@ -34,6 +34,9 @@ namespace SousChapp
         private Boolean splitMode = false;
         private MainWindow otherWindow;
 
+        private double gridHeightBackup;
+        private double gridWidthBackup;
+
         private String search_word;
 
         private List<Grid> all_recipes;
@@ -234,14 +237,17 @@ namespace SousChapp
             this.Left = workArea.Left;
             this.Top = workArea.Top;
             this.WindowState = WindowState.Normal;
-            this.recipeGrid.Height = this.Height;
+            gridHeightBackup = this.mainGrid.Height;
+            this.mainGrid.Height = this.Height;
            // this.recipeGrid.Width = this.Width;
             
             MainWindow window2 = new MainWindow();
             window2.Width = SystemParameters.PrimaryScreenWidth / 2;
             window2.Height = SystemParameters.PrimaryScreenHeight;
             window2.WindowState = WindowState.Normal;
-            window2.recipeGrid.Height = window2.Height;
+            window2.gridHeightBackup = window2.mainGrid.Height;
+            window2.mainGrid.Height = window2.Height;
+
             //window2.recipeGrid.Width = window2.Width;
             setSplit(true, window2);
             window2.setSplit(true, this);
@@ -643,6 +649,7 @@ namespace SousChapp
                 otherWindow.WindowState = WindowState.Maximized;
                 otherWindow.recipeGrid.Height = 392;
                 otherWindow.splitMode = false;
+                otherWindow.mainGrid.Height = otherWindow.gridHeightBackup;
                 otherWindow.Hide();
                 otherWindow.Show();
                 this.Close();
