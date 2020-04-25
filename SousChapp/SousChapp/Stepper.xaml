@@ -20,11 +20,12 @@
             <Button x:Name="MinimizeButton" HorizontalAlignment="Left" Height="20" Margin="559,47,0,0" VerticalAlignment="Top" Width="20" Click="MinimizeButton_Click">
                 <Image Source="Resources/minimize.png"/>
             </Button>
-            <Button x:Name="prevButton" HorizontalAlignment="Left" Margin="157,283,0,0" VerticalAlignment="Top" Width="34" Height="34" Click="prevButton_Click" Background="{x:Null}" BorderThickness="0">
-            <Image Source="Resources/Back Arrow.png"/>
+        <Button x:Name="prevButton" HorizontalAlignment="Left" Margin="157,283,0,0" VerticalAlignment="Top" Width="34" Height="34" Click="prevButton_Click" Background="{x:Null}" BorderThickness="0" Cursor="Hand">
+                
+                <Image Source="Resources/Back Arrow.png"/>
         </Button>
-            <Button x:Name="FinishButton" Content="Finish" HorizontalAlignment="Left" Margin="306,283,0,0" VerticalAlignment="Top" Width="64" Height="34" Visibility="Hidden" Background="IndianRed" Click="finishButton_Click"/>
-            <Button x:Name="NextButton" HorizontalAlignment="Left" Margin="306,283,0,0" VerticalAlignment="Top" Width="34" Height="34" Click="nextButton_Click" Background="{x:Null}" BorderThickness="0">
+            <Button x:Name="FinishButton" Content="Finish" HorizontalAlignment="Left" Margin="306,283,0,0" VerticalAlignment="Top" Width="64" Height="34" Visibility="Hidden" Background="IndianRed" Click="finishButton_Click" />
+            <Button x:Name="NextButton" HorizontalAlignment="Left" Margin="306,283,0,0" VerticalAlignment="Top" Width="34" Height="34" Click="nextButton_Click" Background="{x:Null}" BorderThickness="0" Cursor="Hand">
             <Image Source="Resources/Forward Arrow.png"/>
         </Button>
 
