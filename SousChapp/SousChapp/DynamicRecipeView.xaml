@@ -108,7 +108,7 @@
                         <Button x:Name="cancelButton" Content="Cancel Recipe" HorizontalAlignment="Left" Margin="504,75,0,0" VerticalAlignment="Top" Width="124" Height="46" Background="IndianRed" Click="cancelButton_Click" Visibility="hidden"/>
 
                         <TextBlock HorizontalAlignment="Left" Margin="70,160,0,0" TextWrapping="Wrap" Text="Tools" VerticalAlignment="Top" FontSize="20" FontFamily="Arial" Foreground="White"/>
-                        <TextBlock HorizontalAlignment="Left" Margin="250,160,0,0" TextWrapping="Wrap" Text="Ingridients" VerticalAlignment="Top" FontSize="20" FontFamily="Arial" Foreground="White"/>
+                        <TextBlock HorizontalAlignment="Left" Margin="250,160,0,0" TextWrapping="Wrap" Text="Ingredients" VerticalAlignment="Top" FontSize="20" FontFamily="Arial" Foreground="White"/>
                         <TextBlock HorizontalAlignment="Left" Margin="553,160,0,0" TextWrapping="Wrap" Text="Steps" VerticalAlignment="Top" FontSize="20" FontFamily="Arial" Foreground="White"/>
                         <Button  x:Name="BackBtn" HorizontalAlignment="Left" Height="27" Margin="10,15,0,0" VerticalAlignment="Top" Width="40" Click="backBtn_Click">
                             <Button.Template>

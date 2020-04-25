@@ -192,6 +192,7 @@ namespace SousChapp
 
             this.Close();
             mw.Visibility = Visibility.Visible;
+            mw.viewingRecipe = false;
             //MainWindow mw = new MainWindow();
             //mw.setCuiFilter(this.mw.getCuiFilter());
             //mw.Show();

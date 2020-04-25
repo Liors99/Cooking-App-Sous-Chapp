@@ -34,7 +34,7 @@ namespace SousChapp
         private Boolean splitMode = false;
         private MainWindow otherWindow;
 
-        private Boolean viewingRecipe;
+        public Boolean viewingRecipe;
         private DynamicRecipeView activeRecipe;
 
         private String search_word;
