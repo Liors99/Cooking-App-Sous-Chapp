@@ -665,6 +665,11 @@ namespace SousChapp
 
         }
 
+        /// <summary>
+        /// Resets all the options selected
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnReset_Click(object sender, RoutedEventArgs e)
         {
             this.cui_opt.Clear();
