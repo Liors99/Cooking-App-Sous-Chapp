@@ -332,6 +332,16 @@ namespace SousChapp
             rd.addStep("Salt and pepper to taste");
             rd.addStep("Serve immediately");
 
+            //Tools to step
+            rd.addToolsToStep(0, new List<string> {"1 knife", "4 garlic cloves", "1 small lemon"});
+            rd.addToolsToStep(1, new List<string> {"half bunch broccoli rabe"});
+            rd.addToolsToStep(2, new List<string> {"1 medium pan"});
+            rd.addToolsToStep(3, new List<string> {""});
+            rd.addToolsToStep(4, new List<string> {"30 oz canned white kidney beans", "1 pot"});
+            rd.addToolsToStep(5, new List<string> {""});
+            rd.addToolsToStep(6, new List<string> {"pinch of salt", "pinch of pepper"});
+            rd.addToolsToStep(7, new List<string> {""});
+
             return rd;
         }
 
@@ -366,6 +376,14 @@ namespace SousChapp
             rd.addStep("Heat oil in pan over medium heat, add in quesadilla and cook until golden on both sides");
             rd.addStep("Cut into triangles");
             rd.addStep("Serve immediately with salsa");
+
+            //Tools to step
+            rd.addToolsToStep(0, new List<string> {"1 knife", "2 green onions"});
+            rd.addToolsToStep(1, new List<string> {"6 flour tortillas", "1 1/2 cups shredded cheddar cheese", "jar of salsa"});
+            rd.addToolsToStep(2, new List<string> {""});
+            rd.addToolsToStep(3, new List<string> {"1 large pan"});
+            rd.addToolsToStep(4, new List<string> {""});
+            rd.addToolsToStep(5, new List<string> {""});
 
             return rd;
 
