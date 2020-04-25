@@ -23,12 +23,26 @@ namespace SousChapp
 
         private ArrayList steps_arraylist;
         private MainWindow mw;
+        private double mainGridHeightBackup;
+        private double mainGridWidthBackup;
+        private double recipeGridHeightBackup;
+        private double recipeGridWidthBackup;
+        private double headerWidthBackup;
+
+        private double a;
+        private double b;
+        private double c;
+        private double d;
         
         public DynamicRecipeView(RecipeDetails rd, MainWindow mw)
         {
             InitializeComponent();
 
             this.mw = mw;
+            a = this.Height;
+            b = this.Width;
+            c = this.Top;
+            d = this.Left;
 
             this.steps_arraylist = rd.getSteps();
             this.step.initializeStepper(this.steps_arraylist, rd.getToolsToStep());
@@ -183,6 +197,35 @@ namespace SousChapp
             //mw.Show();
 
 
+        }
+
+        public void resetScale()
+        {
+            this.Height = a;
+            this.Width = b;
+            this.Top = c;
+            this.Left = d;
+            this.WindowState = WindowState.Maximized;
+            this.mainGrid.Height = mainGridHeightBackup;
+            this.mainGrid.Width = mainGridWidthBackup;
+            this.mainGrid.Margin = new Thickness(0, 300, 0, 0);
+            this.recipeGrid.Height = recipeGridHeightBackup;
+            this.recipeGrid.Width = recipeGridWidthBackup;
+            this.header.Width = headerWidthBackup;
+
+
+            
+
+
+        }
+
+        public void backupScale()
+        {
+            mainGridHeightBackup = this.mainGrid.Height;
+            mainGridWidthBackup = this.mainGrid.Width;
+            recipeGridHeightBackup = this.recipeGrid.Height;
+            recipeGridWidthBackup = this.recipeGrid.Width;
+            headerWidthBackup = this.header.Width;
         }
     }
 }

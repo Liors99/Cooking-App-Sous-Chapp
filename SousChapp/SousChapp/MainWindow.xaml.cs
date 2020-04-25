@@ -34,6 +34,9 @@ namespace SousChapp
         private Boolean splitMode = false;
         private MainWindow otherWindow;
 
+        private Boolean viewingRecipe;
+        private DynamicRecipeView activeRecipe;
+
         private String search_word;
 
         private List<Grid> all_recipes;
@@ -450,15 +453,18 @@ namespace SousChapp
             
 
             DynamicRecipeView drv = new DynamicRecipeView(current_recipe, this);
+            viewingRecipe = true;
+            activeRecipe = drv;
 
             if (this.isSplit()) {
+                drv.backupScale();
                 drv.mainGrid.Height = this.Height-20;
                 drv.mainGrid.Width = this.Width;
                 drv.recipeGrid.Width = drv.mainGrid.Width;
                 drv.recipeGrid.Height = drv.mainGrid.Height-20;
                 drv.recipeGrid.Margin = new Thickness(0,-225,0,0);
                 drv.header.Width = this.Width;
-                drv.HorizontalAlignment = HorizontalAlignment.Left;
+               // drv.HorizontalAlignment = HorizontalAlignment.Left;
                 //drv.header.Margin = new Thickness(0, -15, 0, 0);
             }
             
@@ -662,10 +668,21 @@ namespace SousChapp
                 otherWindow.mainGrid.Height = 450;
                 otherWindow.mainGrid.Width = 800;
                 otherWindow.recipeGrid.Height = 392;
-                otherWindow.recipeGrid.Margin = new Thickness(0, 0, 0, -10);
+               // otherWindow.recipeGrid.Margin = new Thickness(0, 0, 0, -10);
                 otherWindow.splitMode = false;
-                otherWindow.Hide();
-                otherWindow.Show();
+                if (otherWindow.viewingRecipe)
+                {
+                    otherWindow.activeRecipe.resetScale();
+                }
+                if (otherWindow.viewingRecipe)
+                {
+                    otherWindow.activeRecipe.Show();
+                }
+                else
+                {
+                    otherWindow.Show();
+                }
+                
                 this.Close();
             }
         }
