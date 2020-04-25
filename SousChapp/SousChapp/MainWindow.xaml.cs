@@ -57,6 +57,9 @@ namespace SousChapp
             initializeRecipes(); //Set the all recipes arraylist
             drawRecipes();
 
+    
+            
+
         }
 
         //Add all the recipes to the array list
@@ -217,9 +220,39 @@ namespace SousChapp
 
         private void Split_Screen(object sender, RoutedEventArgs e)
         {
-            SplitWindow split = new SplitWindow();
-            split.Show();
-            this.Close();
+            this.WindowState = WindowState.Normal;
+            this.SizeToContent = SizeToContent.Manual;
+            this.WindowStyle = WindowStyle.ToolWindow;
+            this.ResizeMode = ResizeMode.CanResize;
+            
+
+            this.Left = 0;
+            this.Top = 0;
+            
+            //this.Width /= 2;
+            this.Width = System.Windows.SystemParameters.PrimaryScreenWidth / 2;
+            this.Height= System.Windows.SystemParameters.PrimaryScreenHeight; 
+            this.mainView.StretchDirection = StretchDirection.Both;
+            this.mainView.Stretch = Stretch.None;
+
+            this.mainGrid.HorizontalAlignment = HorizontalAlignment.Left;
+            //this.mainGrid.Margin = this.Margin;
+            
+            
+
+            this.mainGrid.Height = this.Height-50;
+            this.mainGrid.Width = this.Width;
+
+            
+
+            this.recipeGrid.Height = this.Height - 100;
+            this.recipeGrid.Width = this.Width;
+            
+
+            //this.recipeGrid.Margin = new Thickness(0, 0 ,0,0);
+            //SplitWindow split = new SplitWindow();
+            //split.Show();
+            //this.Close();
         }
 
 
@@ -423,7 +456,12 @@ namespace SousChapp
 
         }
 
-        
+        private void OptExit_Click(object sender, RoutedEventArgs e) {
+            this.Close();
+        }
+
+
+
 
         public void setCuiFilter(HashSet<String> cui_opt) {
 
