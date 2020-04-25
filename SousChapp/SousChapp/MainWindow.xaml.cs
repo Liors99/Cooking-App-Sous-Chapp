@@ -235,14 +235,17 @@ namespace SousChapp
             this.Left = workArea.Left;
             this.Top = workArea.Top;
             this.WindowState = WindowState.Normal;
-            this.recipeGrid.Height = this.Height;
+            this.mainGrid.Height = this.Height - 210;
+            this.recipeGrid.Height = this.mainGrid.Height-50;
+            
            // this.recipeGrid.Width = this.Width;
             
             MainWindow window2 = new MainWindow();
             window2.Width = SystemParameters.PrimaryScreenWidth / 2;
             window2.Height = SystemParameters.PrimaryScreenHeight;
             window2.WindowState = WindowState.Normal;
-            window2.recipeGrid.Height = window2.Height;
+            window2.mainGrid.Height = window2.Height - 210;
+            window2.recipeGrid.Height = window2.mainGrid.Height-50;
             //window2.recipeGrid.Width = window2.Width;
             setSplit(true, window2);
             window2.setSplit(true, this);
