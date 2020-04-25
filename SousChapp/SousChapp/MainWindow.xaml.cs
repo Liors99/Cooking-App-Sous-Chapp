@@ -451,6 +451,18 @@ namespace SousChapp
 
             DynamicRecipeView drv = new DynamicRecipeView(current_recipe, this);
 
+            if (this.isSplit()) {
+                drv.mainGrid.Height = this.Height-20;
+                drv.mainGrid.Width = this.Width;
+                drv.recipeGrid.Width = drv.mainGrid.Width;
+                drv.recipeGrid.Height = drv.mainGrid.Height-20;
+                drv.recipeGrid.Margin = new Thickness(0,-225,0,0);
+                drv.header.Width = this.Width;
+                drv.HorizontalAlignment = HorizontalAlignment.Left;
+                //drv.header.Margin = new Thickness(0, -15, 0, 0);
+            }
+            
+
             drv.Visibility = Visibility.Visible;
             this.Visibility = Visibility.Hidden;
             //drv.Show();
@@ -645,7 +657,12 @@ namespace SousChapp
                 otherWindow.optExit.Header = "Exit";
                 otherWindow.optSplit.Visibility = Visibility.Visible;
                 otherWindow.WindowState = WindowState.Maximized;
+                otherWindow.Height = 450;
+                otherWindow.Width = 800;
+                otherWindow.mainGrid.Height = 450;
+                otherWindow.mainGrid.Width = 800;
                 otherWindow.recipeGrid.Height = 392;
+                otherWindow.recipeGrid.Margin = new Thickness(0, 0, 0, -10);
                 otherWindow.splitMode = false;
                 otherWindow.Hide();
                 otherWindow.Show();
