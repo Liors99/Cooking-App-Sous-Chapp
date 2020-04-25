@@ -688,7 +688,7 @@ namespace SousChapp
             this.SearchSmall.Visibility = Visibility.Visible;
 
             drawRecipes();
-            this.btnReset.Visibility = Visibility.Visible;
+            this.btnReset.Visibility = Visibility.Hidden;
         }
 
         
