@@ -66,7 +66,9 @@ namespace SousChapp
                 this.Left = mw.Left;
             }
 
-            
+            backupScale();
+
+
 
 
         }
@@ -205,16 +207,17 @@ namespace SousChapp
             this.Width = b;
             this.Top = c;
             this.Left = d;
-            this.WindowState = WindowState.Maximized;
+            
             this.mainGrid.Height = mainGridHeightBackup;
             this.mainGrid.Width = mainGridWidthBackup;
-            this.mainGrid.Margin = new Thickness(0, 300, 0, 0);
+            // this.mainGrid.Margin = new Thickness(0, , 0, 0);
+            this.recipeGrid.Margin = new Thickness(0, this.mainGrid.Margin.Top+50, 0,this.mainGrid.Margin.Bottom);
             this.recipeGrid.Height = recipeGridHeightBackup;
             this.recipeGrid.Width = recipeGridWidthBackup;
             this.header.Width = headerWidthBackup;
 
+            this.WindowState = WindowState.Maximized;
 
-            
 
 
         }

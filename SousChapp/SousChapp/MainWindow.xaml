@@ -125,7 +125,7 @@
             <TextBlock x:Name="viewSearch" HorizontalAlignment="Right" Margin="460,0,0,0" TextWrapping="Wrap" Text="matching results for: " VerticalAlignment="Top" FontFamily="Arial" FontSize="10" Visibility="Hidden" Width="263" FontStyle="Italic"/>
 
 
-            <Menu x:Name="mainMenu" HorizontalAlignment="Left" Height="420" VerticalAlignment="Top" Width="165" Margin="0,41,0,0" Visibility="Visible" Grid.ColumnSpan="2">
+            <Menu x:Name="mainMenu" HorizontalAlignment="Left" Height="409" VerticalAlignment="Top" Width="165" Margin="0,41,0,0" Visibility="Visible" Grid.ColumnSpan="2">
                 <Menu.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="#fd9f84" Offset="0"/>
