@@ -43,6 +43,15 @@ namespace SousChapp
             setIngridients(rd.getIngridients());
             setSteps(rd.getSteps());
 
+            if (mw.isSplit())
+            {
+                this.WindowState = WindowState.Normal;
+                this.Height = mw.Height;
+                this.Width = mw.Width;
+                this.Top = mw.Top;
+                this.Left = mw.Left;
+            }
+
             
 
 

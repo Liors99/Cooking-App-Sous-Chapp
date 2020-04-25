@@ -235,12 +235,14 @@ namespace SousChapp
             this.WindowState = WindowState.Normal;
             this.recipeGrid.Height = this.Height;
             this.recipeGrid.Width = this.Width;
+            setSplit(true);
             MainWindow window2 = new MainWindow();
             window2.Width = SystemParameters.PrimaryScreenWidth / 2;
             window2.Height = SystemParameters.PrimaryScreenHeight;
             window2.WindowState = WindowState.Normal;
             window2.recipeGrid.Height = window2.Height;
             window2.recipeGrid.Width = window2.Width;
+            window2.setSplit(true);
 
             window2.Top = this.Top;
             window2.Left = this.Left + this.Width-10;
@@ -609,6 +611,14 @@ namespace SousChapp
             this.Close();
         }
 
+        public Boolean isSplit()
+        {
+            return splitMode;
+        }
 
+        public void setSplit(Boolean val)
+        {
+            splitMode = val;
+        }
     }
 }
