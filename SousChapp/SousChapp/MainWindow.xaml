@@ -5,17 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SousChapp"
         mc:Ignorable="d"
-        Title="Sous-Chapp" Height="450" Width="800"
+        Title="Sous-Chapp"
         WindowState="Maximized"
         WindowStyle="None">
 
 
-    <Viewbox StretchDirection="Both" Stretch="Uniform">
+    <Viewbox StretchDirection="Both" Stretch="Uniform" Width="{Binding ActualWidth, 
+              RelativeSource = {RelativeSource AncestorType = {x:Type Window}}}" 
+             Height="{Binding ActualHeight, 
+              RelativeSource ={RelativeSource AncestorType = {x:Type Window}}}">
 
         <Grid>
             
             
-            <Rectangle HorizontalAlignment="Left" Height="794" Stroke="Black" VerticalAlignment="Top" Width="42" Margin="374,-391,0,0" RenderTransformOrigin="0.5,0.5">
+            <Rectangle x:Name="header" HorizontalAlignment="Left" Height="794" Stroke="Black" VerticalAlignment="Top" Width="42" Margin="374,-391,0,0" RenderTransformOrigin="0.5,0.5">
                 <Rectangle.Fill>
                     <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                         <GradientStop Color="#fd9f84" Offset="1"/>
@@ -47,7 +50,7 @@
             <TextBlock x:Name="viewSearch" HorizontalAlignment="Right" Margin="460,0,0,0" TextWrapping="Wrap" Text="matching results for: " VerticalAlignment="Top" FontFamily="Arial" FontSize="10" Visibility="Hidden" Width="263" FontStyle="Italic"/>
 
 
-            <Grid Height="392" VerticalAlignment="Bottom" Margin="0,0,0,-10" Grid.ColumnSpan="2">
+            <Grid x:Name="recipeGrid" Height="392" VerticalAlignment="Bottom" Margin="0,0,0,-10" Grid.ColumnSpan="2">
                 <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="0,-6,0,0">
                     <Canvas x:Name="recipeCanvas" Height="392" MouseDown="Canvas_MouseDown">
                         <!-- Filter information -->

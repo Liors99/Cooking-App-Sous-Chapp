@@ -31,6 +31,7 @@ namespace SousChapp
         private HashSet<String> cui_opt;
         private HashSet<String> dif_opt;
         private HashSet<String> ing_opt;
+        private Boolean splitMode = false;
 
         private String search_word;
 
@@ -54,9 +55,17 @@ namespace SousChapp
 
             this.search_word = "";
 
+
             initializeRecipes(); //Set the all recipes arraylist
             drawRecipes();
 
+        }
+
+        public MainWindow(double top, double left) : this()
+        {
+            this.Top = top;
+            this.Left = left;
+            
         }
 
         //Add all the recipes to the array list
@@ -217,9 +226,33 @@ namespace SousChapp
 
         private void Split_Screen(object sender, RoutedEventArgs e)
         {
-            SplitWindow split = new SplitWindow();
-            split.Show();
-            this.Close();
+            var workArea = SystemParameters.WorkArea;
+
+            this.Height = SystemParameters.PrimaryScreenHeight;
+            this.Width = SystemParameters.PrimaryScreenWidth / 2;
+            this.Left = workArea.Left;
+            this.Top = workArea.Top;
+            this.WindowState = WindowState.Normal;
+            this.recipeGrid.Height = this.Height;
+            this.recipeGrid.Width = this.Width;
+            MainWindow window2 = new MainWindow();
+            window2.Width = SystemParameters.PrimaryScreenWidth / 2;
+            window2.Height = SystemParameters.PrimaryScreenHeight;
+            window2.WindowState = WindowState.Normal;
+            window2.recipeGrid.Height = window2.Height;
+            window2.recipeGrid.Width = window2.Width;
+
+            window2.Top = this.Top;
+            window2.Left = this.Left + this.Width-10;
+            window2.Show();
+
+
+            
+            //window2.MaxWidth = SystemParameters.PrimaryScreenWidth / 2;
+            //window2.Show();
+            //SplitWindow split = new SplitWindow();
+            //split.Show();
+            //this.Close();
         }
 
 
@@ -570,5 +603,12 @@ namespace SousChapp
             
             
         }
+
+        private void OptExit_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+
     }
 }
