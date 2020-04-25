@@ -648,5 +648,19 @@ namespace SousChapp
                 this.Close();
             }
         }
+
+        private void OSKeyboard_Click(object sender, RoutedEventArgs e)
+        {
+            Console.WriteLine(Environment.GetFolderPath(Environment.SpecialFolder.System) + System.IO.Path.DirectorySeparatorChar + "osk.exe");
+            ProcessStartInfo procStart = new ProcessStartInfo();
+            procStart.FileName = @"c:\Windows\Sysnative\cmd.exe";
+            procStart.Arguments = "/c osk.exe";
+            procStart.CreateNoWindow = true;
+            procStart.UseShellExecute = false;
+            Process proc = new Process();
+            proc.StartInfo = procStart;
+            proc.Start();
+
+        }
     }
 }

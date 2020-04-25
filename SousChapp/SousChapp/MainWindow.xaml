@@ -114,7 +114,7 @@
             </Button>
             <TextBox x:Name="SearchBox" HorizontalAlignment="Right" Height="19" Margin="58,-2" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="116" Visibility="Hidden" GotFocus="SearchBox_GotFocus" LostFocus="SearchBox_LostFocus"/>
             <Button x:Name="SearchLarge" Content="Search" HorizontalAlignment="Right" Margin="10,-2" VerticalAlignment="Top" Width="44" Visibility="Hidden" Click="SearchLarge_Click"/>
-            <Button x:Name="OSKeyboard" HorizontalAlignment="Right" Height="19" Margin="178,-2" VerticalAlignment="Top" Width="28" Visibility="Hidden">
+            <Button x:Name="OSKeyboard" HorizontalAlignment="Right" Height="19" Margin="178,-2" VerticalAlignment="Top" Width="28" Visibility="Hidden" Click="OSKeyboard_Click">
                 <Image Source="Resources/keyboard.png"/>
             </Button>
             <Button x:Name="showMenu" HorizontalAlignment="Left" Margin="5,-5" VerticalAlignment="Top" Width="27" Click="ShowMenu_Click" RenderTransformOrigin="0,0" Height="29" BorderBrush="{x:Null}" Background="#fd9f84" Foreground="{x:Null}">
